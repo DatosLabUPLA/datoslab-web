@@ -1,0 +1,3229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2020-10-01">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="knowledge area id" title="knowledge area id" type="string"></attribute>
+      <attribute id="knowledge area" title="knowledge area" type="string"></attribute>
+      <attribute id="oecd area id" title="oecd area id" type="string"></attribute>
+      <attribute id="oecd area" title="oecd area" type="string"></attribute>
+      <attribute id="oecd subarea id" title="oecd subarea id" type="string"></attribute>
+      <attribute id="oecd subarea" title="oecd subarea" type="string"></attribute>
+      <attribute id="generic career id" title="generic career id" type="string"></attribute>
+      <attribute id="generic career" title="generic career" type="string"></attribute>
+      <attribute id="acategory" title="acategory" type="string"></attribute>
+      <attribute id="cluster" title="cluster" type="string"></attribute>
+    </attributes>
+    <nodes>
+      <node id="1" label="INGENIERIA EN PREVENCION DE RIESGOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="19"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios de Seguridad"></attvalue>
+          <attvalue for="generic career id" value="1"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN PREVENCION DE RIESGOS"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN PREVENCION DE RIESGOS"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="633.90076" y="67.76519"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="29" label="TECNICO EN PREVENCION DE RIESGOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="19"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios de Seguridad"></attvalue>
+          <attvalue for="generic career id" value="29"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN PREVENCION DE RIESGOS"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN PREVENCION DE RIESGOS"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="967.7974" y="371.477"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="63" label="INGENIERIA COMERCIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="63"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA COMERCIAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA COMERCIAL"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="17.714287"></viz:size>
+        <viz:position x="382.83658" y="217.48555"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="218" label="INGENIERIA CIVIL AMBIENTAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="218"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL AMBIENTAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL AMBIENTAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="47.07448" y="-611.9679"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="2" label="ADMINISTRACION TURISTICA Y HOTELERA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="2"></attvalue>
+          <attvalue for="generic career" value="ADMINISTRACION TURISTICA Y HOTELERA"></attvalue>
+          <attvalue for="acategory" value="ADMINISTRACION TURISTICA Y HOTELERA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="522.68" y="489.7992"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="18" label="INGENIERIA EN COMERCIO EXTERIOR">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="18"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN COMERCIO EXTERIOR"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN COMERCIO EXTERIOR"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="747.4889" y="504.42896"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="25" label="ADMINISTRACION DE EMPRESAS E ING. ASOCIADAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="25"></attvalue>
+          <attvalue for="generic career" value="ADMINISTRACION DE EMPRESAS E ING. ASOCIADAS"></attvalue>
+          <attvalue for="acategory" value="ADMINISTRACION DE EMPRESAS E ING. ASOCIADAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="639.4951" y="386.23486"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="48" label="PEDAGOGIA EN IDIOMAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="48"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN IDIOMAS"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN IDIOMAS"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="12.0"></viz:size>
+        <viz:position x="54.59401" y="489.8636"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="55" label="PERIODISMO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="17"></attvalue>
+          <attvalue for="oecd subarea" value="Periodismo e Información"></attvalue>
+          <attvalue for="generic career id" value="55"></attvalue>
+          <attvalue for="generic career" value="PERIODISMO"></attvalue>
+          <attvalue for="acategory" value="PERIODISMO"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="17.142857"></viz:size>
+        <viz:position x="24.797804" y="777.0255"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="169" label="TRADUCCION E INTERPRETACION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="7"></attvalue>
+          <attvalue for="knowledge area" value="Humanidades"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="169"></attvalue>
+          <attvalue for="generic career" value="TRADUCCION E INTERPRETACION"></attvalue>
+          <attvalue for="acategory" value="TRADUCCION E INTERPRETACION"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="382.81018" y="833.7684"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="3" label="INGENIERIA MECANICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="3"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA MECANICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA MECANICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="606.03296" y="-447.24026"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="7" label="INGENIERIA EN MINAS Y METALURGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="7"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN MINAS Y METALURGIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN MINAS Y METALURGIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="350.1118" y="-493.66415"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="8" label="INGENIERIA EN GEOMENSURA Y CARTOGRAFIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="8"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN GEOMENSURA Y CARTOGRAFIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN GEOMENSURA Y CARTOGRAFIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="200.48866" y="-706.841"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="16" label="INGENIERIA INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="16"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="499.3207" y="-223.23206"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="19" label="INGENIERIA EN REFRIGERACION Y CLIMATIZACION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="19"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN REFRIGERACION Y CLIMATIZACION"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN REFRIGERACION Y CLIMATIZACION"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="42.011135" y="-465.54547"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="23" label="INGENIERIA EN ELECTRICIDAD">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="23"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN ELECTRICIDAD"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN ELECTRICIDAD"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="504.73148" y="-560.14404"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="62" label="INGENIERIA CIVIL INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="62"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="17.142857"></viz:size>
+        <viz:position x="357.88754" y="-141.80666"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="87" label="INGENIERIA EN ELECTRONICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="87"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN ELECTRONICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN ELECTRONICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="790.5231" y="-278.93997"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="109" label="INGENIERIA EN CONSTRUCCION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="109"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN CONSTRUCCION"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN CONSTRUCCION"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="357.91312" y="20.153906"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="171" label="TECNICO EN MECANICA INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="171"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN MECANICA INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN MECANICA INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="990.2245" y="-263.8892"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="199" label="INGENIERIA CIVIL, PLAN COMUN Y LICENCIATURA EN CIENCIAS DE LA INGENIERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="199"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL, PLAN COMUN Y LICENCIATURA EN CIENCIAS DE LA INGENIERIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL, PLAN COMUN Y LICENCIATURA EN CIENCIAS DE LA INGENIERIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="19.428572"></viz:size>
+        <viz:position x="202.04329" y="-206.74773"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="239" label="INGENIERIA CIVIL ELECTRICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="239"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL ELECTRICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL ELECTRICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="13.714286"></viz:size>
+        <viz:position x="462.9195" y="-379.769"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="243" label="INGENIERIA CIVIL MECANICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="243"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL MECANICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL MECANICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="12.571428"></viz:size>
+        <viz:position x="196.80429" y="-373.41092"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="5" label="CONSTRUCCION CIVIL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="5"></attvalue>
+          <attvalue for="generic career" value="CONSTRUCCION CIVIL"></attvalue>
+          <attvalue for="acategory" value="CONSTRUCCION CIVIL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="52.456997" y="8.863006"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="66" label="ARQUITECTURA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="66"></attvalue>
+          <attvalue for="generic career" value="ARQUITECTURA"></attvalue>
+          <attvalue for="acategory" value="ARQUITECTURA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="-209.11824" y="234.6042"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="178" label="INGENIERIA CIVIL EN MINAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="178"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN MINAS"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN MINAS"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="12.571428"></viz:size>
+        <viz:position x="330.56903" y="-304.32196"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="232" label="INGENIERIA CIVIL EN OBRAS CIVILES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="232"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN OBRAS CIVILES"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN OBRAS CIVILES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="65.78829" y="-163.19792"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="6" label="DISENO GRAFICO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="6"></attvalue>
+          <attvalue for="generic career" value="DISENO GRAFICO"></attvalue>
+          <attvalue for="acategory" value="DISENO GRAFICO"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="-587.09265" y="494.43985"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="9" label="PUBLICIDAD">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="9"></attvalue>
+          <attvalue for="generic career" value="PUBLICIDAD"></attvalue>
+          <attvalue for="acategory" value="PUBLICIDAD"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-302.16577" y="621.99774"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="12" label="DISENO INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="12"></attvalue>
+          <attvalue for="generic career" value="DISENO INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="DISENO INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-499.30396" y="349.94388"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="13" label="DISENO DE VESTUARIO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="13"></attvalue>
+          <attvalue for="generic career" value="DISENO DE VESTUARIO"></attvalue>
+          <attvalue for="acategory" value="DISENO DE VESTUARIO"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="-731.3449" y="550.0856"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="77" label="DISENO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="77"></attvalue>
+          <attvalue for="generic career" value="DISENO"></attvalue>
+          <attvalue for="acategory" value="DISENO"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="-465.95798" y="619.46356"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="83" label="ANIMACION DIGITAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="83"></attvalue>
+          <attvalue for="generic career" value="ANIMACION DIGITAL"></attvalue>
+          <attvalue for="acategory" value="ANIMACION DIGITAL"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-608.19604" y="673.7402"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="194" label="ARTES Y LICENCIATURA EN ARTES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="194"></attvalue>
+          <attvalue for="generic career" value="ARTES Y LICENCIATURA EN ARTES"></attvalue>
+          <attvalue for="acategory" value="ARTES Y LICENCIATURA EN ARTES"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="-273.09735" y="804.867"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="20" label="INGENIERIA EN QUIMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="20"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN QUIMICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN QUIMICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-130.8014" y="-559.8703"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="207" label="INGENIERIA CIVIL METALURGICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="207"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL METALURGICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL METALURGICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="328.14502" y="-641.2686"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="250" label="INGENIERIA CIVIL EN GEOGRAFIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="250"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN GEOGRAFIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN GEOGRAFIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="442.1058" y="-747.9173"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="56" label="PSICOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="56"></attvalue>
+          <attvalue for="generic career" value="PSICOLOGIA"></attvalue>
+          <attvalue for="acategory" value="PSICOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-130.38521" y="570.0674"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="94" label="REALIZADOR DE CINE Y TELEVISION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="94"></attvalue>
+          <attvalue for="generic career" value="REALIZADOR DE CINE Y TELEVISION"></attvalue>
+          <attvalue for="acategory" value="REALIZADOR DE CINE Y TELEVISION"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="-363.81253" y="946.8177"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="80" label="OTROS PROFESIONALES DE TECNOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="80"></attvalue>
+          <attvalue for="generic career" value="OTROS PROFESIONALES DE TECNOLOGIA"></attvalue>
+          <attvalue for="acategory" value="OTROS PROFESIONALES DE TECNOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-371.0407" y="-164.90201"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="105" label="TECNICO EN DIBUJO TECNICO E INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="105"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN DIBUJO TECNICO E INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN DIBUJO TECNICO E INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="-663.71063" y="332.32593"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="14" label="PAISAJISMO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="14"></attvalue>
+          <attvalue for="generic career" value="PAISAJISMO"></attvalue>
+          <attvalue for="acategory" value="PAISAJISMO"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-804.0757" y="396.9213"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="22" label="INGENIERIA EN COMPUTACION E INFORMATICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="13"></attvalue>
+          <attvalue for="oecd subarea" value="Informática"></attvalue>
+          <attvalue for="generic career id" value="22"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="757.8981" y="-7.440539"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="17" label="CONTADOR AUDITOR">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="17"></attvalue>
+          <attvalue for="generic career" value="CONTADOR AUDITOR"></attvalue>
+          <attvalue for="acategory" value="CONTADOR AUDITOR"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="522.9325" y="285.4063"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="34" label="INGENIERIA EN CONTROL DE GESTION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="34"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN CONTROL DE GESTION"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN CONTROL DE GESTION"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="682.8326" y="215.94054"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="64" label="INGENIERIA CIVIL EN COMPUTACION E INFORMATICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="13"></attvalue>
+          <attvalue for="oecd subarea" value="Informática"></attvalue>
+          <attvalue for="generic career id" value="64"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="14.857142"></viz:size>
+        <viz:position x="520.4598" y="-58.466793"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="79" label="ADMINISTRACION PUBLICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="79"></attvalue>
+          <attvalue for="generic career" value="ADMINISTRACION PUBLICA"></attvalue>
+          <attvalue for="acategory" value="ADMINISTRACION PUBLICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="12.0"></viz:size>
+        <viz:position x="390.6465" y="413.29208"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="192" label="PEDAGOGIA EN MATEMATICAS Y COMPUTACION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="192"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN MATEMATICAS Y COMPUTACION"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN MATEMATICAS Y COMPUTACION"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="61.49448" y="165.45833"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="249" label="INGENIERIA EN MATEMATICA Y ESTADISTICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="15"></attvalue>
+          <attvalue for="oecd subarea" value="Matemáticas y Estadísticas"></attvalue>
+          <attvalue for="generic career id" value="249"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN MATEMATICA Y ESTADISTICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN MATEMATICA Y ESTADISTICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="212.53267" y="122.34887"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="170" label="TECNICO EN QUIMICA (ANALISIS E INDUSTRIAL)">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="170"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN QUIMICA (ANALISIS E INDUSTRIAL)"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN QUIMICA (ANALISIS E INDUSTRIAL)"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="-406.22824" y="-590.15643"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="202" label="QUIMICA Y FARMACIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="202"></attvalue>
+          <attvalue for="generic career" value="QUIMICA Y FARMACIA"></attvalue>
+          <attvalue for="acategory" value="QUIMICA Y FARMACIA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="13.714286"></viz:size>
+        <viz:position x="-480.97113" y="-268.15863"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="210" label="QUIMICA, LICENCIADO EN QUIMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="210"></attvalue>
+          <attvalue for="generic career" value="QUIMICA, LICENCIADO EN QUIMICA"></attvalue>
+          <attvalue for="acategory" value="QUIMICA, LICENCIADO EN QUIMICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-272.94733" y="-312.62936"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="244" label="INGENIERIA CIVIL QUIMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="244"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL QUIMICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL QUIMICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="-109.542656" y="-398.6362"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="255" label="ANALISTA QUIMICO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="255"></attvalue>
+          <attvalue for="generic career" value="ANALISTA QUIMICO"></attvalue>
+          <attvalue for="acategory" value="ANALISTA QUIMICO"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="-533.007" y="-509.3723"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="264" label="QUIMICA INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="264"></attvalue>
+          <attvalue for="generic career" value="QUIMICA INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="QUIMICA INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-267.7087" y="-661.61615"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="46" label="TECNICO EN COMPUTACION E INFORMATICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="13"></attvalue>
+          <attvalue for="oecd subarea" value="Informática"></attvalue>
+          <attvalue for="generic career id" value="46"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN COMPUTACION E INFORMATICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="914.0705" y="17.573006"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="88" label="INGENIERIA CIVIL ELECTRONICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="88"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL ELECTRONICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL ELECTRONICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="636.6215" y="-295.69357"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="130" label="INGENIERIA EN AUTOMATIZACION, INSTRUMENTACION Y CONTROL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="130"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN AUTOMATIZACION, INSTRUMENTACION Y CONTROL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN AUTOMATIZACION, INSTRUMENTACION Y CONTROL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="837.0411" y="162.07108"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="117" label="TECNICO EN ELECTRICIDAD Y ELECTRICIDAD INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="117"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN ELECTRICIDAD Y ELECTRICIDAD INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN ELECTRICIDAD Y ELECTRICIDAD INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="785.5201" y="-426.2988"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="24" label="TRABAJO SOCIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="22"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Sociales"></attvalue>
+          <attvalue for="generic career id" value="24"></attvalue>
+          <attvalue for="generic career" value="TRABAJO SOCIAL"></attvalue>
+          <attvalue for="acategory" value="TRABAJO SOCIAL"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="14.857142"></viz:size>
+        <viz:position x="-88.88047" y="426.4254"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="30" label="PSICOPEDAGOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="30"></attvalue>
+          <attvalue for="generic career" value="PSICOPEDAGOGIA"></attvalue>
+          <attvalue for="acategory" value="PSICOPEDAGOGIA"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-402.5777" y="473.94342"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="37" label="PEDAGOGIA EN EDUCACION DIFERENCIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="37"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN EDUCACION DIFERENCIAL"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN EDUCACION DIFERENCIAL"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-248.37914" y="441.15356"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="38" label="PEDAGOGIA EN EDUCACION BASICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="38"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN EDUCACION BASICA"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN EDUCACION BASICA"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="-331.5053" y="312.99185"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="72" label="DERECHO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="8"></attvalue>
+          <attvalue for="knowledge area" value="Derecho"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="8"></attvalue>
+          <attvalue for="oecd subarea" value="Derecho"></attvalue>
+          <attvalue for="generic career id" value="72"></attvalue>
+          <attvalue for="generic career" value="DERECHO"></attvalue>
+          <attvalue for="acategory" value="DERECHO"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="15.428572"></viz:size>
+        <viz:position x="201.75465" y="577.97327"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="76" label="TERAPIA OCUPACIONAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="76"></attvalue>
+          <attvalue for="generic career" value="TERAPIA OCUPACIONAL"></attvalue>
+          <attvalue for="acategory" value="TERAPIA OCUPACIONAL"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="12.0"></viz:size>
+        <viz:position x="-537.87115" y="202.07916"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="78" label="SOCIOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="78"></attvalue>
+          <attvalue for="generic career" value="SOCIOLOGIA"></attvalue>
+          <attvalue for="acategory" value="SOCIOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="13.142858"></viz:size>
+        <viz:position x="312.6614" y="696.89746"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="89" label="PEDAGOGIA EN EDUCACION FISICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="89"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN EDUCACION FISICA"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN EDUCACION FISICA"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="-822.2124" y="240.98647"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="90" label="PEDAGOGIA EN EDUCACION DE PARVULOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="90"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN EDUCACION DE PARVULOS"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN EDUCACION DE PARVULOS"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-66.12868" y="280.51965"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="155" label="PEDAGOGIA EN HISTORIA, GEOGRAFIA Y CIENCIAS SOCIALES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="155"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN HISTORIA, GEOGRAFIA Y CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN HISTORIA, GEOGRAFIA Y CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="13.142858"></viz:size>
+        <viz:position x="26.298193" y="632.6009"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="157" label="CIENCIAS POLITICAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="157"></attvalue>
+          <attvalue for="generic career" value="CIENCIAS POLITICAS"></attvalue>
+          <attvalue for="acategory" value="CIENCIAS POLITICAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="387.01974" y="572.95355"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="158" label="ANTROPOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="158"></attvalue>
+          <attvalue for="generic career" value="ANTROPOLOGIA"></attvalue>
+          <attvalue for="acategory" value="ANTROPOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="12.0"></viz:size>
+        <viz:position x="225.13869" y="881.3455"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="159" label="HISTORIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="159"></attvalue>
+          <attvalue for="generic career" value="HISTORIA"></attvalue>
+          <attvalue for="acategory" value="HISTORIA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="13.714286"></viz:size>
+        <viz:position x="170.84074" y="739.22424"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="161" label="PEDAGOGIA EN LENGUAJE, COMUNICACION Y/O CASTELLANO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="161"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN LENGUAJE, COMUNICACION Y/O CASTELLANO"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN LENGUAJE, COMUNICACION Y/O CASTELLANO"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="12.0"></viz:size>
+        <viz:position x="-143.10028" y="715.9736"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="191" label="PEDAGOGIA EN FILOSOFIA Y RELIGION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="191"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN FILOSOFIA Y RELIGION"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN FILOSOFIA Y RELIGION"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-121.07621" y="881.923"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="261" label="BACHILLERATO Y/O LICENCIATURA EN HUMANIDADES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="7"></attvalue>
+          <attvalue for="knowledge area" value="Humanidades"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="261"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN HUMANIDADES"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN HUMANIDADES"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="240.5557" y="434.54297"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="36" label="INGENIERIA EN RECURSOS HUMANOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="36"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN RECURSOS HUMANOS"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN RECURSOS HUMANOS"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="240.96724" y="265.73"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="251" label="BACHILLERATO Y/O LICENCIATURA EN ADMINISTRACION Y COMERCIO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="251"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN ADMINISTRACION Y COMERCIO"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN ADMINISTRACION Y COMERCIO"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="888.4789" y="527.3333"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="26" label="TECNICO EN ADMINISTRACION DE EMPRESAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="26"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN ADMINISTRACION DE EMPRESAS"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN ADMINISTRACION DE EMPRESAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="814.5844" y="334.11862"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="28" label="TECNICO ASISTENTE DEL EDUCADOR DE PARVULOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="28"></attvalue>
+          <attvalue for="generic career" value="TECNICO ASISTENTE DEL EDUCADOR DE PARVULOS"></attvalue>
+          <attvalue for="acategory" value="TECNICO ASISTENTE DEL EDUCADOR DE PARVULOS"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="630.1488" y="617.23376"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="114" label="TECNICO EN CONSTRUCCION Y OBRAS CIVILES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="114"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN CONSTRUCCION Y OBRAS CIVILES"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN CONSTRUCCION Y OBRAS CIVILES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="867.607" y="-146.74211"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="59" label="FONOAUDIOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="59"></attvalue>
+          <attvalue for="generic career" value="FONOAUDIOLOGIA"></attvalue>
+          <attvalue for="acategory" value="FONOAUDIOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-389.8291" y="155.72743"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="98" label="PEDAGOGIA EN ARTES Y MUSICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="98"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN ARTES Y MUSICA"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN ARTES Y MUSICA"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="-417.1885" y="763.38324"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="177" label="PEDAGOGIA EN CIENCIAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="4"></attvalue>
+          <attvalue for="oecd area" value="Educación"></attvalue>
+          <attvalue for="oecd subarea id" value="10"></attvalue>
+          <attvalue for="oecd subarea" value="Formación de Personal Docente"></attvalue>
+          <attvalue for="generic career id" value="177"></attvalue>
+          <attvalue for="generic career" value="PEDAGOGIA EN CIENCIAS"></attvalue>
+          <attvalue for="acategory" value="PEDAGOGIA EN CIENCIAS"></attvalue>
+          <attvalue for="cluster" value="Educación"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-246.38345" y="-101.821884"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="40" label="NUTRICION Y DIETETICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="40"></attvalue>
+          <attvalue for="generic career" value="NUTRICION Y DIETETICA"></attvalue>
+          <attvalue for="acategory" value="NUTRICION Y DIETETICA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="-694.75696" y="146.80554"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="58" label="ODONTOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="58"></attvalue>
+          <attvalue for="generic career" value="ODONTOLOGIA"></attvalue>
+          <attvalue for="acategory" value="ODONTOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-573.5464" y="43.288254"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="61" label="TECNOLOGIA MEDICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="61"></attvalue>
+          <attvalue for="generic career" value="TECNOLOGIA MEDICA"></attvalue>
+          <attvalue for="acategory" value="TECNOLOGIA MEDICA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="13.142858"></viz:size>
+        <viz:position x="-554.7601" y="-126.9948"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="65" label="MEDICINA VETERINARIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="23"></attvalue>
+          <attvalue for="oecd subarea" value="Veterinaria"></attvalue>
+          <attvalue for="generic career id" value="65"></attvalue>
+          <attvalue for="generic career" value="MEDICINA VETERINARIA"></attvalue>
+          <attvalue for="acategory" value="MEDICINA VETERINARIA"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="-757.40497" y="-349.95975"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="68" label="OBSTETRICIA Y PUERICULTURA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="68"></attvalue>
+          <attvalue for="generic career" value="OBSTETRICIA Y PUERICULTURA"></attvalue>
+          <attvalue for="acategory" value="OBSTETRICIA Y PUERICULTURA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="-848.99506" y="-87.04786"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="70" label="ENFERMERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="70"></attvalue>
+          <attvalue for="generic career" value="ENFERMERIA"></attvalue>
+          <attvalue for="acategory" value="ENFERMERIA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="-433.40244" y="-8.823336"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="71" label="KINESIOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="71"></attvalue>
+          <attvalue for="generic career" value="KINESIOLOGIA"></attvalue>
+          <attvalue for="acategory" value="KINESIOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="11.428572"></viz:size>
+        <viz:position x="-846.17755" y="69.53259"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="246" label="INGENIERIA EN ALIMENTOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="246"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN ALIMENTOS"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN ALIMENTOS"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-864.6784" y="-246.26097"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="260" label="BACHILLERATO Y/O LICENCIATURA EN SALUD">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="260"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN SALUD"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN SALUD"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="-712.4485" y="-29.022388"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="99" label="TECNICO EN TELECOMUNICACIONES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="99"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN TELECOMUNICACIONES"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN TELECOMUNICACIONES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="994.1263" y="230.62062"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="173" label="TECNICO EN ELECTRONICA Y ELECTRONICA INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="173"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN ELECTRONICA Y ELECTRONICA INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN ELECTRONICA Y ELECTRONICA INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="1030.6869" y="-109.18502"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="212" label="LICENCIATURA EN LETRAS Y LITERATURA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="7"></attvalue>
+          <attvalue for="knowledge area" value="Humanidades"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="212"></attvalue>
+          <attvalue for="generic career" value="LICENCIATURA EN LETRAS Y LITERATURA"></attvalue>
+          <attvalue for="acategory" value="LICENCIATURA EN LETRAS Y LITERATURA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="10.857143"></viz:size>
+        <viz:position x="46.40233" y="926.4808"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="95" label="ACTUACION Y TEATRO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="95"></attvalue>
+          <attvalue for="generic career" value="ACTUACION Y TEATRO"></attvalue>
+          <attvalue for="acategory" value="ACTUACION Y TEATRO"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-224.66922" y="1011.76416"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="138" label="COMUNICACION AUDIOVISUAL Y/O MULTIMEDIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="138"></attvalue>
+          <attvalue for="generic career" value="COMUNICACION AUDIOVISUAL Y/O MULTIMEDIA"></attvalue>
+          <attvalue for="acategory" value="COMUNICACION AUDIOVISUAL Y/O MULTIMEDIA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="356.76733" y="993.4319"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="160" label="GEOGRAFIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="160"></attvalue>
+          <attvalue for="generic career" value="GEOGRAFIA"></attvalue>
+          <attvalue for="acategory" value="GEOGRAFIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="521.81573" y="880.4471"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="266" label="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS SOCIALES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="266"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="97.091606" y="337.89804"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="211" label="FILOSOFIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="7"></attvalue>
+          <attvalue for="knowledge area" value="Humanidades"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="211"></attvalue>
+          <attvalue for="generic career" value="FILOSOFIA"></attvalue>
+          <attvalue for="acategory" value="FILOSOFIA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="156.48799" y="1027.8641"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="67" label="MEDICINA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="9"></attvalue>
+          <attvalue for="knowledge area" value="Salud"></attvalue>
+          <attvalue for="oecd area id" value="7"></attvalue>
+          <attvalue for="oecd area" value="Salud y Servicios Sociales"></attvalue>
+          <attvalue for="oecd subarea id" value="16"></attvalue>
+          <attvalue for="oecd subarea" value="Medicina"></attvalue>
+          <attvalue for="generic career id" value="67"></attvalue>
+          <attvalue for="generic career" value="MEDICINA"></attvalue>
+          <attvalue for="acategory" value="MEDICINA"></attvalue>
+          <attvalue for="cluster" value="Salud y Servicios Sociales"></attvalue>
+        </attvalues>
+        <viz:size value="9.714286"></viz:size>
+        <viz:position x="-688.5247" y="-198.44931"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="267" label="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="5"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias de la Vida"></attvalue>
+          <attvalue for="generic career id" value="267"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN CIENCIAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-261.58173" y="50.83835"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="197" label="INGENIERIA EN BIOTECNOLOGIA Y BIOINGENIERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="197"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN BIOTECNOLOGIA Y BIOINGENIERIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN BIOTECNOLOGIA Y BIOINGENIERIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="10.285714"></viz:size>
+        <viz:position x="-277.22433" y="-480.41696"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="204" label="BIOQUIMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="5"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias de la Vida"></attvalue>
+          <attvalue for="generic career id" value="204"></attvalue>
+          <attvalue for="generic career" value="BIOQUIMICA"></attvalue>
+          <attvalue for="acategory" value="BIOQUIMICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="12.571428"></viz:size>
+        <viz:position x="-409.03238" y="-402.49756"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="92" label="GEOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="92"></attvalue>
+          <attvalue for="generic career" value="GEOLOGIA"></attvalue>
+          <attvalue for="acategory" value="GEOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="24.641232" y="-308.62137"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="242" label="INGENIERIA CIVIL MATEMATICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="15"></attvalue>
+          <attvalue for="oecd subarea" value="Matemáticas y Estadísticas"></attvalue>
+          <attvalue for="generic career id" value="242"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL MATEMATICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL MATEMATICA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="203.1232" y="-43.82956"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="253" label="OTRAS INGENIERIAS CIVILES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="253"></attvalue>
+          <attvalue for="generic career" value="OTRAS INGENIERIAS CIVILES"></attvalue>
+          <attvalue for="acategory" value="OTRAS INGENIERIAS CIVILES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="12.571428"></viz:size>
+        <viz:position x="193.88441" y="-526.74524"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="258" label="INGENIERIA CIVIL EN TELEMATICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="258"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN TELEMATICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN TELEMATICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.857143"></viz:size>
+        <viz:position x="664.86774" y="-131.94893"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="259" label="BACHILLERATO Y/O LICENCIATURA EN TECNOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="259"></attvalue>
+          <attvalue for="generic career" value="BACHILLERATO Y/O LICENCIATURA EN TECNOLOGIA"></attvalue>
+          <attvalue for="acategory" value="BACHILLERATO Y/O LICENCIATURA EN TECNOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="495.61716" y="107.55742"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="81" label="AGRONOMIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="1"></attvalue>
+          <attvalue for="oecd subarea" value="Agricultura, Silvicultura y Pesca"></attvalue>
+          <attvalue for="generic career id" value="81"></attvalue>
+          <attvalue for="generic career" value="AGRONOMIA"></attvalue>
+          <attvalue for="acategory" value="AGRONOMIA"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="9.142857"></viz:size>
+        <viz:position x="-652.64185" y="-795.4897"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="82" label="INGENIERIA FORESTAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="1"></attvalue>
+          <attvalue for="oecd subarea" value="Agricultura, Silvicultura y Pesca"></attvalue>
+          <attvalue for="generic career id" value="82"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA FORESTAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA FORESTAL"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="-517.81244" y="-717.0544"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="176" label="BIOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="5"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias de la Vida"></attvalue>
+          <attvalue for="generic career id" value="176"></attvalue>
+          <attvalue for="generic career" value="BIOLOGIA"></attvalue>
+          <attvalue for="acategory" value="BIOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="-601.0462" y="-357.15607"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="206" label="BIOLOGIA MARINA Y ECOLOGIA MARINA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="5"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias de la Vida"></attvalue>
+          <attvalue for="generic career id" value="206"></attvalue>
+          <attvalue for="generic career" value="BIOLOGIA MARINA Y ECOLOGIA MARINA"></attvalue>
+          <attvalue for="acategory" value="BIOLOGIA MARINA Y ECOLOGIA MARINA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="-745.8979" y="-494.03748"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="247" label="INGENIERIA EN RECURSOS RENOVABLES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="18"></attvalue>
+          <attvalue for="oecd subarea" value="Protección del Medio Ambiente"></attvalue>
+          <attvalue for="generic career id" value="247"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN RECURSOS RENOVABLES"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN RECURSOS RENOVABLES"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-386.89948" y="-787.3075"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="179" label="OTROS PROFESIONALES DE EDUCACION">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="179"></attvalue>
+          <attvalue for="generic career" value="OTROS PROFESIONALES DE EDUCACION"></attvalue>
+          <attvalue for="acategory" value="OTROS PROFESIONALES DE EDUCACION"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-1024.9565" y="84.10817"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="188" label="OTROS PROFESIONALES DE CIENCIAS SOCIALES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="7"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Sociales y del Comportamiento"></attvalue>
+          <attvalue for="generic career id" value="188"></attvalue>
+          <attvalue for="generic career" value="OTROS PROFESIONALES DE CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="acategory" value="OTROS PROFESIONALES DE CIENCIAS SOCIALES"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="509.96292" y="711.7844"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="184" label="DISENO TEATRAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="184"></attvalue>
+          <attvalue for="generic career" value="DISENO TEATRAL"></attvalue>
+          <attvalue for="acategory" value="DISENO TEATRAL"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-770.06036" y="700.5879"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="216" label="INGENIERIA CIVIL EN BIOTECNOLOGIA Y/O BIOINGENIERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="216"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN BIOTECNOLOGIA Y/O BIOINGENIERIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN BIOTECNOLOGIA Y/O BIOINGENIERIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-1015.45605" y="-69.37226"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="115" label="TECNICO AGROPECUARIO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="1"></attvalue>
+          <attvalue for="oecd subarea" value="Agricultura, Silvicultura y Pesca"></attvalue>
+          <attvalue for="generic career id" value="115"></attvalue>
+          <attvalue for="generic career" value="TECNICO AGROPECUARIO"></attvalue>
+          <attvalue for="acategory" value="TECNICO AGROPECUARIO"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-521.468" y="-902.16345"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="122" label="INGENIERIA EN MEDIO AMBIENTE">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="18"></attvalue>
+          <attvalue for="oecd subarea" value="Protección del Medio Ambiente"></attvalue>
+          <attvalue for="generic career id" value="122"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN MEDIO AMBIENTE"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN MEDIO AMBIENTE"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="8.571428"></viz:size>
+        <viz:position x="-233.71426" y="-834.6293"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="263" label="INGENIERIA AGROINDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="263"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA AGROINDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA AGROINDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-218.82104" y="-1008.8947"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="269" label="INGENIERIA CIVIL AGRICOLA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="269"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL AGRICOLA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL AGRICOLA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-86.31283" y="-886.55225"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="238" label="INGENIERIA CIVIL EN SONIDO Y ACUSTICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="238"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN SONIDO Y ACUSTICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN SONIDO Y ACUSTICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="451.2206" y="-925.5572"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="111" label="TECNICO EN DEPORTE, RECREACION Y PREPARACION FISICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="6"></attvalue>
+          <attvalue for="knowledge area" value="Educación"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="111"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN DEPORTE, RECREACION Y PREPARACION FISICA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN DEPORTE, RECREACION Y PREPARACION FISICA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-999.04114" y="224.09308"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="205" label="FISICA Y ASTRONOMIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="205"></attvalue>
+          <attvalue for="generic career" value="FISICA Y ASTRONOMIA"></attvalue>
+          <attvalue for="acategory" value="FISICA Y ASTRONOMIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="8.0"></viz:size>
+        <viz:position x="-126.96134" y="-225.22603"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="97" label="MUSICA, CANTO O DANZA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="3"></attvalue>
+          <attvalue for="oecd subarea" value="Artes"></attvalue>
+          <attvalue for="generic career id" value="97"></attvalue>
+          <attvalue for="generic career" value="MUSICA, CANTO O DANZA"></attvalue>
+          <attvalue for="acategory" value="MUSICA, CANTO O DANZA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-639.48816" y="819.4941"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="133" label="TECNICO EN MINERIA Y METALURGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="133"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN MINERIA Y METALURGIA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN MINERIA Y METALURGIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="599.6214" y="-679.8114"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="123" label="TECNICO EN MECANICA AUTOMOTRIZ">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="123"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN MECANICA AUTOMOTRIZ"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN MECANICA AUTOMOTRIZ"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="952.74274" y="-411.40842"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="127" label="TECNICO EN INSTRUMENTACION, AUTOMATIZACION Y CONTROL INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="127"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN INSTRUMENTACION, AUTOMATIZACION Y CONTROL INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN INSTRUMENTACION, AUTOMATIZACION Y CONTROL INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="5.142857"></viz:size>
+        <viz:position x="309.0246" y="-837.6804"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="128" label="TECNICO EN MANTENIMIENTO INDUSTRIAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="128"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN MANTENIMIENTO INDUSTRIAL"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN MANTENIMIENTO INDUSTRIAL"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="721.72095" y="-584.24677"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="153" label="INGENIERIA EN ACUICULTURA Y PESCA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="1"></attvalue>
+          <attvalue for="oecd subarea" value="Agricultura, Silvicultura y Pesca"></attvalue>
+          <attvalue for="generic career id" value="153"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN ACUICULTURA Y PESCA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN ACUICULTURA Y PESCA"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-1020.30695" y="-228.07147"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="193" label="ARQUEOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="5"></attvalue>
+          <attvalue for="oecd area" value="Humanidades y Artes"></attvalue>
+          <attvalue for="oecd subarea id" value="11"></attvalue>
+          <attvalue for="oecd subarea" value="Humanidades"></attvalue>
+          <attvalue for="generic career id" value="193"></attvalue>
+          <attvalue for="generic career" value="ARQUEOLOGIA"></attvalue>
+          <attvalue for="acategory" value="ARQUEOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Humanidades y Artes"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="787.41486" y="675.1439"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="248" label="MATEMATICAS Y/O ESTADISTICAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="15"></attvalue>
+          <attvalue for="oecd subarea" value="Matemáticas y Estadísticas"></attvalue>
+          <attvalue for="generic career id" value="248"></attvalue>
+          <attvalue for="generic career" value="MATEMATICAS Y/O ESTADISTICAS"></attvalue>
+          <attvalue for="acategory" value="MATEMATICAS Y/O ESTADISTICAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="7.4285717"></viz:size>
+        <viz:position x="-101.80337" y="95.69095"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="274" label="INGENIERIA CIVIL BIOQUIMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="274"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL BIOQUIMICA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL BIOQUIMICA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="-111.167786" y="-722.1133"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="208" label="OTRAS INGENIERIAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="13"></attvalue>
+          <attvalue for="oecd subarea" value="Informática"></attvalue>
+          <attvalue for="generic career id" value="208"></attvalue>
+          <attvalue for="generic career" value="OTRAS INGENIERIAS"></attvalue>
+          <attvalue for="acategory" value="OTRAS INGENIERIAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-89.338715" y="-67.225365"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="268" label="INGENIERIA CIVIL EN MATERIALES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="268"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN MATERIALES"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN MATERIALES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="6.285714"></viz:size>
+        <viz:position x="46.53268" y="-776.83844"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="241" label="QUIMICA AMBIENTAL">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="5"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias de la Vida"></attvalue>
+          <attvalue for="generic career id" value="241"></attvalue>
+          <attvalue for="generic career" value="QUIMICA AMBIENTAL"></attvalue>
+          <attvalue for="acategory" value="QUIMICA AMBIENTAL"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="5.714286"></viz:size>
+        <viz:position x="-641.5864" y="-619.0324"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="275" label="OTROS PROFESIONALES DE CIENCIAS BASICAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="10"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Básicas"></attvalue>
+          <attvalue for="oecd area id" value="2"></attvalue>
+          <attvalue for="oecd area" value="Ciencias"></attvalue>
+          <attvalue for="oecd subarea id" value="6"></attvalue>
+          <attvalue for="oecd subarea" value="Ciencias Físicas"></attvalue>
+          <attvalue for="generic career id" value="275"></attvalue>
+          <attvalue for="generic career" value="OTROS PROFESIONALES DE CIENCIAS BASICAS"></attvalue>
+          <attvalue for="acategory" value="OTROS PROFESIONALES DE CIENCIAS BASICAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-954.0521" y="-389.75137"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="271" label="TECNICO EN PROYECTOS DE INGENIERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="271"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN PROYECTOS DE INGENIERIA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN PROYECTOS DE INGENIERIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="-55.686405" y="-1028.8123"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="272" label="TECNICO EN PROYECTO Y DISENO MECANICO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="272"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN PROYECTO Y DISENO MECANICO"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN PROYECTO Y DISENO MECANICO"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.571429"></viz:size>
+        <viz:position x="145.404" y="-901.48395"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="10" label="ADMINISTRACION GASTRONOMICA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="10"></attvalue>
+          <attvalue for="generic career" value="ADMINISTRACION GASTRONOMICA"></attvalue>
+          <attvalue for="acategory" value="ADMINISTRACION GASTRONOMICA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="1047.0201" y="81.63828"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="21" label="TECNICO EN TURISMO Y HOTELERIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="2"></attvalue>
+          <attvalue for="knowledge area" value="Administración y Comercio"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="21"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN TURISMO Y HOTELERIA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN TURISMO Y HOTELERIA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-904.07855" y="535.5566"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="116" label="TECNICO EN ALIMENTOS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="116"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN ALIMENTOS"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN ALIMENTOS"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="289.3876" y="-1000.47534"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="119" label="OTROS TECNICOS DE TECNOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="119"></attvalue>
+          <attvalue for="generic career" value="OTROS TECNICOS DE TECNOLOGIA"></attvalue>
+          <attvalue for="acategory" value="OTROS TECNICOS DE TECNOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="747.779" y="-739.7915"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="121" label="TECNICO EN MEDIO AMBIENTE (CONTROL Y GESTION)">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="18"></attvalue>
+          <attvalue for="oecd subarea" value="Protección del Medio Ambiente"></attvalue>
+          <attvalue for="generic career id" value="121"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN MEDIO AMBIENTE (CONTROL Y GESTION)"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN MEDIO AMBIENTE (CONTROL Y GESTION)"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-509.4936" y="902.9777"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="131" label="TECNICO EN TOPOGRAFIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="2"></attvalue>
+          <attvalue for="oecd subarea" value="Arquitectura y Construcción"></attvalue>
+          <attvalue for="generic career id" value="131"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN TOPOGRAFIA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN TOPOGRAFIA"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-968.30225" y="375.30377"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="137" label="RELACIONES PUBLICAS">
+        <attvalues>
+          <attvalue for="knowledge area id" value="4"></attvalue>
+          <attvalue for="knowledge area" value="Ciencias Sociales"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="9"></attvalue>
+          <attvalue for="oecd subarea" value="Enseñanza Comercial y Administración"></attvalue>
+          <attvalue for="generic career id" value="137"></attvalue>
+          <attvalue for="generic career" value="RELACIONES PUBLICAS"></attvalue>
+          <attvalue for="acategory" value="RELACIONES PUBLICAS"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-892.0857" y="-533.4555"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="145" label="INGENIERIA EN SONIDO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="14"></attvalue>
+          <attvalue for="oecd subarea" value="Ingeniería y Profesiones Afines"></attvalue>
+          <attvalue for="generic career id" value="145"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN SONIDO"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN SONIDO"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="119.22836" y="-1043.75"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="180" label="OTROS PROFESIONALES DE ARTE Y ARQUITECTURA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="3"></attvalue>
+          <attvalue for="knowledge area" value="Arte y Arquitectura"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="21"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios Personales"></attvalue>
+          <attvalue for="generic career id" value="180"></attvalue>
+          <attvalue for="generic career" value="OTROS PROFESIONALES DE ARTE Y ARQUITECTURA"></attvalue>
+          <attvalue for="acategory" value="OTROS PROFESIONALES DE ARTE Y ARQUITECTURA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="887.1806" y="-568.9544"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="195" label="BIBLIOTECOLOGIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="7"></attvalue>
+          <attvalue for="knowledge area" value="Humanidades"></attvalue>
+          <attvalue for="oecd area id" value="3"></attvalue>
+          <attvalue for="oecd area" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+          <attvalue for="oecd subarea id" value="17"></attvalue>
+          <attvalue for="oecd subarea" value="Periodismo e Información"></attvalue>
+          <attvalue for="generic career id" value="195"></attvalue>
+          <attvalue for="generic career" value="BIBLIOTECOLOGIA"></attvalue>
+          <attvalue for="acategory" value="BIBLIOTECOLOGIA"></attvalue>
+          <attvalue for="cluster" value="Ciencias Sociales, Enseñanza Comercial y Derecho"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-368.59616" y="-964.2808"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="214" label="INGENIERIA MARINA Y MARITIMO PORTUARIA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="20"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios de Transporte"></attvalue>
+          <attvalue for="generic career id" value="214"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA MARINA Y MARITIMO PORTUARIA"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA MARINA Y MARITIMO PORTUARIA"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="670.49023" y="795.69794"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="222" label="TECNICO EN ACUICULTURA Y PESCA">
+        <attvalues>
+          <attvalue for="knowledge area id" value="5"></attvalue>
+          <attvalue for="knowledge area" value="Agropecuaria"></attvalue>
+          <attvalue for="oecd area id" value="1"></attvalue>
+          <attvalue for="oecd area" value="Agricultura"></attvalue>
+          <attvalue for="oecd subarea id" value="1"></attvalue>
+          <attvalue for="oecd subarea" value="Agricultura, Silvicultura y Pesca"></attvalue>
+          <attvalue for="generic career id" value="222"></attvalue>
+          <attvalue for="generic career" value="TECNICO EN ACUICULTURA Y PESCA"></attvalue>
+          <attvalue for="acategory" value="TECNICO EN ACUICULTURA Y PESCA"></attvalue>
+          <attvalue for="cluster" value="Agricultura"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-52.956505" y="1050.1566"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="256" label="INGENIERIA CIVIL EN INDUSTRIAS FORESTALES">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="6"></attvalue>
+          <attvalue for="oecd area" value="Ingeniería, Industria y Construcción"></attvalue>
+          <attvalue for="oecd subarea id" value="12"></attvalue>
+          <attvalue for="oecd subarea" value="Industria y Producción"></attvalue>
+          <attvalue for="generic career id" value="256"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA CIVIL EN INDUSTRIAS FORESTALES"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA CIVIL EN INDUSTRIAS FORESTALES"></attvalue>
+          <attvalue for="cluster" value="Ingeniería, Industria y Construcción"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="-793.3532" y="-682.5268"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="265" label="INGENIERIA EN TRANSPORTE Y TRANSITO">
+        <attvalues>
+          <attvalue for="knowledge area id" value="1"></attvalue>
+          <attvalue for="knowledge area" value="Tecnología"></attvalue>
+          <attvalue for="oecd area id" value="8"></attvalue>
+          <attvalue for="oecd area" value="Servicios"></attvalue>
+          <attvalue for="oecd subarea id" value="20"></attvalue>
+          <attvalue for="oecd subarea" value="Servicios de Transporte"></attvalue>
+          <attvalue for="generic career id" value="265"></attvalue>
+          <attvalue for="generic career" value="INGENIERIA EN TRANSPORTE Y TRANSITO"></attvalue>
+          <attvalue for="acategory" value="INGENIERIA EN TRANSPORTE Y TRANSITO"></attvalue>
+          <attvalue for="cluster" value="Servicios"></attvalue>
+        </attvalues>
+        <viz:size value="4.0"></viz:size>
+        <viz:position x="594.24115" y="-853.90735"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="1" target="29"></edge>
+      <edge id="1" source="1" target="63"></edge>
+      <edge id="2" source="1" target="218"></edge>
+      <edge id="3" source="2" target="18"></edge>
+      <edge id="4" source="2" target="25"></edge>
+      <edge id="5" source="2" target="48"></edge>
+      <edge id="6" source="2" target="55"></edge>
+      <edge id="7" source="2" target="63"></edge>
+      <edge id="8" source="2" target="169"></edge>
+      <edge id="9" source="3" target="7"></edge>
+      <edge id="10" source="3" target="8"></edge>
+      <edge id="11" source="3" target="16"></edge>
+      <edge id="12" source="3" target="19"></edge>
+      <edge id="13" source="3" target="23"></edge>
+      <edge id="14" source="3" target="62"></edge>
+      <edge id="15" source="3" target="87"></edge>
+      <edge id="16" source="3" target="109"></edge>
+      <edge id="17" source="3" target="171"></edge>
+      <edge id="18" source="3" target="199"></edge>
+      <edge id="19" source="3" target="239"></edge>
+      <edge id="20" source="3" target="243"></edge>
+      <edge id="21" source="5" target="62"></edge>
+      <edge id="22" source="5" target="66"></edge>
+      <edge id="23" source="5" target="109"></edge>
+      <edge id="24" source="5" target="178"></edge>
+      <edge id="25" source="5" target="199"></edge>
+      <edge id="26" source="5" target="232"></edge>
+      <edge id="27" source="6" target="9"></edge>
+      <edge id="28" source="6" target="12"></edge>
+      <edge id="29" source="6" target="13"></edge>
+      <edge id="30" source="6" target="66"></edge>
+      <edge id="31" source="6" target="77"></edge>
+      <edge id="32" source="6" target="83"></edge>
+      <edge id="33" source="6" target="194"></edge>
+      <edge id="34" source="7" target="8"></edge>
+      <edge id="35" source="7" target="16"></edge>
+      <edge id="36" source="7" target="19"></edge>
+      <edge id="37" source="7" target="20"></edge>
+      <edge id="38" source="7" target="23"></edge>
+      <edge id="39" source="7" target="62"></edge>
+      <edge id="40" source="7" target="178"></edge>
+      <edge id="41" source="7" target="199"></edge>
+      <edge id="42" source="7" target="207"></edge>
+      <edge id="43" source="7" target="250"></edge>
+      <edge id="44" source="8" target="16"></edge>
+      <edge id="45" source="8" target="19"></edge>
+      <edge id="46" source="8" target="20"></edge>
+      <edge id="47" source="8" target="23"></edge>
+      <edge id="48" source="8" target="232"></edge>
+      <edge id="49" source="8" target="250"></edge>
+      <edge id="50" source="9" target="55"></edge>
+      <edge id="51" source="9" target="56"></edge>
+      <edge id="52" source="9" target="66"></edge>
+      <edge id="53" source="9" target="77"></edge>
+      <edge id="54" source="9" target="94"></edge>
+      <edge id="55" source="12" target="66"></edge>
+      <edge id="56" source="12" target="77"></edge>
+      <edge id="57" source="12" target="80"></edge>
+      <edge id="58" source="12" target="105"></edge>
+      <edge id="59" source="12" target="194"></edge>
+      <edge id="60" source="13" target="77"></edge>
+      <edge id="61" source="14" target="66"></edge>
+      <edge id="62" source="16" target="19"></edge>
+      <edge id="63" source="16" target="22"></edge>
+      <edge id="64" source="16" target="23"></edge>
+      <edge id="65" source="16" target="62"></edge>
+      <edge id="66" source="16" target="63"></edge>
+      <edge id="67" source="16" target="199"></edge>
+      <edge id="68" source="16" target="232"></edge>
+      <edge id="69" source="17" target="18"></edge>
+      <edge id="70" source="17" target="22"></edge>
+      <edge id="71" source="17" target="25"></edge>
+      <edge id="72" source="17" target="34"></edge>
+      <edge id="73" source="17" target="62"></edge>
+      <edge id="74" source="17" target="63"></edge>
+      <edge id="75" source="17" target="64"></edge>
+      <edge id="76" source="17" target="79"></edge>
+      <edge id="77" source="17" target="192"></edge>
+      <edge id="78" source="17" target="249"></edge>
+      <edge id="79" source="18" target="25"></edge>
+      <edge id="80" source="18" target="63"></edge>
+      <edge id="81" source="18" target="79"></edge>
+      <edge id="82" source="19" target="20"></edge>
+      <edge id="83" source="19" target="23"></edge>
+      <edge id="84" source="19" target="80"></edge>
+      <edge id="85" source="20" target="170"></edge>
+      <edge id="86" source="20" target="202"></edge>
+      <edge id="87" source="20" target="210"></edge>
+      <edge id="88" source="20" target="244"></edge>
+      <edge id="89" source="20" target="255"></edge>
+      <edge id="90" source="20" target="264"></edge>
+      <edge id="91" source="22" target="23"></edge>
+      <edge id="92" source="22" target="46"></edge>
+      <edge id="93" source="22" target="63"></edge>
+      <edge id="94" source="22" target="64"></edge>
+      <edge id="95" source="22" target="87"></edge>
+      <edge id="96" source="22" target="88"></edge>
+      <edge id="97" source="22" target="130"></edge>
+      <edge id="98" source="23" target="87"></edge>
+      <edge id="99" source="23" target="88"></edge>
+      <edge id="100" source="23" target="117"></edge>
+      <edge id="101" source="23" target="239"></edge>
+      <edge id="102" source="23" target="243"></edge>
+      <edge id="103" source="24" target="30"></edge>
+      <edge id="104" source="24" target="37"></edge>
+      <edge id="105" source="24" target="38"></edge>
+      <edge id="106" source="24" target="48"></edge>
+      <edge id="107" source="24" target="55"></edge>
+      <edge id="108" source="24" target="56"></edge>
+      <edge id="109" source="24" target="72"></edge>
+      <edge id="110" source="24" target="76"></edge>
+      <edge id="111" source="24" target="78"></edge>
+      <edge id="112" source="24" target="79"></edge>
+      <edge id="113" source="24" target="89"></edge>
+      <edge id="114" source="24" target="90"></edge>
+      <edge id="115" source="24" target="155"></edge>
+      <edge id="116" source="24" target="157"></edge>
+      <edge id="117" source="24" target="158"></edge>
+      <edge id="118" source="24" target="159"></edge>
+      <edge id="119" source="24" target="161"></edge>
+      <edge id="120" source="24" target="191"></edge>
+      <edge id="121" source="24" target="261"></edge>
+      <edge id="122" source="25" target="34"></edge>
+      <edge id="123" source="25" target="36"></edge>
+      <edge id="124" source="25" target="63"></edge>
+      <edge id="125" source="25" target="251"></edge>
+      <edge id="126" source="26" target="63"></edge>
+      <edge id="127" source="28" target="90"></edge>
+      <edge id="128" source="29" target="114"></edge>
+      <edge id="129" source="30" target="37"></edge>
+      <edge id="130" source="30" target="38"></edge>
+      <edge id="131" source="30" target="56"></edge>
+      <edge id="132" source="30" target="76"></edge>
+      <edge id="133" source="30" target="90"></edge>
+      <edge id="134" source="34" target="62"></edge>
+      <edge id="135" source="34" target="63"></edge>
+      <edge id="136" source="34" target="64"></edge>
+      <edge id="137" source="36" target="63"></edge>
+      <edge id="138" source="36" target="79"></edge>
+      <edge id="139" source="36" target="80"></edge>
+      <edge id="140" source="37" target="38"></edge>
+      <edge id="141" source="37" target="48"></edge>
+      <edge id="142" source="37" target="56"></edge>
+      <edge id="143" source="37" target="59"></edge>
+      <edge id="144" source="37" target="76"></edge>
+      <edge id="145" source="37" target="90"></edge>
+      <edge id="146" source="37" target="155"></edge>
+      <edge id="147" source="37" target="161"></edge>
+      <edge id="148" source="38" target="48"></edge>
+      <edge id="149" source="38" target="56"></edge>
+      <edge id="150" source="38" target="89"></edge>
+      <edge id="151" source="38" target="90"></edge>
+      <edge id="152" source="38" target="98"></edge>
+      <edge id="153" source="38" target="155"></edge>
+      <edge id="154" source="38" target="161"></edge>
+      <edge id="155" source="38" target="177"></edge>
+      <edge id="156" source="38" target="192"></edge>
+      <edge id="157" source="40" target="56"></edge>
+      <edge id="158" source="40" target="58"></edge>
+      <edge id="159" source="40" target="59"></edge>
+      <edge id="160" source="40" target="61"></edge>
+      <edge id="161" source="40" target="65"></edge>
+      <edge id="162" source="40" target="68"></edge>
+      <edge id="163" source="40" target="70"></edge>
+      <edge id="164" source="40" target="71"></edge>
+      <edge id="165" source="40" target="76"></edge>
+      <edge id="166" source="40" target="89"></edge>
+      <edge id="167" source="40" target="202"></edge>
+      <edge id="168" source="40" target="246"></edge>
+      <edge id="169" source="40" target="260"></edge>
+      <edge id="170" source="46" target="64"></edge>
+      <edge id="171" source="46" target="99"></edge>
+      <edge id="172" source="46" target="117"></edge>
+      <edge id="173" source="46" target="173"></edge>
+      <edge id="174" source="48" target="55"></edge>
+      <edge id="175" source="48" target="56"></edge>
+      <edge id="176" source="48" target="72"></edge>
+      <edge id="177" source="48" target="90"></edge>
+      <edge id="178" source="48" target="98"></edge>
+      <edge id="179" source="48" target="155"></edge>
+      <edge id="180" source="48" target="161"></edge>
+      <edge id="181" source="48" target="169"></edge>
+      <edge id="182" source="48" target="191"></edge>
+      <edge id="183" source="48" target="212"></edge>
+      <edge id="184" source="55" target="56"></edge>
+      <edge id="185" source="55" target="72"></edge>
+      <edge id="186" source="55" target="77"></edge>
+      <edge id="187" source="55" target="78"></edge>
+      <edge id="188" source="55" target="79"></edge>
+      <edge id="189" source="55" target="94"></edge>
+      <edge id="190" source="55" target="95"></edge>
+      <edge id="191" source="55" target="138"></edge>
+      <edge id="192" source="55" target="155"></edge>
+      <edge id="193" source="55" target="157"></edge>
+      <edge id="194" source="55" target="158"></edge>
+      <edge id="195" source="55" target="159"></edge>
+      <edge id="196" source="55" target="160"></edge>
+      <edge id="197" source="55" target="161"></edge>
+      <edge id="198" source="55" target="169"></edge>
+      <edge id="199" source="55" target="194"></edge>
+      <edge id="200" source="55" target="212"></edge>
+      <edge id="201" source="55" target="261"></edge>
+      <edge id="202" source="55" target="266"></edge>
+      <edge id="203" source="56" target="59"></edge>
+      <edge id="204" source="56" target="72"></edge>
+      <edge id="205" source="56" target="76"></edge>
+      <edge id="206" source="56" target="77"></edge>
+      <edge id="207" source="56" target="78"></edge>
+      <edge id="208" source="56" target="79"></edge>
+      <edge id="209" source="56" target="90"></edge>
+      <edge id="210" source="56" target="98"></edge>
+      <edge id="211" source="56" target="155"></edge>
+      <edge id="212" source="56" target="157"></edge>
+      <edge id="213" source="56" target="158"></edge>
+      <edge id="214" source="56" target="159"></edge>
+      <edge id="215" source="56" target="161"></edge>
+      <edge id="216" source="56" target="169"></edge>
+      <edge id="217" source="56" target="191"></edge>
+      <edge id="218" source="56" target="194"></edge>
+      <edge id="219" source="56" target="211"></edge>
+      <edge id="220" source="56" target="212"></edge>
+      <edge id="221" source="56" target="261"></edge>
+      <edge id="222" source="56" target="266"></edge>
+      <edge id="223" source="58" target="59"></edge>
+      <edge id="224" source="58" target="61"></edge>
+      <edge id="225" source="58" target="67"></edge>
+      <edge id="226" source="58" target="68"></edge>
+      <edge id="227" source="58" target="70"></edge>
+      <edge id="228" source="58" target="71"></edge>
+      <edge id="229" source="58" target="202"></edge>
+      <edge id="230" source="58" target="260"></edge>
+      <edge id="231" source="58" target="267"></edge>
+      <edge id="232" source="59" target="61"></edge>
+      <edge id="233" source="59" target="68"></edge>
+      <edge id="234" source="59" target="70"></edge>
+      <edge id="235" source="59" target="71"></edge>
+      <edge id="236" source="59" target="76"></edge>
+      <edge id="237" source="59" target="90"></edge>
+      <edge id="238" source="61" target="65"></edge>
+      <edge id="239" source="61" target="67"></edge>
+      <edge id="240" source="61" target="68"></edge>
+      <edge id="241" source="61" target="70"></edge>
+      <edge id="242" source="61" target="71"></edge>
+      <edge id="243" source="61" target="76"></edge>
+      <edge id="244" source="61" target="80"></edge>
+      <edge id="245" source="61" target="177"></edge>
+      <edge id="246" source="61" target="197"></edge>
+      <edge id="247" source="61" target="202"></edge>
+      <edge id="248" source="61" target="204"></edge>
+      <edge id="249" source="61" target="255"></edge>
+      <edge id="250" source="61" target="260"></edge>
+      <edge id="251" source="62" target="63"></edge>
+      <edge id="252" source="62" target="64"></edge>
+      <edge id="253" source="62" target="88"></edge>
+      <edge id="254" source="62" target="92"></edge>
+      <edge id="255" source="62" target="109"></edge>
+      <edge id="256" source="62" target="178"></edge>
+      <edge id="257" source="62" target="199"></edge>
+      <edge id="258" source="62" target="207"></edge>
+      <edge id="259" source="62" target="218"></edge>
+      <edge id="260" source="62" target="232"></edge>
+      <edge id="261" source="62" target="239"></edge>
+      <edge id="262" source="62" target="242"></edge>
+      <edge id="263" source="62" target="243"></edge>
+      <edge id="264" source="62" target="244"></edge>
+      <edge id="265" source="62" target="253"></edge>
+      <edge id="266" source="62" target="258"></edge>
+      <edge id="267" source="62" target="259"></edge>
+      <edge id="268" source="63" target="64"></edge>
+      <edge id="269" source="63" target="66"></edge>
+      <edge id="270" source="63" target="72"></edge>
+      <edge id="271" source="63" target="79"></edge>
+      <edge id="272" source="63" target="109"></edge>
+      <edge id="273" source="63" target="178"></edge>
+      <edge id="274" source="63" target="192"></edge>
+      <edge id="275" source="63" target="199"></edge>
+      <edge id="276" source="63" target="249"></edge>
+      <edge id="277" source="63" target="251"></edge>
+      <edge id="278" source="63" target="259"></edge>
+      <edge id="279" source="63" target="266"></edge>
+      <edge id="280" source="63" target="267"></edge>
+      <edge id="281" source="64" target="87"></edge>
+      <edge id="282" source="64" target="88"></edge>
+      <edge id="283" source="64" target="109"></edge>
+      <edge id="284" source="64" target="130"></edge>
+      <edge id="285" source="64" target="178"></edge>
+      <edge id="286" source="64" target="192"></edge>
+      <edge id="287" source="64" target="199"></edge>
+      <edge id="288" source="64" target="239"></edge>
+      <edge id="289" source="64" target="242"></edge>
+      <edge id="290" source="64" target="243"></edge>
+      <edge id="291" source="64" target="253"></edge>
+      <edge id="292" source="64" target="258"></edge>
+      <edge id="293" source="64" target="259"></edge>
+      <edge id="294" source="65" target="68"></edge>
+      <edge id="295" source="65" target="70"></edge>
+      <edge id="296" source="65" target="71"></edge>
+      <edge id="297" source="65" target="76"></edge>
+      <edge id="298" source="65" target="81"></edge>
+      <edge id="299" source="65" target="82"></edge>
+      <edge id="300" source="65" target="176"></edge>
+      <edge id="301" source="65" target="206"></edge>
+      <edge id="302" source="65" target="247"></edge>
+      <edge id="303" source="66" target="72"></edge>
+      <edge id="304" source="66" target="77"></edge>
+      <edge id="305" source="66" target="105"></edge>
+      <edge id="306" source="66" target="109"></edge>
+      <edge id="307" source="66" target="194"></edge>
+      <edge id="308" source="66" target="232"></edge>
+      <edge id="309" source="67" target="68"></edge>
+      <edge id="310" source="67" target="70"></edge>
+      <edge id="311" source="67" target="71"></edge>
+      <edge id="312" source="67" target="197"></edge>
+      <edge id="313" source="67" target="202"></edge>
+      <edge id="314" source="67" target="204"></edge>
+      <edge id="315" source="67" target="260"></edge>
+      <edge id="316" source="67" target="267"></edge>
+      <edge id="317" source="68" target="70"></edge>
+      <edge id="318" source="68" target="71"></edge>
+      <edge id="319" source="68" target="76"></edge>
+      <edge id="320" source="68" target="202"></edge>
+      <edge id="321" source="68" target="260"></edge>
+      <edge id="322" source="70" target="71"></edge>
+      <edge id="323" source="70" target="76"></edge>
+      <edge id="324" source="70" target="177"></edge>
+      <edge id="325" source="70" target="202"></edge>
+      <edge id="326" source="70" target="260"></edge>
+      <edge id="327" source="70" target="267"></edge>
+      <edge id="328" source="71" target="76"></edge>
+      <edge id="329" source="71" target="89"></edge>
+      <edge id="330" source="71" target="179"></edge>
+      <edge id="331" source="71" target="202"></edge>
+      <edge id="332" source="71" target="260"></edge>
+      <edge id="333" source="72" target="78"></edge>
+      <edge id="334" source="72" target="79"></edge>
+      <edge id="335" source="72" target="155"></edge>
+      <edge id="336" source="72" target="157"></edge>
+      <edge id="337" source="72" target="158"></edge>
+      <edge id="338" source="72" target="159"></edge>
+      <edge id="339" source="72" target="160"></edge>
+      <edge id="340" source="72" target="161"></edge>
+      <edge id="341" source="72" target="169"></edge>
+      <edge id="342" source="72" target="188"></edge>
+      <edge id="343" source="72" target="211"></edge>
+      <edge id="344" source="72" target="212"></edge>
+      <edge id="345" source="72" target="261"></edge>
+      <edge id="346" source="72" target="266"></edge>
+      <edge id="347" source="76" target="89"></edge>
+      <edge id="348" source="76" target="90"></edge>
+      <edge id="349" source="76" target="179"></edge>
+      <edge id="350" source="77" target="83"></edge>
+      <edge id="351" source="77" target="94"></edge>
+      <edge id="352" source="77" target="184"></edge>
+      <edge id="353" source="77" target="194"></edge>
+      <edge id="354" source="78" target="79"></edge>
+      <edge id="355" source="78" target="155"></edge>
+      <edge id="356" source="78" target="157"></edge>
+      <edge id="357" source="78" target="158"></edge>
+      <edge id="358" source="78" target="159"></edge>
+      <edge id="359" source="78" target="160"></edge>
+      <edge id="360" source="78" target="161"></edge>
+      <edge id="361" source="78" target="188"></edge>
+      <edge id="362" source="78" target="191"></edge>
+      <edge id="363" source="78" target="211"></edge>
+      <edge id="364" source="78" target="261"></edge>
+      <edge id="365" source="78" target="266"></edge>
+      <edge id="366" source="79" target="155"></edge>
+      <edge id="367" source="79" target="157"></edge>
+      <edge id="368" source="79" target="159"></edge>
+      <edge id="369" source="79" target="160"></edge>
+      <edge id="370" source="79" target="188"></edge>
+      <edge id="371" source="80" target="170"></edge>
+      <edge id="372" source="80" target="197"></edge>
+      <edge id="373" source="80" target="204"></edge>
+      <edge id="374" source="80" target="216"></edge>
+      <edge id="375" source="80" target="246"></edge>
+      <edge id="376" source="81" target="82"></edge>
+      <edge id="377" source="81" target="115"></edge>
+      <edge id="378" source="81" target="122"></edge>
+      <edge id="379" source="81" target="206"></edge>
+      <edge id="380" source="81" target="246"></edge>
+      <edge id="381" source="81" target="247"></edge>
+      <edge id="382" source="81" target="263"></edge>
+      <edge id="383" source="81" target="269"></edge>
+      <edge id="384" source="82" target="122"></edge>
+      <edge id="385" source="82" target="247"></edge>
+      <edge id="386" source="83" target="94"></edge>
+      <edge id="387" source="87" target="88"></edge>
+      <edge id="388" source="87" target="173"></edge>
+      <edge id="389" source="87" target="239"></edge>
+      <edge id="390" source="87" target="253"></edge>
+      <edge id="391" source="88" target="130"></edge>
+      <edge id="392" source="88" target="173"></edge>
+      <edge id="393" source="88" target="199"></edge>
+      <edge id="394" source="88" target="238"></edge>
+      <edge id="395" source="88" target="239"></edge>
+      <edge id="396" source="88" target="243"></edge>
+      <edge id="397" source="88" target="253"></edge>
+      <edge id="398" source="88" target="258"></edge>
+      <edge id="399" source="89" target="111"></edge>
+      <edge id="400" source="89" target="179"></edge>
+      <edge id="401" source="90" target="161"></edge>
+      <edge id="402" source="92" target="178"></edge>
+      <edge id="403" source="92" target="199"></edge>
+      <edge id="404" source="92" target="205"></edge>
+      <edge id="405" source="92" target="207"></edge>
+      <edge id="406" source="92" target="253"></edge>
+      <edge id="407" source="94" target="95"></edge>
+      <edge id="408" source="94" target="184"></edge>
+      <edge id="409" source="94" target="194"></edge>
+      <edge id="410" source="94" target="212"></edge>
+      <edge id="411" source="95" target="194"></edge>
+      <edge id="412" source="97" target="98"></edge>
+      <edge id="413" source="98" target="155"></edge>
+      <edge id="414" source="98" target="161"></edge>
+      <edge id="415" source="98" target="191"></edge>
+      <edge id="416" source="98" target="194"></edge>
+      <edge id="417" source="99" target="173"></edge>
+      <edge id="418" source="109" target="114"></edge>
+      <edge id="419" source="109" target="178"></edge>
+      <edge id="420" source="109" target="199"></edge>
+      <edge id="421" source="109" target="232"></edge>
+      <edge id="422" source="109" target="243"></edge>
+      <edge id="423" source="109" target="259"></edge>
+      <edge id="424" source="114" target="117"></edge>
+      <edge id="425" source="114" target="133"></edge>
+      <edge id="426" source="114" target="171"></edge>
+      <edge id="427" source="117" target="123"></edge>
+      <edge id="428" source="117" target="127"></edge>
+      <edge id="429" source="117" target="128"></edge>
+      <edge id="430" source="117" target="171"></edge>
+      <edge id="431" source="117" target="173"></edge>
+      <edge id="432" source="117" target="239"></edge>
+      <edge id="433" source="122" target="197"></edge>
+      <edge id="434" source="122" target="218"></edge>
+      <edge id="435" source="122" target="247"></edge>
+      <edge id="436" source="122" target="253"></edge>
+      <edge id="437" source="122" target="263"></edge>
+      <edge id="438" source="122" target="269"></edge>
+      <edge id="439" source="123" target="128"></edge>
+      <edge id="440" source="123" target="171"></edge>
+      <edge id="441" source="127" target="253"></edge>
+      <edge id="442" source="128" target="133"></edge>
+      <edge id="443" source="128" target="171"></edge>
+      <edge id="444" source="133" target="178"></edge>
+      <edge id="445" source="133" target="207"></edge>
+      <edge id="446" source="153" target="206"></edge>
+      <edge id="447" source="155" target="157"></edge>
+      <edge id="448" source="155" target="158"></edge>
+      <edge id="449" source="155" target="159"></edge>
+      <edge id="450" source="155" target="160"></edge>
+      <edge id="451" source="155" target="161"></edge>
+      <edge id="452" source="155" target="191"></edge>
+      <edge id="453" source="157" target="158"></edge>
+      <edge id="454" source="157" target="159"></edge>
+      <edge id="455" source="157" target="160"></edge>
+      <edge id="456" source="157" target="188"></edge>
+      <edge id="457" source="157" target="261"></edge>
+      <edge id="458" source="157" target="266"></edge>
+      <edge id="459" source="158" target="159"></edge>
+      <edge id="460" source="158" target="160"></edge>
+      <edge id="461" source="158" target="193"></edge>
+      <edge id="462" source="158" target="194"></edge>
+      <edge id="463" source="158" target="211"></edge>
+      <edge id="464" source="158" target="212"></edge>
+      <edge id="465" source="158" target="261"></edge>
+      <edge id="466" source="159" target="160"></edge>
+      <edge id="467" source="159" target="161"></edge>
+      <edge id="468" source="159" target="188"></edge>
+      <edge id="469" source="159" target="191"></edge>
+      <edge id="470" source="159" target="211"></edge>
+      <edge id="471" source="159" target="212"></edge>
+      <edge id="472" source="159" target="261"></edge>
+      <edge id="473" source="159" target="266"></edge>
+      <edge id="474" source="161" target="191"></edge>
+      <edge id="475" source="161" target="212"></edge>
+      <edge id="476" source="169" target="212"></edge>
+      <edge id="477" source="170" target="202"></edge>
+      <edge id="478" source="170" target="210"></edge>
+      <edge id="479" source="170" target="264"></edge>
+      <edge id="480" source="176" target="177"></edge>
+      <edge id="481" source="176" target="197"></edge>
+      <edge id="482" source="176" target="204"></edge>
+      <edge id="483" source="176" target="206"></edge>
+      <edge id="484" source="176" target="210"></edge>
+      <edge id="485" source="176" target="267"></edge>
+      <edge id="486" source="177" target="192"></edge>
+      <edge id="487" source="177" target="202"></edge>
+      <edge id="488" source="177" target="204"></edge>
+      <edge id="489" source="177" target="205"></edge>
+      <edge id="490" source="177" target="210"></edge>
+      <edge id="491" source="177" target="248"></edge>
+      <edge id="492" source="178" target="199"></edge>
+      <edge id="493" source="178" target="207"></edge>
+      <edge id="494" source="178" target="218"></edge>
+      <edge id="495" source="178" target="232"></edge>
+      <edge id="496" source="178" target="239"></edge>
+      <edge id="497" source="178" target="243"></edge>
+      <edge id="498" source="178" target="244"></edge>
+      <edge id="499" source="184" target="194"></edge>
+      <edge id="500" source="188" target="212"></edge>
+      <edge id="501" source="191" target="211"></edge>
+      <edge id="502" source="192" target="205"></edge>
+      <edge id="503" source="192" target="242"></edge>
+      <edge id="504" source="192" target="248"></edge>
+      <edge id="505" source="192" target="249"></edge>
+      <edge id="506" source="194" target="211"></edge>
+      <edge id="507" source="194" target="212"></edge>
+      <edge id="508" source="197" target="202"></edge>
+      <edge id="509" source="197" target="204"></edge>
+      <edge id="510" source="197" target="206"></edge>
+      <edge id="511" source="197" target="253"></edge>
+      <edge id="512" source="197" target="264"></edge>
+      <edge id="513" source="197" target="274"></edge>
+      <edge id="514" source="199" target="205"></edge>
+      <edge id="515" source="199" target="207"></edge>
+      <edge id="516" source="199" target="208"></edge>
+      <edge id="517" source="199" target="218"></edge>
+      <edge id="518" source="199" target="232"></edge>
+      <edge id="519" source="199" target="239"></edge>
+      <edge id="520" source="199" target="242"></edge>
+      <edge id="521" source="199" target="243"></edge>
+      <edge id="522" source="199" target="244"></edge>
+      <edge id="523" source="199" target="248"></edge>
+      <edge id="524" source="199" target="249"></edge>
+      <edge id="525" source="199" target="253"></edge>
+      <edge id="526" source="199" target="258"></edge>
+      <edge id="527" source="199" target="259"></edge>
+      <edge id="528" source="199" target="267"></edge>
+      <edge id="529" source="199" target="268"></edge>
+      <edge id="530" source="202" target="204"></edge>
+      <edge id="531" source="202" target="210"></edge>
+      <edge id="532" source="202" target="241"></edge>
+      <edge id="533" source="202" target="244"></edge>
+      <edge id="534" source="202" target="255"></edge>
+      <edge id="535" source="202" target="264"></edge>
+      <edge id="536" source="204" target="206"></edge>
+      <edge id="537" source="204" target="210"></edge>
+      <edge id="538" source="204" target="241"></edge>
+      <edge id="539" source="204" target="244"></edge>
+      <edge id="540" source="204" target="255"></edge>
+      <edge id="541" source="204" target="264"></edge>
+      <edge id="542" source="204" target="267"></edge>
+      <edge id="543" source="204" target="274"></edge>
+      <edge id="544" source="205" target="208"></edge>
+      <edge id="545" source="205" target="248"></edge>
+      <edge id="546" source="205" target="253"></edge>
+      <edge id="547" source="206" target="247"></edge>
+      <edge id="548" source="206" target="275"></edge>
+      <edge id="549" source="207" target="239"></edge>
+      <edge id="550" source="207" target="243"></edge>
+      <edge id="551" source="207" target="244"></edge>
+      <edge id="552" source="207" target="268"></edge>
+      <edge id="553" source="208" target="249"></edge>
+      <edge id="554" source="210" target="241"></edge>
+      <edge id="555" source="210" target="244"></edge>
+      <edge id="556" source="210" target="255"></edge>
+      <edge id="557" source="211" target="212"></edge>
+      <edge id="558" source="218" target="247"></edge>
+      <edge id="559" source="232" target="239"></edge>
+      <edge id="560" source="232" target="243"></edge>
+      <edge id="561" source="232" target="250"></edge>
+      <edge id="562" source="232" target="259"></edge>
+      <edge id="563" source="239" target="242"></edge>
+      <edge id="564" source="239" target="243"></edge>
+      <edge id="565" source="239" target="244"></edge>
+      <edge id="566" source="239" target="250"></edge>
+      <edge id="567" source="239" target="253"></edge>
+      <edge id="568" source="239" target="258"></edge>
+      <edge id="569" source="242" target="243"></edge>
+      <edge id="570" source="242" target="248"></edge>
+      <edge id="571" source="242" target="249"></edge>
+      <edge id="572" source="242" target="253"></edge>
+      <edge id="573" source="243" target="244"></edge>
+      <edge id="574" source="243" target="253"></edge>
+      <edge id="575" source="243" target="268"></edge>
+      <edge id="576" source="244" target="264"></edge>
+      <edge id="577" source="244" target="274"></edge>
+      <edge id="578" source="248" target="249"></edge>
+      <edge id="579" source="253" target="268"></edge>
+      <edge id="580" source="253" target="274"></edge>
+      <edge id="581" source="260" target="267"></edge>
+      <edge id="582" source="261" target="266"></edge>
+      <edge id="583" source="263" target="269"></edge>
+      <edge id="584" source="266" target="267"></edge>
+      <edge id="585" source="271" target="272"></edge>
+    </edges>
+  </graph>
+</gexf>

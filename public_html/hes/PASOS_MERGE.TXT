@@ -1,0 +1,61 @@
+- Copiar index.html -> about.html
+- En CSS/the-big-picture.css
+	- comment background or remove
+- En index.html
+	- Remove the only one h1 and p tag.
+	<h1 class="mt-5">The Big Picture</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates rerum eveniet sapiente repellat esse, doloremque quod recusandae deleniti nostrum assumenda vel beatae sed aut modi nesciunt porro quisquam voluptatem.</p>
+
+    - Replace TITLE
+    <title>The Big Picture - Start Bootstrap Template</title>
+    BY: Espacio Educación Superior Chileno
+
+- MERGE NETWORK WITH HTML (index.html)
+	- Add js libraries from Nw to HTML:
+		- In line app. 18, before end HEAD, add all after TITLE and before end HEAD. From Network to HTML.
+	- REMOVE div of contents
+		-  <div class="col-lg-3">
+	- Add the DIV containing the network to DIV ROW in contents in HTML.
+	- <div id="htmlwidget-78a29a0bd556d2a5b69a" class="visNetwork html-widget" style="width:100%;height:700px;">
+
+	- Add data and other scripts.
+		- Everithing before the end of body in Netw to same place in HTML.
+
+- Change details in HTML:
+
+	- Delete main title from VIS
+	- replace {"text":"Espacio de Educación Superior Chileno","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"}
+	by 
+	Null
+	- replace "height":"700"  by "height":"650"
+- Barra Navegacion
+
+Usar esta
+
+<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Espacio Educación Superior Chileno</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="acerca.html">Acerca</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-019-0218-4" target="blank">Paper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://complejidadsocial.udd.cl/" target="blank">CICS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

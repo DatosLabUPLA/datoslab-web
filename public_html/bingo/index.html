@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>B I N G O - Familiar/Comunitario de 75 números</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.7.1.js"
+    
+  ></script>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+             div {
+            text-align: center;
+        }
+
+        .bigNumberDisplay {
+            font-size: 10em;
+        }
+
+        .numbersTable {
+            font-size: 1.6em;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table, tr, td {
+            border-collapse: collapse;
+            border: solid 1px #999;
+        }
+
+        td {
+            min-width: 70px;
+            color: #fff; //poner en negro si se quiere hacer debug
+        }
+
+        td.selected {
+            color: #f00;
+        }
+        th {
+            color: #00f;
+        }
+
+
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    $(window).load(function(){
+      
+$(function() {
+    var bingo = {
+        selectedNumbers: [],
+        generateRandom: function() {
+            var min = 1; //1 osea 0
+            var max = 75; // 89 osea 89
+            var random = Math.floor(Math.random() * (max - min + 1)) + min;
+            console.log("Random", random)
+            return random;
+        },
+        generateNextRandom: function() {
+            if (bingo.selectedNumbers.length > 74) {
+                alert("Ya salieron todos los números!");
+                return 0;
+            }
+            var random = bingo.generateRandom();
+            while ($.inArray(random, bingo.selectedNumbers) > -1) {
+                random = bingo.generateRandom();
+            }
+            bingo.selectedNumbers.push(random);
+            return random;
+        }
+    };
+    //numera todas las celdas, luego solo las hace aparecer con rojo
+    $('td').each(function() {
+        var concatClass = parseInt(this.cellIndex) + parseInt(this.parentNode.rowIndex) *15 ;
+        var numberString = parseInt(concatClass).toString();
+        $(this).addClass("cell" + numberString).text(numberString);
+        console.log("parent", this.parentNode.rowIndex)
+        console.log("cellIndex", this.cellIndex)
+    });
+    $('#btnGenerate').click(function() {
+        var random = bingo.generateNextRandom().toString();
+        $('.bigNumberDisplay span').text(random);
+        $('td.cell' + random).addClass('selected');
+    });
+    window.onbeforeunload = function(e) {
+        e = e || window.event;
+        var returnString = 'Are you sure?';
+        if (e) {
+            e.returnValue = returnString;
+        }
+        return returnString;
+    };
+});
+
+    });
+
+  //]]></script>
+
+</head>
+<body>
+    <div class="container">
+    <div>
+        <p>Bingo Comunitario/Familiar. </p>
+    </div>
+    <div class="bigNumberDisplay">
+        <span>0</span>
+    </div>
+    <div>
+        <input id="btnGenerate" type="button" value="Rueda la bolita..."/>
+    </div>
+
+    <br/>
+<div>
+    
+
+</div>
+    <div class="numbersTable">
+        <table>
+
+            <tr>
+                <th>B</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th>I</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                
+            </tr>
+            <tr>
+                <th>N</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <th>G</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <th>O</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            
+        </table>
+    </div>
+
+    <br/>
+
+    <div>
+        <span>Crear cartones en <a href="http://www.bingo.es/cartones-bingo/"
+                           title="bingo.es" target="blank">Bingo.es</a></span>
+                           Codigo base de <a href="http://jsfiddle.net/FloydPink/KHLtw/" target="blank">Aqui</a>
+    </div>
+</div>
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "KHLtw"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
