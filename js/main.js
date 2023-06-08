@@ -62,53 +62,53 @@ fetch(apiUrl)
                 <!-- Modal Project ${item.proyecto} -->
                 <div class="portfolio-modal modal fade" id="portfolioModal-${stringToSlug(item.proyecto)}" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">${item.proyecto}</h2>
-                                <hr class="my-4">
-                                <!--SLIDER-->
-                                <div id="carouselControls-${stringToSlug(item.proyecto)}" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                    <img class="d-block w-100" src="img/portfolio/img/portfolio/1.jpg" alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/portfolio/img/portfolio/2.jpg" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                    <img class="d-block w-100" src="img/portfolio/img/portfolio/3.jpg" alt="Third slide">
-                                    </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselControls-${stringToSlug(item.proyecto)}" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselControls-${stringToSlug(item.proyecto)}" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                </div>
+                        <div class="modal-content" style="padding-top:0px; padding-bottom:0px;">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-10">
+                                        <div class="modal-body">
+                                            <!-- Project details-->
+                                            <h2 class="text-uppercase">${item.proyecto}</h2>
+                                            <hr class="mb-4">
+                                            <!--SLIDER-->
+                                            <div id="carouselControls-${stringToSlug(item.proyecto)}" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner" style="max-width=300px;">
+                                                    <div class="carousel-item active">
+                                                        <img class="d-block w-100" src="img/portfolio/img/portfolio/1.jpg" alt="First slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="img/portfolio/img/portfolio/2.jpg" alt="Second slide">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img class="d-block w-100" src="img/portfolio/img/portfolio/3.jpg" alt="Third slide">
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselControls-${stringToSlug(item.proyecto)}" role="button" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselControls-${stringToSlug(item.proyecto)}" role="button" data-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
 
-                                <p class="text-muted">${item.descripcion}</p>
-                                <ul class="list-inline">
-                                <li>
-                                    <h6>${item.persona_a_cargo}</h6>
-                                    <h6 class="text-muted">${item.tipo}</h6>
-                                    <h6 class="text-muted"><a href="${item.url}" target="_blank">${item.url}</a></h6>
-                                </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                Cerrar
-                                </button>
-                            </div>
+                                            <p class="text-muted">${item.descripcion}</p>
+                                            <ul class="list-inline">
+                                                <li>
+                                                    <h6>${item.persona_a_cargo}</h6>
+                                                    <h6 class="text-muted">${item.tipo}</h6>
+                                                    <h6 class="text-muted"><a href="${item.url}" target="_blank">${item.url}</a></h6>
+                                                </li>
+                                            </ul>
+                                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                            Cerrar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             `;
