@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 
 // Tipos para la estructura del componente Navbar
 interface NavbarProps {
@@ -7,103 +8,127 @@ interface NavbarProps {
   menuItems: string[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => (
-  <nav className="navbar bg-gradient-to-r shadow-lg justify-center">
-    <div className="flex items-center space-x-4">
-      <img
-        src={logoSrc}
-        alt={logoAlt}
-        style={{ maxWidth: "70px", maxHeight: "70px" }}
-        className="img-fluid"
-      />
-      <a className="btn btn-ghost normal-case text-2xl font-bold text-current">DatosLab</a>
-    </div>
-    <div className="flex-none">
-      <ul className="menu menu-horizontal px-1">
-        {menuItems.map((item, index) => (
-          <li key={index}>
-            <a className="hover:text-gray-300 text-current">{item}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
+  const [theme, setTheme] = useState("light"); // Tema predeterminado
 
-  <div className="navbar-end">
-  {/* Menú desplegable de temas */}
-  <div className="navbar-end mr-auto dropdown dropdown-hover mb-1">
-    <div
-      tabIndex={0}
-      role="button"
-      className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
-    >
-      Temas
-      <svg
-        width="12px"
-        height="12px"
-        className="inline-block h-2 w-2 fill-current opacity-60 ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 2048 2048"
-      >
-        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-      </svg>
-    </div>
-    <ul
-      tabIndex={0}
-      className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg"
-    >
-      <li>
-        <label className="cursor-pointer flex items-center gap-2">
-          <input
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller"
-            aria-label="Light"
-            value="light"
-          />
-          <span className="text-sm">Light</span>
-        </label>
-      </li>
-      <li>
-        <label className="cursor-pointer flex items-center gap-2">
-          <input
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller"
-            aria-label="Dark"
-            value="dark"
-          />
-          <span className="text-sm">Dark</span>
-        </label>
-      </li>
-      <li>
-        <label className="cursor-pointer flex items-center gap-2">
-          <input
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller"
-            aria-label="Retro"
-            value="retro"
-          />
-          <span className="text-sm">Retro</span>
-        </label>
-      </li>
-      <li>
-        <label className="cursor-pointer flex items-center gap-2">
-          <input
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller"
-            aria-label="Aqua"
-            value="aqua"
-          />
-          <span className="text-sm">Aqua</span>
-        </label>
-      </li>
-    </ul>
-  </div>
-</div>
-  </nav>
-);
+  useEffect(() => {
+    // Establece el tema inicial en el body
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedTheme = e.target.value;
+    setTheme(selectedTheme); // Actualiza el estado del tema
+  };
+
+  return (
+    <nav className="navbar bg-gradient-to-r shadow-lg justify-center">
+      <div className="flex items-center space-x-4">
+        <img
+          src={logoSrc}
+          alt={logoAlt}
+          style={{ maxWidth: "70px", maxHeight: "70px" }}
+          className="img-fluid"
+        />
+        <a className="btn btn-ghost normal-case text-2xl font-bold text-current">
+          DatosLab
+        </a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a className="hover:text-gray-300 text-current">{item}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="navbar-end">
+        {/* Menú desplegable de temas */}
+        <div className="navbar-end mr-auto dropdown dropdown-hover mb-1">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
+          >
+            Temas
+            <svg
+              width="12px"
+              height="12px"
+              className="inline-block h-2 w-2 fill-current opacity-60 ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2048 2048"
+            >
+              <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg"
+          >
+            <li>
+              <label className="cursor-pointer flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller"
+                  aria-label="Light"
+                  value="light"
+                  onChange={handleThemeChange}
+                  checked={theme === "light"}
+                />
+                <span className="text-sm">Light</span>
+              </label>
+            </li>
+            <li>
+              <label className="cursor-pointer flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller"
+                  aria-label="Dark"
+                  value="dark"
+                  onChange={handleThemeChange}
+                  checked={theme === "dark"}
+                />
+                <span className="text-sm">Dark</span>
+              </label>
+            </li>
+            <li>
+              <label className="cursor-pointer flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller"
+                  aria-label="Retro"
+                  value="retro"
+                  onChange={handleThemeChange}
+                  checked={theme === "retro"}
+                />
+                <span className="text-sm">Retro</span>
+              </label>
+            </li>
+            <li>
+              <label className="cursor-pointer flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  className="theme-controller"
+                  aria-label="Aqua"
+                  value="aqua"
+                  onChange={handleThemeChange}
+                  checked={theme === "aqua"}
+                />
+                <span className="text-sm">Aqua</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 const App: React.FC = () => {
   return (
