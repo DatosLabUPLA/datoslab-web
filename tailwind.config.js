@@ -28,6 +28,15 @@ module.exports = {
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
       },
+      animation: {
+        'slide-up': 'slideUp 0.6s ease-out', // Cambié la duración a 0.6s para hacerlo más lento
+      },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
     },
     screens: {
       xs: "480px",
@@ -37,6 +46,37 @@ module.exports = {
   },
   plugins: [require("daisyui")], 
   daisyui: {
-    themes: ["corporate", "dark", "light", "emerald", "current", "synthwave","default","retro","aqua","class"],
+    themes: [
+      "corporate",
+      "dark",
+      "light",
+      "emerald",
+      "current",
+      "synthwave",
+      "default",
+      "retro",
+      "aqua",
+      "class",
+      {
+        mytheme: {
+          "primary": "#FF6B66",
+          "secondary": "#FFC132",
+          "accent": "#FFCD5B",
+          "neutral": "#3D4451",
+          "base-100": "#FFFFFF",
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        },
+      },
+    ],
+    base: true,
+    styled: true, 
+    utils: true, 
+    logs: false,
+    rtl: false,
+    prefix: "",
+    darkTheme: "dark",
   },
 };
