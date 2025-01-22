@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        sans: ["Roboto Mono", "sans-serif"],
       },
       content: {
         evolvetext: "url('./assets/EvolveText.png')",
@@ -57,6 +58,8 @@ module.exports = {
       "retro",
       "aqua",
       "class",
+      "nord",
+      "dim",
       {
         mytheme: {
           "primary": "#FF6B66",
