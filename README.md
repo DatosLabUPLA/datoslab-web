@@ -9,4 +9,5 @@ npx tailwindcss init -p
 npm install daisyui
 npm install tailwindcss
 npx tailwindcss init
+npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 npm run dev
