@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
-
+  
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
@@ -42,6 +42,15 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
     }
   };
 
+  const scrollToSection = (id: string): void => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100; // Desplazamiento ajustado
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  
   return (
     // Navbar
     <section className="z-10 fixed w-full" style={{ top: 0, left: 0, right: 0 }}>
@@ -66,10 +75,21 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
         </div>
 
         <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
-          <ul className={`menu menu-horizontal px-1 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg" : ""}`}>
+          <ul
+            className={`menu menu-horizontal px-1 ${
+              isMenuOpen
+                ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg"
+                : ""
+            }`}
+          >
             {menuItems.map((item, index) => (
               <li key={index}>
-                <a className="hover:text-gray-300 text-current">{item}</a>
+                <button
+                  onClick={() => scrollToSection(item.toLowerCase())} // Conectar a scrollToSection
+                  className="hover:text-gray-300 text-current"
+                >
+                  {item}
+                </button>
               </li>
             ))}
           </ul>
@@ -79,14 +99,14 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
           {/* Menú desplegable de temas */}
           <div
             className="navbar-end mr-auto dropdown dropdown-hover mb-1"
-            onMouseEnter={handleMouseEnter} // Mostrar menú de temas al pasar el mouse
-            onMouseLeave={handleMouseLeave} // Ocultar menú de temas al salir el mouse
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <div
               tabIndex={0}
               role="button"
               className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
-              onClick={toggleThemeMenu} // Alternar el menú de temas
+              onClick={toggleThemeMenu}
             >
               Temas
               <svg
@@ -99,9 +119,8 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                 <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
               </svg>
             </div>
-            {(isThemeMenuOpen || isThemeMenuOpen) && ( // Mostrar el menú de temas si está abierto o al pasar el mouse
-              <ul
-                className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg">
+            {(isThemeMenuOpen || isThemeMenuOpen) && (
+              <ul className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg">
                 {["light", "dark", "retro", "aqua"].map((themeOption) => (
                   <li key={themeOption}>
                     <label className="cursor-pointer flex items-center gap-2">
@@ -130,12 +149,20 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
 const App: React.FC = () => {
   return (
     <div>
-      {/* Navbar */}
       <header>
         <Navbar
           logoSrc="img/datos_lab.png"
           logoAlt="DatosLab"
-          menuItems={["Inicio", "Líneas", "Publicaciones", "Science Mapping", "Participation", "Proyectos", "Contacto"]}
+          menuItems={[
+            "Inicio",
+            "Líneas",
+            "Publicaciones",
+            "Science Mapping",
+            "Participation",
+            "Proyectos",
+            "Equipo",
+            "Contacto",
+          ]}
         />
       </header>
 
@@ -163,7 +190,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Que hacemos */}
-      <section className="p-10 md:p-20 text-center bg-gradient-to-r my-60">
+      <section id="inicio" className="p-10 md:p-20 text-center bg-gradient-to-r my-60">
         <div className="container mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-5">
             Cómo hacer simple la complejidad de los datos
@@ -191,7 +218,7 @@ const App: React.FC = () => {
       </section>
 
         {/* Líneas de Investigación */}
-      <section className="p-10 text-center bg-gradient-to-r my-60">
+      <section id="líneas" className="p-10 text-center bg-gradient-to-r my-60">
         <div className="w-full px-4 mt-8">
           <h2 className="text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
           <div className="flex flex-wrap justify-between gap-5">
@@ -212,7 +239,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Publicaciones */}
-      <section>
+      <section id="publicaciones">
         <div className="bg-gray-800 bg-opacity-30 mt-40 mb-40 py-40">
           <h2 className="text-4xl font-bold text-center mb-8">Publicaciones</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-1">
@@ -235,7 +262,7 @@ const App: React.FC = () => {
       </section>
     
       {/* Science mapping */}
-      <section className="py-20 px-4 md:px-40 lg:px-20">
+      <section id="science mapping" className="py-20 px-4 md:px-40 lg:px-20">
         <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
           <h2 className="text-4xl font-bold text-center mb-16">Science Mapping</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28">
@@ -320,7 +347,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Participation */}
-      <section className="py-20 px-4 md:px-40 lg:px-20">
+      <section id="participation" className="py-20 px-4 md:px-40 lg:px-20">
         <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
           <h2 className="text-4xl font-bold text-center mb-16">Participation</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-28">
@@ -489,135 +516,113 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Slider de imágenes */}
-      <section className="relative mt-8" style={{ marginTop: "80px" }}>
-        <h2 className="text-4xl font-bold text-center mb-6">Proyectos más relevantes</h2>
-        <div className="carousel w-full space-x-4 overflow-hidden">
-          {/* Imagen 1 */}
-          <div id="slide1" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
-              alt="Image 1"
-            />
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-neutral-content text-center absolute inset-0 flex flex-col justify-center items-center">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Proyecto 1</h1>
-                <p className="mb-5">
-                  Descripción breve del proyecto 1. Aquí puedes incluir más detalles.
-                </p>
-                <button className="btn btn-primary">Ver Más</button>
-              </div>
-            </div>
-            {/* Flechas de navegación */}
-            <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
-              <a href="#slide4" className="btn btn-circle">❮</a>
-              <a href="#slide2" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-
-          {/* Imagen 2 */}
-          <div id="slide2" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
-              alt="Image 2"
-            />
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-neutral-content text-center absolute inset-0 flex flex-col justify-center items-center">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Proyecto 2</h1>
-                <p className="mb-5">
-                  Descripción breve del proyecto 2. Aquí puedes incluir más detalles.
-                </p>
-                <button className="btn btn-primary">Ver Más</button>
-              </div>
-            </div>
-            <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
-              <a href="#slide1" className="btn btn-circle">❮</a>
-              <a href="#slide3" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-
-          {/* Imagen 3 */}
-          <div id="slide3" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
-              alt="Image 3"
-            />
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-neutral-content text-center absolute inset-0 flex flex-col justify-center items-center">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Proyecto 3</h1>
-                <p className="mb-5">
-                  Descripción breve del proyecto 3. Aquí puedes incluir más detalles.
-                </p>
-                <button className="btn btn-primary">Ver Más</button>
-              </div>
-            </div>
-            <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
-              <a href="#slide2" className="btn btn-circle">❮</a>
-              <a href="#slide4" className="btn btn-circle">❯</a>
-            </div>
-          </div>
-
-          {/* Imagen 4 */}
-          <div id="slide4" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
-              alt="Image 4"
-            />
-            <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-neutral-content text-center absolute inset-0 flex flex-col justify-center items-center">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Proyecto 4</h1>
-                <p className="mb-5">
-                  Descripción breve del proyecto 4. Aquí puedes incluir más detalles.
-                </p>
-                <button className="btn btn-primary">Ver Más</button>
-              </div>
-            </div>
-            <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
-              <a href="#slide3" className="btn btn-circle">❮</a>
-              <a href="#slide1" className="btn btn-circle">❯</a>
-            </div>
+{/* Slider de imágenes en Tailwind */}
+<section className="relative mt-20">
+  <h2 className="text-4xl font-bold text-center mb-10">
+    Proyectos más relevantes
+  </h2>
+  <div className="relative w-full flex overflow-hidden">
+    {/* Contenedor del slider */}
+    <div className="carousel w-full overflow-hidden relative space-x-4">
+      {/* Imagen 1 */}
+      <div
+        id="slide1"
+        className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto"
+      >
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+          className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
+          alt="Proyecto 1"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-white">
+          <div className="max-w-md text-center">
+            <h1 className="mb-4 text-5xl font-bold">Proyecto 1</h1>
+            <p className="mb-4">Descripción breve del proyecto 1.</p>
+            <button className="btn btn-primary">Ver Más</button>
           </div>
         </div>
-      </section>
+        {/* Flechas de navegación */}
+        <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between">
+          <a href="#slide4" className="btn btn-circle">❮</a>
+          <a href="#slide2" className="btn btn-circle">❯</a>
+        </div>
+      </div>
 
-            {/* Contacto */}
-      <section className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16">
-        <div className="container mx-auto p-5 md:p-40">
-          <h1 className="text-3xl md:text-4xl font-bold mb-5">Nos encanta debatir ideas y participar en nuevos proyectos!</h1>
-          <p className="text-base md:text-lg mb-5">
-            Recibiremos postulaciones de nuevos estudiantes y postdocs durante 2025, contáctanos.
-            Nos encontramos en Subida Leopoldo Carvallo 270, 4to piso, Valparaíso, CHILE.
-          </p>
-
-          {/* Contenedor para los íconos */}
-          <div className="flex justify-center items-center mb-5 space-x-4">
-            <p className="text-base md:text-lg flex items-center">
-              <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              +56 32 2 500 537
-            </p>
-            <p className="text-base md:text-lg flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" className="mr-2" style={{ width: '1em', height: '1em' }}>
-                <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
-              </svg>
-              DatosLab UPLA [Canal]
-            </p>
-            <p className="text-base md:text-lg flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="mr-2" style={{ width: '1em', height: '1em' }}>
-                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
-              </svg>
-              miguel.guevara@upla.cl
-            </p>
+      {/* Imagen 2 */}
+      <div
+        id="slide2"
+        className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto"
+      >
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+          className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
+          alt="Proyecto 2"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-white">
+          <div className="max-w-md text-center">
+            <h1 className="mb-4 text-5xl font-bold">Proyecto 2</h1>
+            <p className="mb-4">Descripción breve del proyecto 2.</p>
+            <button className="btn btn-primary">Ver Más</button>
           </div>
         </div>
-      </section>
+        {/* Flechas de navegación */}
+        <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between">
+          <a href="#slide1" className="btn btn-circle">❮</a>
+          <a href="#slide3" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+      {/* Imagen 3 */}
+      <div
+        id="slide3"
+        className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto"
+      >
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+          className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
+          alt="Proyecto 3"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-white">
+          <div className="max-w-md text-center">
+            <h1 className="mb-4 text-5xl font-bold">Proyecto 3</h1>
+            <p className="mb-4">Descripción breve del proyecto 3.</p>
+            <button className="btn btn-primary">Ver Más</button>
+          </div>
+        </div>
+        {/* Flechas de navegación */}
+        <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between">
+          <a href="#slide2" className="btn btn-circle">❮</a>
+          <a href="#slide4" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+      {/* Imagen 4 */}
+      <div
+        id="slide4"
+        className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto"
+      >
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+          className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
+          alt="Proyecto 4"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center text-white">
+          <div className="max-w-md text-center">
+            <h1 className="mb-4 text-5xl font-bold">Proyecto 4</h1>
+            <p className="mb-4">Descripción breve del proyecto 4.</p>
+            <button className="btn btn-primary">Ver Más</button>
+          </div>
+        </div>
+        {/* Flechas de navegación */}
+        <div className="absolute left-5 right-5 top-1/2 transform -translate-y-1/2 flex justify-between">
+          <a href="#slide3" className="btn btn-circle">❮</a>
+          <a href="#slide1" className="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="footer bg-gray-800 bg-opacity-70 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
