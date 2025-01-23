@@ -7,7 +7,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas */
+  .container {
+    max-width: 100%;
+  }
+}
 /*body {
   font-family: 'Inter', sans-serif; 
 }*/

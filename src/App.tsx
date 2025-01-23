@@ -9,6 +9,8 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("light");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
@@ -17,11 +19,31 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedTheme = e.target.value;
     setTheme(selectedTheme);
+    setIsThemeMenuOpen(false); // Cerrar el menú de temas al seleccionar un tema
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleThemeMenu = () => {
+    setIsThemeMenuOpen(!isThemeMenuOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setIsThemeMenuOpen(true); 
+  };
+
+  const handleMouseLeave = () => {
+    if (!isThemeMenuOpen) {
+      setIsThemeMenuOpen(false); 
+    }
   };
 
   return (
-    <section className="z-10 bg-black fixed w-full" style={{ top: 0, left: 0, right: 0 }}>
-      <nav className="navbar bg-gradient-to-r justify-center fixed bg-base-100">
+    // Navbar
+    <section className="z-10 fixed w-full" style={{ top: 0, left: 0, right: 0 }}>
+      <nav className="navbar bg-gradient-to-r justify-between items-center bg-base-100 p-4">
         <div className="flex items-center space-x-4">
           <img
             src={logoSrc}
@@ -33,8 +55,16 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
             DatosLab
           </a>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
+
+        {/* Menú hamburguesa para pantallas pequeñas */}
+        <div className="flex-none md:hidden">
+          <button onClick={toggleMenu} className="btn btn-ghost">
+            ☰
+          </button>
+        </div>
+
+        <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
+          <ul className={`menu menu-horizontal px-1 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg" : ""}`}>
             {menuItems.map((item, index) => (
               <li key={index}>
                 <a className="hover:text-gray-300 text-current">{item}</a>
@@ -45,11 +75,16 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
 
         <div className="navbar-end">
           {/* Menú desplegable de temas */}
-          <div className="navbar-end mr-auto dropdown dropdown-hover mb-1">
+          <div
+            className="navbar-end mr-auto dropdown dropdown-hover mb-1"
+            onMouseEnter={handleMouseEnter} // Mostrar menú de temas al pasar el mouse
+            onMouseLeave={handleMouseLeave} // Ocultar menú de temas al salir el mouse
+          >
             <div
               tabIndex={0}
               role="button"
               className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
+              onClick={toggleThemeMenu} // Alternar el menú de temas
             >
               Temas
               <svg
@@ -62,67 +97,28 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                 <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg"
-            >
-              <li>
-                <label className="cursor-pointer flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller"
-                    aria-label="Light"
-                    value="light"
-                    onChange={handleThemeChange}
-                    checked={theme === "light"}
-                  />
-                  <span className="text-sm">Light</span>
-                </label>
-              </li>
-              <li>
-                <label className="cursor-pointer flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller"
-                    aria-label="Dark"
-                    value="dark"
-                    onChange={handleThemeChange}
-                    checked={theme === "dark"}
-                  />
-                  <span className="text-sm">Dark</span>
-                </label>
-              </li>
-              <li>
-                <label className="cursor-pointer flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller"
-                    aria-label="Retro"
-                    value="retro"
-                    onChange={handleThemeChange}
-                    checked={theme === "retro"}
-                  />
-                  <span className="text-sm">Retro</span>
-                </label>
-              </li>
-              <li>
-                <label className="cursor-pointer flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="theme-dropdown"
-                    className="theme-controller"
-                    aria-label="Aqua"
-                    value="aqua"
-                    onChange={handleThemeChange}
-                    checked={theme === "aqua"}
-                  />
-                  <span className="text-sm">Aqua</span>
-                </label>
-              </li>
-            </ul>
+            {(isThemeMenuOpen || isThemeMenuOpen) && ( // Mostrar el menú de temas si está abierto o al pasar el mouse
+              <ul
+                className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg"
+              >
+                {["light", "dark", "retro", "aqua"].map((themeOption) => (
+                  <li key={themeOption}>
+                    <label className="cursor-pointer flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        className="theme-controller"
+                        aria-label={themeOption}
+                        value={themeOption}
+                        onChange={handleThemeChange}
+                        checked={theme === themeOption}
+                      />
+                      <span className="text-sm capitalize">{themeOption}</span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </nav>
@@ -166,305 +162,304 @@ const App: React.FC = () => {
       </section>
 
       {/* Que hacemos */}
-      <section className="p-10 text-center bg-gradient-to-r my-60">
+      <section className="p-10 md:p-20 text-center bg-gradient-to-r my-60">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold mb-5">
+          <h1 className="text-3xl md:text-4xl font-bold mb-5">
             Cómo hacer simple la complejidad de los datos
           </h1>
-          <p className="mb-5">
-            Nuestro laboratorio encuentra patrones y valor en datos interrelacionados -y abundantes- a través de nuevos métodos y visualizaciones
+          <p className="text-base md:text-lg mb-5">
+            Nuestro laboratorio encuentra patrones y valor en datos interrelacionados -y abundantes- a través de nuevos métodos y visualizaciones.
           </p>
           <a
             href="#"
-            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
           >
             COMENZAR!
           </a>
         </div>
       </section>
 
-    {/* Quienes somos */}
-    <section className="bg-gray-800 bg-opacity-30 p-60 text-center bg-gradient-to-r shadow-lg my-16">
-      <div className="container mx-auto p-10">
-        <h1 className="text-4xl font-bold mb-5">Somos el laboratorio de Data Science</h1>
-        <p className="text-lg mb-5">
-          Nuestra investigación se aplica a temáticas diversas y con orientación social.
-        </p>
-      </div>
-    </section>
-
-      {/* Líneas de Investigación */}
-    <section className="p-10 text-center bg-gradient-to-r my-60">
-      <div className="w-full px-4 mt-8">
-        <h2 className="text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
-        <div className="flex flex-wrap justify-between gap-5">
-          {[ 
-            { title: "Open Data", description: "Potenciamos la participación ciudadana a través del uso de datos abiertos y de nuevas aplicaciones", iconSrc: "img/iconos/icono1.png" },
-            { title: "Data Analytics", description: "Buscamos patrones significativos en los datos a través de algoritmos computacionales y modelos estadísticos", iconSrc: "img/iconos/icono2.png" },
-            { title: "Networks", description: "Creamos y utilizamos redes complejas basadas en interacciones sociales o información de producción", iconSrc: "img/iconos/icono3.png" },
-            { title: "Data Visualization", description: "Creamos y aplicamos las mejores técnicas de visualización de datos de forma estática o interactiva", iconSrc: "img/iconos/icono4.png" }
-          ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-5 text-center w-full sm:w-[48%] md:w-[23%]">
-              <img src={item.iconSrc} alt={`Icono ${item.title}`} className="w-16 h-16 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold text-blue-500">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
-            </div>
-          ))}
+      {/* Quienes somos */}
+      <section className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16">
+        <div className="container mx-auto p-5 md:p-10">
+          <h1 className="text-3xl md:text-4xl font-bold mb-5">Somos el laboratorio de Data Science</h1>
+          <p className="text-base md:text-lg mb-5">
+            Nuestra investigación se aplica a temáticas diversas y con orientación social.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* Publicaciones */}
-    <section>
-      <div className="bg-gray-800 bg-opacity-30 mt-40 mb-40 py-40">
-        <h2 className="text-4xl font-bold text-center mb-8">Publicaciones</h2>
-        <div className="grid grid-cols-4 gap-5">
-          {[
-            "img/portfolio/thumbnails/research1.png",
-            "img/portfolio/thumbnails/sistemadesarrollo.png",
-            "img/portfolio/thumbnails/3.png",
-            "img/portfolio/thumbnails/research1.png"
-          ].map((src, index) => (
-            <a key={index} className="portfolio-box" href={src} target="_blank" rel="noopener noreferrer">
-              <img
-                src={src}
-                alt={`Research ${index + 1}`}
-                className="p-2 w-full h-[400px] object-cover rounded-lg shadow-lg hover:opacity-80 transition duration-300"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-   
-    {/* Science mapping */}
-    <section className="py-20 px-40">
-      <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
-        <h2 className="text-4xl font-bold text-center mb-16">Science Mapping</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28">
-          {[
-            {
-              description: "Mendoza, M., & Guevara, M. R. (2017). Cienciometría: factores de impacto y mapas de la ciencia. Bits de Ciencia, 15, 8–15.",
-              badges: [
-                <a href="/publications/2017-Bitsdeciencia15-Cienciometria.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>,
-                <a href="/publications/journal/Bitsdeciencia15.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">FULL JOURNAL</div>
-                </a>,
-                <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">VIDEO</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
-              badges: [
-                <a href="https://mguevaraa.medium.com/de-c%C3%B3mo-las-gal%C3%A1pagos-nos-ense%C3%B1an-que-la-migraci%C3%B3n-y-la-diversidad-son-importantes-para-el-2b7efb257826" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">POST</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
-              badges: [
-                <a href="https://link.springer.com/article/10.1007/s11192-016-2125-9" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>,
-                <a href="https://arxiv.org/abs/1602.08409" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PREPRINT</div>
-                </a>,
-                <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">VIDEO</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., Hartmann, D., & Mendoza, M. (2016). diverse: an R Package to Measure Diversity in Complex Systems. The R Journal, 8(2), 60–78.",
-              badges: [
-                <a href="https://journal.r-project.org/archive/2016/RJ-2016-033/" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>,
-                <a href="https://cran.r-project.org/web/packages/diverse/index.html" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">R-PACKAGE</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., & Mendoza, M. (2016). Publishing Patterns in BRIC Countries: A Network Analysis. Publications, 4(3), 20.",
-              badges: [
-                <a href="/publications/2016-PublishingsPatternsINBRIC-publications.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M., & Mendoza, M. (2013). Revealing Comparative Advantages in the Backbone of Science. In Proceedings of the 2013 Workshop on Computational Scientometrics: Theory & Applications (pp. 31–36). San Francisco, CA, USA: ACM.",
-              badges: [
-                <a href="https://dl.acm.org/doi/10.1145/2508497.2508503" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PROCEEDINGS</div>
-                </a>
-              ]
-            }
-          ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <p className="text-gray-600 mb-3">{item.description}</p>
-              <div className="badge-container">
-                {item.badges.map((badge, badgeIndex) => (
-                  <div key={badgeIndex} className="inline-block m-1">
-                    {badge}
-                  </div>
-                ))}
+        {/* Líneas de Investigación */}
+      <section className="p-10 text-center bg-gradient-to-r my-60">
+        <div className="w-full px-4 mt-8">
+          <h2 className="text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
+          <div className="flex flex-wrap justify-between gap-5">
+            {[ 
+              { title: "Open Data", description: "Potenciamos la participación ciudadana a través del uso de datos abiertos y de nuevas aplicaciones", iconSrc: "img/iconos/icono1.png" },
+              { title: "Data Analytics", description: "Buscamos patrones significativos en los datos a través de algoritmos computacionales y modelos estadísticos", iconSrc: "img/iconos/icono2.png" },
+              { title: "Networks", description: "Creamos y utilizamos redes complejas basadas en interacciones sociales o información de producción", iconSrc: "img/iconos/icono3.png" },
+              { title: "Data Visualization", description: "Creamos y aplicamos las mejores técnicas de visualización de datos de forma estática o interactiva", iconSrc: "img/iconos/icono4.png" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-5 text-center w-full sm:w-[48%] md:w-[23%]">
+                <img src={item.iconSrc} alt={`Icono ${item.title}`} className="w-16 h-16 mx-auto mb-3" />
+                <h3 className="text-2xl font-bold text-blue-500">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* Participation */}
-    <section className="py-20 px-40">
-      <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
-        <h2 className="text-4xl font-bold text-center mb-16">Participation</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28">
-          {[
-            {
-              description: "Guevara, M.R., & Pacheco,C (2018) Los datos abiertos de Chile. Serie de Documentos técnicos Facultad de ingeniería.(In press).",
-              badges: [
-                <a href="/publications/2018-LosDatosAbiertosDeChile.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PREPRINT</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
-              badges: [
-                <a href="https://mguevaraa.medium.com/de-c%C3%B3mo-las-gal%C3%A1pagos-nos-ense%C3%B1an-que-la-migraci%C3%B3n-y-la-diversidad-son-importantes-para-el-2b7efb257826" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PAPER</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
-              badges: [
-                <a href="https://link.springer.com/article/10.1007/s11192-016-2125-9" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>,
-                <a href="https://arxiv.org/abs/1602.08409" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PREPRINT</div>
-                </a>,
-                <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">VIDEO</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., Hartmann, D., & Mendoza, M. (2016). diverse: an R Package to Measure Diversity in Complex Systems. The R Journal, 8(2), 60–78.",
-              badges: [
-                <a href="https://journal.r-project.org/archive/2016/RJ-2016-033/" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>,
-                <a href="https://cran.r-project.org/web/packages/diverse/index.html" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">R-PACKAGE</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., & Mendoza, M. (2016). Publishing Patterns in BRIC Countries: A Network Analysis. Publications, 4(3), 20.",
-              badges: [
-                <a href="/publications/2016-PublishingsPatternsINBRIC-publications.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">PAPER</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M., & Mendoza, M. (2013). Revealing Comparative Advantages in the Backbone of Science. In Proceedings of the 2013 Workshop on Computational Scientometrics: Theory & Applications (pp. 31–36). San Francisco, CA, USA: ACM.",
-              badges: [
-                <a href="https://dl.acm.org/doi/10.1145/2508497.2508503" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PROCEEDINGS</div>
-                </a>
-              ]
-            }
-          ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <p className="text-gray-600 mb-3">{item.description}</p>
-              <div className="badge-container">
-                {item.badges.map((badge, badgeIndex) => (
-                  <div key={badgeIndex} className="inline-block m-1">
-                    {badge}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Inequality */}
-    <section className="py-20 px-40">
-      <div className="mx-auto mt-16 mb-16 max-w-screen-lg">
-        <h2 className="text-4xl font-bold text-center mb-12">Inequality</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28">
-          {[
-            {
-              description: "Guevara, M.R., & Pacheco,C (2018) Los datos abiertos de Chile. Serie de Documentos técnicos Facultad de ingeniería.(In press).",
-              badges: [
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">POST</div>
-                </a>,
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">INTERACTIVE NOTEBOOK</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
-              badges: [
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PAPER</div>
-                </a>,
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PREPRINT</div>
-                </a>
-              ]
-            },
-            {
-              description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
-              badges: [
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-primary badge-outline">FULL JOURNAL</div>
-                </a>,
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PAPER EN</div>
-                </a>,
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div className="badge badge-outline">PAPER ES</div>
-                </a>
-              ]
-            }
-          ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <p className="text-gray-600 mb-3">{item.description}</p>
-              <div className="badge-container">
-                {item.badges.map((badge, badgeIndex) => (
-                  <div key={badgeIndex} className="inline-block m-1">
-                    {badge}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  
-
-    {/* Descargar R-package */}
+      {/* Publicaciones */}
       <section>
-      <div className="bg-gray-800 bg-opacity-30 text-base-content rounded p-10 flex flex-col items-center text-center space-y-6">
-          <h2 className="text-4xl font-bold text-center mt-8 mb-5">Descarga nuestro R-package para medir diversidad en Sistemas Complejos!</h2>
-          <div className="flex justify-center">
+        <div className="bg-gray-800 bg-opacity-30 mt-40 mb-40 py-40">
+          <h2 className="text-4xl font-bold text-center mb-8">Publicaciones</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {[
+              "img/portfolio/thumbnails/research1.png",
+              "img/portfolio/thumbnails/sistemadesarrollo.png",
+              "img/portfolio/thumbnails/3.png",
+              "img/portfolio/thumbnails/research1.png"
+            ].map((src, index) => (
+              <a key={index} className="portfolio-box" href={src} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={src}
+                  alt={`Research ${index + 1}`}
+                  className="p-2 w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-lg hover:opacity-80 transition duration-300"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    
+      {/* Science mapping */}
+      <section className="py-20 px-4 md:px-40 lg:px-20">
+        <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
+          <h2 className="text-4xl font-bold text-center mb-16">Science Mapping</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28"> {/* Espacio aumentado */}
+            {[
+              {
+                description: "Mendoza, M., & Guevara, M. R. (2017). Cienciometría: factores de impacto y mapas de la ciencia. Bits de Ciencia, 15, 8–15.",
+                badges: [
+                  <a href="/publications/2017-Bitsdeciencia15-Cienciometria.pdf" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>,
+                  <a href="/publications/journal/Bitsdeciencia15.pdf" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">FULL JOURNAL</div>
+                  </a>,
+                  <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">VIDEO</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
+                badges: [
+                  <a href="https://mguevaraa.medium.com/de-c%C3%B3mo-las-gal%C3%A1pagos-nos-ense%C3%B1an-que-la-migraci%C3%B3n-y-la-diversidad-son-importantes-para-el-2b7efb257826" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">POST</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
+                badges: [
+                  <a href="https://link.springer.com/article/10.1007/s11192-016-2125-9" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>,
+                  <a href="https://arxiv.org/abs/1602.08409" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PREPRINT</div>
+                  </a>,
+                  <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">VIDEO</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., Hartmann, D., & Mendoza, M. (2016). diverse: an R Package to Measure Diversity in Complex Systems. The R Journal, 8(2), 60–78.",
+                badges: [
+                  <a href="https://journal.r-project.org/archive/2016/RJ-2016-033/" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>,
+                  <a href="https://cran.r-project.org/web/packages/diverse/index.html" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">R-PACKAGE</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., & Mendoza, M. (2016). Publishing Patterns in BRIC Countries: A Network Analysis. Publications, 4(3), 20.",
+                badges: [
+                  <a href="/publications/2016-PublishingsPatternsINBRIC-publications.pdf" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M., & Mendoza, M. (2013). Revealing Comparative Advantages in the Backbone of Science. In Proceedings of the 2013 Workshop on Computational Scientometrics: Theory & Applications (pp. 31–36). San Francisco, CA, USA: ACM.",
+                badges: [
+                  <a href="https://dl.acm.org/doi/10.1145/2508497.2508503" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PROCEEDINGS</div>
+                  </a>
+                ]
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <p className="text-gray-600 mb-3">{item.description}</p>
+                <div className="badge-container">
+                  {item.badges.map((badge, badgeIndex) => (
+                    <div key={badgeIndex} className="inline-block m-1">
+                      {badge}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Participation */}
+      <section className="py-20 px-4 md:px-40 lg:px-20">
+        <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
+          <h2 className="text-4xl font-bold text-center mb-16">Participation</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-28">
+            {[
+              {
+                description: "Guevara, M.R., & Pacheco,C (2018) Los datos abiertos de Chile. Serie de Documentos técnicos Facultad de ingeniería.(In press).",
+                badges: [
+                  <a href="/publications/2018-LosDatosAbiertosDeChile.pdf" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PREPRINT</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
+                badges: [
+                  <a href="https://mguevaraa.medium.com/de-c%C3%B3mo-las-gal%C3%A1pagos-nos-ense%C3%B1an-que-la-migraci%C3%B3n-y-la-diversidad-son-importantes-para-el-2b7efb257826" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PAPER</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
+                badges: [
+                  <a href="https://link.springer.com/article/10.1007/s11192-016-2125-9" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>,
+                  <a href="https://arxiv.org/abs/1602.08409" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PREPRINT</div>
+                  </a>,
+                  <a href="https://uplatv.cl/2018/10/16/un-recorrido-por-los-espacios-de-investigacion/" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">VIDEO</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., Hartmann, D., & Mendoza, M. (2016). diverse: an R Package to Measure Diversity in Complex Systems. The R Journal, 8(2), 60–78.",
+                badges: [
+                  <a href="https://journal.r-project.org/archive/2016/RJ-2016-033/" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>,
+                  <a href="https://cran.r-project.org/web/packages/diverse/index.html" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">R-PACKAGE</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., & Mendoza, M. (2016). Publishing Patterns in BRIC Countries: A Network Analysis. Publications, 4(3), 20.",
+                badges: [
+                  <a href="/publications/2016-PublishingsPatternsINBRIC-publications.pdf" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">PAPER</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M., & Mendoza, M. (2013). Revealing Comparative Advantages in the Backbone of Science. In Proceedings of the 2013 Workshop on Computational Scientometrics: Theory & Applications (pp. 31–36). San Francisco, CA, USA: ACM.",
+                badges: [
+                  <a href="https://dl.acm.org/doi/10.1145/2508497.2508503" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PROCEEDINGS</div>
+                  </a>
+                ]
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <p className="text-gray-600 mb-3">{item.description}</p>
+                <div className="badge-container flex justify-center">
+                  {item.badges.map((badge, badgeIndex) => (
+                    <div key={badgeIndex} className="inline-block m-1">
+                      {badge}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inequality */}
+      <section className="py-20 px-4 md:px-40 lg:px-20">
+        <div className="mx-auto mt-16 mb-16 max-w-screen-lg">
+          <h2 className="text-4xl font-bold text-center mb-12">Inequality</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-28">
+            {[
+              {
+                description: "Guevara, M.R., & Pacheco,C (2018) Los datos abiertos de Chile. Serie de Documentos técnicos Facultad de ingeniería.(In press).",
+                badges: [
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">POST</div>
+                  </a>,
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">INTERACTIVE NOTEBOOK</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R. (2017). De cómo las Galápagos nos enseñan que la migración y la diversidad son importantes para el desarrollo científico, la innovación y la economía. Medium.",
+                badges: [
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PAPER</div>
+                  </a>,
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PREPRINT</div>
+                  </a>
+                ]
+              },
+              {
+                description: "Guevara, M. R., Hartmann, D., Aristarán, M., Mendoza, M., & Hidalgo, C. A. (2016). The research space: using career paths to predict the evolution of the research output of individuals, institutions, and nations. Scientometrics, 109(3), 1695–1709.",
+                badges: [
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline">FULL JOURNAL</div>
+                  </a>,
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PAPER EN</div>
+                  </a>,
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-outline">PAPER ES</div>
+                  </a>
+                ]
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <p className="text-gray-600 mb-3">{item.description}</p>
+                <div className="badge-container">
+                  {item.badges.map((badge, badgeIndex) => (
+                    <div key={badgeIndex} className="inline-block m-1">
+                      {badge}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Descargar R-package */}
+      <section className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16 w-full">
+        <div className="mx-auto p-5 md:p-10">
+          <h2 className="text-4xl font-bold mt-8 mb-5">Descarga nuestro R-package para medir diversidad en Sistemas Complejos!</h2>
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 w-full">
             {[
               {
                 description: "Guevara, M.R., & Pacheco,C (2018) Los datos abiertos de Chile. Serie de Documentos técnicos Facultad de ingeniería.(In press).",
@@ -476,10 +471,9 @@ const App: React.FC = () => {
                     <div className="badge badge-outline">INTERACTIVE NOTEBOOK</div>
                   </a>
                 ]
-              },
-              
+              }
             ].map((item, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-5 text-center">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-5 text-center w-full md:w-1/3"> {/* Ancho responsivo */}
                 <p className="text-gray-600 mb-3">{item.description}</p>
                 <div className="badge-container">
                   {item.badges.map((badge, badgeIndex) => (
@@ -498,10 +492,10 @@ const App: React.FC = () => {
       <section className="relative mt-8" style={{ marginTop: "80px" }}>
         <div className="carousel w-full space-x-4 overflow-hidden">
           {/* Imagen 1 */}
-          <div id="slide1" className="carousel-item relative flex-shrink-0 w-[80%] mx-auto">
+          <div id="slide1" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
             <img
               src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-              className="w-full h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
               alt="Image 1"
             />
             {/* Flechas de navegación */}
@@ -512,10 +506,10 @@ const App: React.FC = () => {
           </div>
 
           {/* Imagen 2 */}
-          <div id="slide2" className="carousel-item relative flex-shrink-0 w-[80%] mx-auto">
+          <div id="slide2" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
             <img
               src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-              className="w-full h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
               alt="Image 2"
             />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
@@ -525,10 +519,10 @@ const App: React.FC = () => {
           </div>
 
           {/* Imagen 3 */}
-          <div id="slide3" className="carousel-item relative flex-shrink-0 w-[80%] mx-auto">
+          <div id="slide3" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
             <img
               src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              className="w-full h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
               alt="Image 3"
             />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
@@ -538,10 +532,10 @@ const App: React.FC = () => {
           </div>
 
           {/* Imagen 4 */}
-          <div id="slide4" className="carousel-item relative flex-shrink-0 w-[80%] mx-auto">
+          <div id="slide4" className="carousel-item relative flex-shrink-0 w-full md:w-[80%] mx-auto">
             <img
               src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-              className="w-full h-[500px] object-cover rounded-lg"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-lg"
               alt="Image 4"
             />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
@@ -552,60 +546,16 @@ const App: React.FC = () => {
         </div>
       </section>
 
-    {/* Contacto y ubicación */}
-      <section>
-        <div className="text-base-content rounded p-10 flex flex-col items-center text-center space-y-6">
-          {/* Encabezado */}
-          <p className="text-2xl font-bold">
-            Nos encanta debatir ideas y participar en nuevos proyectos!
-          </p>
-          <p className="text-xl">
-            Recibiremos postulaciones de nuevos estudiantes y postdocs durante 2025, contáctanos.
-          </p>
-
-          {/* Dirección */}
-          <div>
-            <p className="text-lg font-semibold">Nos encontramos en:</p>
-            <p className="text-lg">Subida Leopoldo Carvallo 270, 4to piso, Valparaíso, CHILE.</p>
-          </div>
-
-          {/* Información de contacto en una sola línea */}
-          <div className="flex space-x-8 mt-4">
-            {/* Teléfono */}
-            <div>
-              <p className="text-lg font-semibold">Teléfono:</p>
-              <p className="text-lg">+56 32 2 500 537</p>
-            </div>
-
-            {/* Canal */}
-            <div>
-              <p className="text-lg font-semibold">Canal:</p>
-              <p className="text-lg">DatosLab UPLA [Canal]</p>
-            </div>
-
-            {/* Email */}
-            <div>
-              <p className="text-lg font-semibold">Correo electrónico:</p>
-              <p className="text-lg">
-                <a href="mailto:miguel.guevara@upla.cl" className="link link-hover text-blue-400">
-                  miguel.guevara@upla.cl
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="footer bg-gray-800 bg-opacity-70 text-base-content rounded p-10 flex items-center justify-center gap-20">
+      <footer className="footer bg-gray-800 bg-opacity-70 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen izquierda */}
-        <aside>
+        <aside className="flex justify-center w-full md:w-auto">
           <a href="https://www.upla.cl" target="_blank" rel="noopener noreferrer">
             <img
               src="img/logoupla1.png"
               className="img-fluid"
               alt="Universidad de Playa Ancha"
-              style={{ maxWidth: "400px", maxHeight: "400px" }}
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "200px" }} // Ajuste para responsividad
             />
           </a>
         </aside>
@@ -648,7 +598,8 @@ const App: React.FC = () => {
             <img
               src="img/datos_lab.png"
               alt="Logo DatosLab"
-              className="w-16 h-16 mb-2"/>
+              className="w-16 h-16 mb-2"
+            />
             <a
               href="#top"
               className="btn btn-primary text-white flex items-center transition-transform transform hover:translate-y-[-5px]"
@@ -668,12 +619,12 @@ const App: React.FC = () => {
         </div>
 
         {/* Imagen derecha */}
-        <aside>
+        <aside className="flex justify-center w-full md:w-auto">
           <img
             src="img/logoacreditacion.png"
             className="img-fluid"
             alt="Imagen acreditacion"
-            style={{ maxWidth: "500px", maxHeight: "500px" }}
+            style={{ maxWidth: "100%", height: "auto", maxHeight: "200px" }}
           />
         </aside>
       </footer>
