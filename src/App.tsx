@@ -1,7 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
 
 interface NavbarProps {
   logoSrc: string;
@@ -56,13 +53,13 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
     <section className="z-10 fixed w-full" style={{ top: 0, left: 0, right: 0 }}>
       <nav className="navbar bg-gradient-to-r justify-between items-center bg-base-100 p-4">
         <div className="flex items-center space-x-4">
-          <img
+             <img
             src={logoSrc}
             alt={logoAlt}
             style={{ maxWidth: "70px", maxHeight: "70px" }}
             className="img-fluid"
           />
-          <a href="#" className="btn btn-ghost normal-case text-2xl font-bold text-current">
+          <a href="#" className="text-xl font-bold text-current">
             DatosLab
           </a>
         </div>
@@ -85,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
             {menuItems.map((item, index) => (
               <li key={index}>
                 <button
-                  onClick={() => scrollToSection(item.toLowerCase())} // Conectar a scrollToSection
+                  onClick={() => scrollToSection(item.toLowerCase())}
                   className="hover:text-gray-300 text-current"
                 >
                   {item}
@@ -151,16 +148,15 @@ const App: React.FC = () => {
     <div>
       <header>
         <Navbar
-          logoSrc="img/datos_lab.png"
+          logoSrc="img/datos_lab.png" 
           logoAlt="DatosLab"
           menuItems={[
-            "Inicio",
             "Líneas",
             "Publicaciones",
             "Science Mapping",
             "Participation",
             "Inequality",
-            "R-package",
+            "Descargas",
             "Proyectos",
             "Equipo",
             "Contacto",
@@ -169,7 +165,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Hero */}
-      <section style={{marginTop: "80px",}}>
+      <section style={{ marginTop: "80px" }}>
         <div
           className="hero min-h-screen"
           style={{
@@ -185,13 +181,19 @@ const App: React.FC = () => {
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                 quasi. In deleniti eaque aut repudiandae et a id nisi.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              {/* Botón Get Started con enlace a la sección de "Quienes Somos" */}
+              <a
+                href="#inicio"
+                className="btn btn-primary"
+              >
+                Get Started
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Que hacemos */}
+      {/* Inicio */}
       <section id="inicio" className="p-10 md:p-20 text-center bg-gradient-to-r my-40">
         <div className="container mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-5">
@@ -486,9 +488,9 @@ const App: React.FC = () => {
       </section>
 
       {/* Descargar R-package */}
-      <section id="r-package" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16 w-full">
-        <div className="mx-auto p-5 md:p-10">
-          <h2 className="p-8 text-4xl font-bold mt-8 mb-5">Descarga nuestro R-package para medir diversidad en Sistemas Complejos!</h2>
+      <section id="descargas" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16 w-full">
+        <div className="mx-auto p-5 md:p-5">
+          <h2 className="text-4xl font-bold mt-8 mb-5">Descarga nuestro R-package para medir diversidad en Sistemas Complejos!</h2>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 w-full">
             {[
               {
@@ -792,7 +794,7 @@ const App: React.FC = () => {
 
       {/* Contacto */}
       <section id="contacto" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg">
-        <div className="container mx-auto p-5 md:p-20">
+        <div className="container mx-auto p-5 md:p-10">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">Nos encanta debatir ideas y participar en nuevos proyectos!</h1>
           <p className="text-base md:text-lg mb-5">
             Recibiremos postulaciones de nuevos estudiantes y postdocs durante 2025, contáctanos.
@@ -854,12 +856,12 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer bg-gray-800 bg-opacity-70 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
+      <footer className="footer bg-gray-800 bg-opacity-50 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen izquierda */}
         <aside className="flex justify-center w-full md:w-auto">
           <a href="https://www.upla.cl" target="_blank" rel="noopener noreferrer">
             <img
-              src="img/logoupla1.png"
+              src="img/logoupla_bn.png"
               className="img-fluid"
               alt="Universidad de Playa Ancha"
               style={{ maxWidth: "100%", height: "auto", maxHeight: "200px" }}
@@ -869,18 +871,12 @@ const App: React.FC = () => {
 
         {/* Contenido central */}
         <div className="flex flex-col items-center text-center">
-          <p className="font-bold">
-            Universidad de Playa Ancha
-            <br />
-            Fundada el 1 de abril de 1948
-          </p>
-
+          <p className="font-bold">Acerca de nosotros<br /></p>
           <nav className="grid grid-flow-col gap-4 mt-4">
-            <a href="#" className="link link-hover">Acerca de nosotros</a>
-            <a href="mailto:datoslab@upla.cl" className="link link-hover">datoslab@upla.cl</a>
-            <a href="mailto:datoslabcl@gmail.com" className="link link-hover">datoslabcl@gmail.com</a>
+            <a className="link link-hover">datoslab@upla.cl</a>
+            <a className="link link-hover">datoslabcl@gmail.com</a>
           </nav>
-
+          
           {/* Redes sociales */}
           <nav className="grid grid-flow-col gap-4 mt-4">
             <a href="https://twitter.com/DatosLab_UPLA" target="_blank" rel="noopener noreferrer">
@@ -899,17 +895,18 @@ const App: React.FC = () => {
               </svg>
             </a>
           </nav>
-
-          {/* Botón para volver al inicio */}
-          <div className="flex flex-col items-center mt-4">
-            <img
+          <img
               src="img/datos_lab.png"
               alt="Logo DatosLab"
               className="w-16 h-16 mb-2"
             />
+          {/* Botón para volver al inicio */}
+          <div 
+            className="fixed bottom-4 right-4 flex flex-col items-center">
             <a
               href="#top"
-              className="btn btn-primary text-white flex items-center transition-transform transform hover:translate-y-[-5px]"
+              className="btn flex items-center border border-white text-white bg-transparent hover:bg-primary hover:text-black transition-all"
+              style={{ backdropFilter: "blur(5px)", padding: "0.5rem 1rem", borderRadius: "0.5rem" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -920,7 +917,6 @@ const App: React.FC = () => {
               >
                 <path d="M12 19V5M5 12l7-7 7 7"></path>
               </svg>
-              Volver al inicio
             </a>
           </div>
         </div>
