@@ -10,6 +10,12 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(userPrefersDark ? "dark" : "light");
+  }, []);
+  
   
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
@@ -73,17 +79,17 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
 
         <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
           <ul
-            className={`menu menu-horizontal px-1 ${
+            className={`menu menu-horizontal px-2 space-x-2 ${
               isMenuOpen
                 ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg"
                 : ""
             }`}
           >
             {menuItems.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="p-0">
                 <button
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="hover:text-gray-300 text-current"
+                  className="hover:text-gray-300 text-current px-2 py-1"
                 >
                   {item}
                 </button>
@@ -92,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
           </ul>
         </div>
 
-        <div className="navbar-end">
+        <div className="navbar-right">
           {/* Menú desplegable de temas */}
           <div
             className="navbar-end mr-auto dropdown dropdown-hover mb-1"
@@ -153,9 +159,6 @@ const App: React.FC = () => {
           menuItems={[
             "Líneas",
             "Publicaciones",
-            "Science Mapping",
-            "Participation",
-            "Inequality",
             "Descargas",
             "Proyectos",
             "Equipo",
@@ -178,15 +181,27 @@ const App: React.FC = () => {
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+                a id nisi.
               </p>
-              {/* Botón Get Started con enlace a la sección de "Quienes Somos" */}
               <a
                 href="#inicio"
                 className="btn btn-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.getElementById("inicio");
+                  if (target) {
+                    const yOffset = -140;
+                    const y =
+                      target.getBoundingClientRect().top +
+                      window.pageYOffset +
+                      yOffset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
               >
-                Get Started
+                COMENZAR
               </a>
             </div>
           </div>
@@ -194,36 +209,47 @@ const App: React.FC = () => {
       </section>
 
       {/* Inicio */}
-      <section id="inicio" className="p-10 md:p-20 text-center bg-gradient-to-r my-40">
-        <div className="container mx-auto">
+      <section
+        id="inicio"
+        className="p-10 md:p-0 text-center bg-gradient-to-r my-40"
+      >
+        <div className="container mx-auto space-y-16">
           <h1 className="text-3xl md:text-4xl font-bold mb-5">
             Cómo hacer simple la complejidad de los datos
           </h1>
           <p className="text-base md:text-lg mb-5">
-            Nuestro laboratorio encuentra patrones y valor en datos interrelacionados -y abundantes- a través de nuevos métodos y visualizaciones.
+            Nuestro laboratorio encuentra patrones y valor en datos
+            interrelacionados -y abundantes- a través de nuevos métodos y
+            visualizaciones.
           </p>
           <a
             href="#quienes-somos"
             className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
           >
-            COMENZAR!
+            CONTINUAR
           </a>
         </div>
       </section>
 
       {/* Quienes somos */}
-      <section id="quienes-somos" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16">
-        <div className="container mx-auto p-5 md:p-40">
+      <section id="quienes-somos" className="section-dark p-10 md:p-0 lg:p-60 text-center shadow-lg my-16">
+        <div className="container mx-auto p-5 md:p-40 space-y-16">
           <h1 className="text-3xl md:text-4xl font-bold mb-5">Somos el laboratorio de Data Science</h1>
           <p className="text-base md:text-lg mb-5">
             Nuestra investigación se aplica a temáticas diversas y con orientación social.
           </p>
+          <a
+            href="#líneas"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
         </div>
       </section>
 
         {/* Líneas de Investigación */}
-      <section id="líneas" className="p-10 text-center bg-gradient-to-r my-40">
-        <div className="w-full px-4 mt-8">
+      <section id="líneas" className="p-0 text-center bg-gradient-to-r my-40">
+        <div className="w-full px-4 mt-8 space-y-16">
           <h2 className="text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
           <div className="flex flex-wrap justify-between gap-5">
             {[ 
@@ -238,6 +264,12 @@ const App: React.FC = () => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
+            <a
+            href="#publicaciones"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
@@ -261,6 +293,12 @@ const App: React.FC = () => {
                 />
               </a>
             ))}
+            <a
+            href="#science mapping"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
@@ -346,12 +384,18 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
+                  <a
+            href="#participation"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
 
       {/* Participation */}
-      <section id="participation" className="px-4 md:px-40 lg:px-20">
+      <section id="participation" className="bg-gray-800 bg-opacity-30 px-4 md:px-40 lg:px-20 p-1">
         <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
           <h2 className="text-4xl font-bold text-center mb-16">Participation</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-28 gap-y-6">
@@ -427,6 +471,12 @@ const App: React.FC = () => {
             ))}
           </div>
         </div>
+        <a
+            href="#inequality"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
       </section>
 
       {/* Inequality */}
@@ -483,13 +533,19 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
+                  <a
+            href="#descargas"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
 
       {/* Descargar R-package */}
-      <section id="descargas" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16 w-full">
-        <div className="mx-auto p-5 md:p-5">
+      <section id="descargas" className="bg-gray-800 bg-opacity-30 p-10 md:p-8 lg:p-60 text-center bg-gradient-to-r shadow-lg my-16 w-full">
+        <div className="mx-auto p-5 md:p-5 space-y-16">
           <h2 className="text-4xl font-bold mt-8 mb-5">Descarga nuestro R-package para medir diversidad en Sistemas Complejos!</h2>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 w-full">
             {[
@@ -516,12 +572,18 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
+                  <a
+            href="#proyectos"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
 
       {/* Slider de imágenes en Tailwind */}
-      <section id="proyectos" className="relative mt-20">
+      <section id="proyectos" className="relative mt-2 p-0">
         <h2 className="text-4xl font-bold text-center mb-10">
           Proyectos más relevantes
         </h2>
@@ -542,7 +604,9 @@ const App: React.FC = () => {
                 <div className="max-w-md text-center">
                   <h1 className="mb-4 text-5xl font-bold">Proyecto 1</h1>
                   <p className="mb-4">Descripción breve del proyecto 1.</p>
-                  <button className="btn btn-primary">Ver Más</button>
+                  <a href="src/proyectos" className="btn btn-primary">
+                    Ver Más
+                  </a>
                 </div>
               </div>
               {/* Flechas de navegación */}
@@ -623,6 +687,12 @@ const App: React.FC = () => {
                 <a href="#slide1" className="btn btn-circle">❯</a>
               </div>
             </div>
+            <a
+            href="#equipo"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
@@ -630,7 +700,7 @@ const App: React.FC = () => {
       {/* Equipo */}
       <section
         id="equipo"
-        className="p-10 lg:p-40 text-center bg-gradient-to-r shadow-lg">
+        className="bg-gray-800 bg-opacity-30 p-10 lg:p-40 text-center bg-gradient-to-r shadow-lg">
         <div className="container mx-auto p-5">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">
             ¡Conoce al equipo!
@@ -640,123 +710,7 @@ const App: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Miembro 1 */}
-            <div className="flex flex-col items-center gap-4">
-              <img
-                alt="Logo"
-                src="img/portfolio/img/team/miguel_guevara.png"
-                className="rounded-full w-24 border-2 border-gray-300"
-              />
-              <div className="text-center">
-                <h3 className="font-bold text-lg">Miguel Guevara</h3>
-                <span className="text-sm text-gray-400">Director DatosLab</span>
-              </div>
-              <div className="flex justify-center gap-3 mt-3 text-gray-500">
-                <a href="#" aria-label="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
-                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Email">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            {/* Miembro 2 */}
-            <div className="flex flex-col items-center gap-4">
-              <img
-                alt="Logo"
-                src="img/portfolio/img/team/ezequiel_lagos.png"
-                className="rounded-full w-24 border-2 border-gray-300"
-              />
-              <div className="text-center">
-                <h3 className="font-bold text-lg">Ezequiel Lagos</h3>
-                <span className="text-sm text-gray-400">Ingeniero en informática</span>
-              </div>
-              <div className="flex justify-center gap-3 mt-3 text-gray-500">
-                <a href="#" aria-label="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
-                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Email">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            {/* Miembro 3 */}
-            <div className="flex flex-col items-center gap-4">
-              <img
-                alt="Logo"
-                src="img/portfolio/img/team/crying-cat.jpg"
-                className="rounded-full w-24 border-2 border-gray-300"
-              />
-              <div className="text-center">
-                <h3 className="font-bold text-lg">Sebastian Torres</h3>
-                <span className="text-sm text-gray-400">Practicante Ingeniería en informática</span>
-              </div>
-              <div className="flex justify-center gap-3 mt-3 text-gray-500">
-                <a href="#" aria-label="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
-                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Email">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            {/* Miembro 4 */}
-            <div className="flex flex-col items-center gap-4">
-              <img
-                alt="Logo"
-                src="img/portfolio/img/team/crying-cat.jpg"
-                className="rounded-full w-24 border-2 border-gray-300"
-              />
-              <div className="text-center">
-                <h3 className="font-bold text-lg">Sebastian Torres</h3>
-                <span className="text-sm text-gray-400">Practicante ingeniería en informática</span>
-              </div>
-              <div className="flex justify-center gap-3 mt-3 text-gray-500">
-                <a href="#" aria-label="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
-                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                  </svg>
-                </a>
-                <a href="#" aria-label="Email">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-             {/* Miembro 5 */}
+             {/* Miembro 1 */}
              <div className="flex items-center gap-6">
               {/* Imagen */}
               <img
@@ -767,9 +721,9 @@ const App: React.FC = () => {
               {/* Texto */}
               <div className="text-left">
                 <h3 className="font-bold text-lg">Miguel Guevara</h3>
-                <span className="text-sm text-gray-400 block mb-2">Director DatosLab</span>
+                <span className="text-sm text-black-400 block mb-2">Director DatosLab</span>
                 {/* Íconos */}
-                <div className="flex gap-3 text-gray-500">
+                <div className="flex gap-3 text-orange-600 text-opacity-80">
                   <a href="#" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
                       <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
@@ -788,12 +742,114 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
+            {/* Miembro 2 */}
+            <div className="flex items-center gap-6">
+              {/* Imagen */}
+              <img
+                alt="Foto de Miguel Guevara"
+                src="img/portfolio/img/team/ezequiel_lagos.png"
+                className="rounded-full w-24 border-2 border-gray-300"
+              />
+              {/* Texto */}
+              <div className="text-left">
+                <h3 className="font-bold text-lg">Ezequiel Lagos</h3>
+                <span className="text-sm text-black-400 block mb-2">Ingeniero en informática</span>
+                {/* Íconos */}
+                <div className="flex gap-3 text-orange-600 text-opacity-80">
+                  <a href="#" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
+                      <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
+                      <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Miembro 3 */}
+            <div className="flex items-center gap-6">
+              {/* Imagen */}
+              <img
+                alt="Foto de Miguel Guevara"
+                src="img/portfolio/img/team/crying-cat.jpg"
+                className="rounded-full w-24 border-2 border-gray-300"
+              />
+              {/* Texto */}
+              <div className="text-left">
+                <h3 className="font-bold text-lg">Sebastian Torres</h3>
+                <span className="text-sm text-black-400 block mb-2">Practicante Ingeniería en informática</span>
+                {/* Íconos */}
+                <div className="flex gap-3 text-orange-600 text-opacity-80">
+                  <a href="#" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
+                      <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
+                      <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Miembro 4 */}
+            <div className="flex items-center gap-6">
+              {/* Imagen */}
+              <img
+                alt="Foto de Miguel Guevara"
+                src="img/portfolio/img/team/crying-cat.jpg"
+                className="rounded-full w-24 border-2 border-gray-300"
+              />
+              {/* Texto */}
+              <div className="text-left">
+                <h3 className="font-bold text-lg">Sebastian Torres</h3>
+                <span className="text-sm text-black-400 block mb-2">Estudiante Ingeniería en informática</span>
+                {/* Íconos */}
+                <div className="flex gap-3 text-orange-600 text-opacity-80">
+                  <a href="#" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" className="w-5 h-5 fill-current">
+                      <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-5 fill-current">
+                      <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+                    </svg>
+                  </a>
+                  <a href="#" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+            href="#contacto"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
           </div>
         </div>
       </section>
 
       {/* Contacto */}
-      <section id="contacto" className="bg-gray-800 bg-opacity-30 p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg">
+      <section id="contacto" className="p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg">
         <div className="container mx-auto p-5 md:p-10">
           <h1 className="text-3xl md:text-4xl font-bold mb-10">Nos encanta debatir ideas y participar en nuevos proyectos!</h1>
           <p className="text-base md:text-lg mb-5">
@@ -852,11 +908,17 @@ const App: React.FC = () => {
               miguel.guevara@upla.cl
             </a>
           </p>
+          <a
+            href="#footer"
+            className="btn btn-primary text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
+          >
+            CONTINUAR
+          </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer bg-gray-800 bg-opacity-50 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
+      <footer id="footer" className="footer bg-gray-800 bg-opacity-50 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen izquierda */}
         <aside className="flex justify-center w-full md:w-auto">
           <a href="https://www.upla.cl" target="_blank" rel="noopener noreferrer">
@@ -864,13 +926,13 @@ const App: React.FC = () => {
               src="img/logoupla_bn.png"
               className="img-fluid"
               alt="Universidad de Playa Ancha"
-              style={{ maxWidth: "100%", height: "auto", maxHeight: "200px" }}
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "70px" }}
             />
           </a>
         </aside>
 
         {/* Contenido central */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center text-white">
           <p className="font-bold">Acerca de nosotros<br /></p>
           <nav className="grid grid-flow-col gap-4 mt-4">
             <a className="link link-hover">datoslab@upla.cl</a>
@@ -927,7 +989,7 @@ const App: React.FC = () => {
             src="img/logoacreditacion.png"
             className="img-fluid"
             alt="Imagen acreditacion"
-            style={{ maxWidth: "100%", height: "auto", maxHeight: "200px" }}
+            style={{ maxWidth: "100%", height: "auto", maxHeight: "120px" }}
           />
         </aside>
       </footer>

@@ -42,3 +42,11 @@ h3 {
 body {
   font-family: 'Roboto Mono', sans-serif;
 }
+
+.section-dark {
+  background-color: rgba(31, 41, 55, 0.3); /* Light mode */
+}
+
+.dark .section-dark {
+  background-color: rgba(251, 146, 60, 0.8); /* Dark mode */
+}
