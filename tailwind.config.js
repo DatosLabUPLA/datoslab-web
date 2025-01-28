@@ -13,6 +13,8 @@ module.exports = {
         "primary-500": "#FF6B66",
         "secondary-400": "#FFCD5B",
         "secondary-500": "#FFC132",
+        "base-100": "#FFFFFF", 
+        "text": "#FFFFFF",
       },
       backgroundImage: {
         "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
@@ -30,7 +32,7 @@ module.exports = {
         circles: "url('./assets/Circles.png')",
       },
       animation: {
-        'slide-up': 'slideUp 0.6s ease-out', // Cambié la duración a 0.6s para hacerlo más lento
+        'slide-up': 'slideUp 0.6s ease-out', // Duración ajustada
       },
       keyframes: {
         slideUp: {
@@ -40,12 +42,12 @@ module.exports = {
       },
     },
     screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
+      xs: "480px", // Define una pantalla extra pequeña si es necesario
+      sm: "768px", // Tamaño de pantalla para tablets
+      md: "1060px", // Tamaño para pantallas medianas
     },
   },
-  plugins: [require("daisyui")], 
+  plugins: [require("daisyui")], // DaisyUI para usar temas de interfaz
   daisyui: {
     themes: [
       "corporate",
@@ -54,7 +56,7 @@ module.exports = {
       "emerald",
       "current",
       "synthwave",
-      "default",
+      "default", // Tema por defecto
       "retro",
       "aqua",
       "class",
@@ -62,26 +64,26 @@ module.exports = {
       "dim",
       {
         mytheme: {
-          "primary": "#FF6B66",
-          "secondary": "#FFC132",
-          "accent": "#FFCD5B",
-          "neutral": "#3D4451",
-          "base-100": "#FFFFFF",
-          "info": "#3ABFF8",
-          "success": "#36D399",
-          "warning": "#FBBD23",
-          "error": "#F87272",
+          "primary": "#FF6B66", // Naranja rojizo
+          "secondary": "#FFC132", // Amarillo
+          "accent": "#FFCD5B", // Naranja más suave
+          "neutral": "#3D4451", // Gris oscuro neutro
+          "base-100": "#FFFFFF", // Fondo blanco
+          "info": "#3ABFF8", // Azul claro
+          "success": "#36D399", // Verde éxito
+          "warning": "#FBBD23", // Amarillo alerta
+          "error": "#F87272", // Rojo de error
         },
       },
     ],
     base: true,
-    styled: true, 
-    utils: true, 
+    styled: true,
+    utils: true,
     logs: false,
     rtl: false,
-    prefix: "",
-    darkTheme: "dark",
-    darkMode: "class",
+    prefix: "", // Si no necesitas prefijos, déjalo vacío
+    darkTheme: "dark", // Usar tema oscuro si se activa
+    darkMode: "class", // Activar dark mode por clase
   },
 };
 
