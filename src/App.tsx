@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+import { Route } from "react-router-dom";
+//import Equipo from "./pages/Equipo";
+//import Proyectos from "./pages/Proyectos";
 interface NavbarProps {
   logoSrc: string;
   logoAlt: string;
@@ -7,12 +9,12 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
-  const [theme, setTheme] = useState("default"); // Inicia con el tema 'default'
+  const [theme, setTheme] = useState("default");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", theme); // Aplica el tema al body.
+    document.body.setAttribute("data-theme", theme); 
   }, [theme]);
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   };
 
   return (
+
     <section className="z-10 fixed w-full navbar-right" style={{ top: 0, left: 0, right: 0 }}>
       <nav className="navbar bg-gradient-to-r justify-between items-center bg-base-100 p-4">
         <div className="flex items-center space-x-4">
@@ -63,12 +66,18 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
           <ul className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg" : ""}`}>
             {menuItems.map((item, index) => (
               <li key={index} className="p-0">
-                <button
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="hover:text-gray-300 text-current px-2 py-1"
-                >
-                  {item}
-                </button>
+                {item === "Proyectos" ? (
+                  <a className="hover:text-gray-300 text-current px-2 py-1">
+                    {item}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => scrollToSection(item.toLowerCase())}
+                    className="hover:text-gray-300 text-current px-2 py-1"
+                  >
+                    {item}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -621,7 +630,7 @@ const App: React.FC = () => {
         {/* Botón centrado*/}
         <div className="flex justify-center mt-4"> 
           <a
-            href="#proyectos"
+            href="#proyecto"
             className="btn btn-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
             CONTINUAR
           </a>
@@ -629,7 +638,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Slider de imágenes en Tailwind */}
-      <section id="proyectos" className="relative mt-20 p-0">
+      <section id="proyecto" className="relative mt-20 p-0">
         <h2 className="text-4xl font-bold text-center mb-16">
           Proyectos más relevantes
         </h2>
@@ -889,16 +898,16 @@ const App: React.FC = () => {
       </section>
 
       {/* Contacto */}
-      <section id="contacto" className="p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg">
+      <section id="contacto" className="bg-customOrange p-10 md:p-20 lg:p-60 text-center bg-gradient-to-r shadow-lg">
         <div className="container mx-auto p-5 md:p-10">
-          <h1 className="text-3xl md:text-4xl font-bold mb-10">Nos encanta debatir ideas y participar en nuevos proyectos!</h1>
-          <p className="text-base md:text-lg mb-5">
+          <h1 className="text-white text-3xl md:text-4xl font-bold mb-10">Nos encanta debatir ideas y participar en nuevos proyectos!</h1>
+          <p className="text-white text-base md:text-lg mb-5">
             Recibiremos postulaciones de nuevos estudiantes y postdocs durante 2025, contáctanos.
             Nos encontramos en <a 
               href="https://www.google.com/maps/place/Subida+Leopoldo+Carvallo+270,+2360004+Playa+Ancha,+Valpara%C3%ADso/@-33.0210752,-71.6415382,17z/data=!3m1!4b1!4m6!3m5!1s0x9689e6c0ce538cb9:0x75514ace54db50af!8m2!3d-33.0210752!4d-71.6415382!16s%2Fg%2F11ggrmbzlj?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-blue-500 underline hover:text-blue-700">
+              className="text-white underline hover:text-white">
               Subida Leopoldo Carvallo 270, 4to piso, Valparaíso, CHILE
             </a>.
           </p>
@@ -919,7 +928,7 @@ const App: React.FC = () => {
               href="https://www.youtube.com/channel/UCrXz_w8sok_tv7NcUfiEuhw/featured" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-flex items-center text-blue-500 font-bold hover:text-blue-700"
+              className="inline-flex items-center font-bold hover:text-white"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -936,7 +945,7 @@ const App: React.FC = () => {
               href="mailto:miguel.guevara@upla.cl" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-flex items-center text-blue-500 font-bold hover:text-blue-700"
+              className="inline-flex items-center font-bold hover:text-white"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 

@@ -11,4 +11,5 @@ npm install tailwindcss
 npx tailwindcss init
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
 npm install react-scroll
+npm install react-router-dom
 npm run dev
