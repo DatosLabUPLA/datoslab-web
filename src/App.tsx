@@ -34,8 +34,6 @@ const App: React.FC = () => {
         {/* Ruta para el equipo */}
         <Route path="/equipo" element={<Equipo />} />
       </Routes>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
