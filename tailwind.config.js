@@ -32,7 +32,7 @@ module.exports = {
         circles: "url('./assets/Circles.png')",
       },
       animation: {
-        'slide-up': 'slideUp 0.6s ease-out', // Duración ajustada
+        'slide-up': 'slideUp 0.6s ease-out',
       },
       keyframes: {
         slideUp: {
@@ -42,12 +42,12 @@ module.exports = {
       },
     },
     screens: {
-      xs: "480px", // Define una pantalla extra pequeña si es necesario
-      sm: "768px", // Tamaño de pantalla para tablets
-      md: "1060px", // Tamaño para pantallas medianas
+      xs: "480px", 
+      sm: "768px", 
+      md: "1060px", 
     },
   },
-  plugins: [require("daisyui")], // DaisyUI para usar temas de interfaz
+  plugins: [require("daisyui")], 
   daisyui: {
     themes: [
       "corporate",
@@ -56,7 +56,7 @@ module.exports = {
       "emerald",
       "current",
       "synthwave",
-      "default", // Tema por defecto
+      "default", 
       "retro",
       "aqua",
       "class",
@@ -64,15 +64,15 @@ module.exports = {
       "dim",
       {
         mytheme: {
-          "primary": "#FF6B66", // Naranja rojizo
-          "secondary": "#FFC132", // Amarillo
-          "accent": "#FFCD5B", // Naranja más suave
-          "neutral": "#3D4451", // Gris oscuro neutro
-          "base-100": "#FFFFFF", // Fondo blanco
-          "info": "#3ABFF8", // Azul claro
-          "success": "#36D399", // Verde éxito
-          "warning": "#FBBD23", // Amarillo alerta
-          "error": "#F87272", // Rojo de error
+          "primary": "#FF6B66", 
+          "secondary": "#FFC132", 
+          "accent": "#FFCD5B", 
+          "neutral": "#3D4451", 
+          "base-100": "#FFFFFF", 
+          "info": "#3ABFF8", 
+          "success": "#36D399", 
+          "warning": "#FBBD23", 
+          "error": "#F87272", 
         },
       },
     ],
@@ -81,9 +81,9 @@ module.exports = {
     utils: true,
     logs: false,
     rtl: false,
-    prefix: "", // Si no necesitas prefijos, déjalo vacío
-    darkTheme: "dark", // Usar tema oscuro si se activa
-    darkMode: "class", // Activar dark mode por clase
+    prefix: "", 
+    darkTheme: "dark",
+    darkMode: "class", 
   },
 };
 
