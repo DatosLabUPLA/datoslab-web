@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Importa Link
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   logoSrc: string;
@@ -10,19 +10,28 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("default");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", theme); 
+    document.body.setAttribute("data-theme", theme);
   }, [theme]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleThemeMenu = () => {
+    setIsThemeMenuOpen(!isThemeMenuOpen);
+  };
+
+  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(event.target.value);
+  };
+
   return (
-    <section className="z-10 fixed w-full navbar-right" style={{ top: 0, left: 0, right: 0 }}>
+    <section className="z-50 fixed w-full navbar-right" style={{ top: 0, left: 0, right: 0 }}>
       <nav className="navbar bg-gradient-to-r justify-between items-center bg-base-100 p-4">
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-4">
           <img
             src={logoSrc}
             alt={logoAlt}
@@ -34,13 +43,23 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
           </a>
         </div>
 
+        {/* Botón de menú hamburguesa para pantallas pequeñas */}
+        <div className="flex-none md:hidden">
+          <button onClick={toggleMenu} className="btn btn-ghost">
+            ☰
+          </button>
+        </div>
+
+        {/* Menú en pantallas grandes y menú hamburguesa en pantallas pequeñas */}
         <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
-          <ul className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg" : ""}`}>
+          <ul
+            className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg z-50" : ""}`}
+          >
             {menuItems.map((item, index) => (
               <li key={index} className="p-0">
                 {item === "Equipo" || item === "Proyectos" ? (
                   <Link
-                    to={`/${item.toLowerCase()}`} // Crea el enlace hacia /equipo o /proyectos
+                    to={`/${item.toLowerCase()}`}
                     className="hover:text-gray-300 text-current px-2 py-1"
                   >
                     {item}
@@ -54,10 +73,56 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
             ))}
           </ul>
         </div>
+
+        {/* Menú desplegable de temas */}
+        <div className="navbar-right">
+          <div
+            className="navbar-end mr-auto dropdown dropdown-hover mb-1"
+            onMouseEnter={() => setIsThemeMenuOpen(true)}
+            onMouseLeave={() => setIsThemeMenuOpen(false)}
+          >
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
+              onClick={toggleThemeMenu}
+            >
+              Temas
+              <svg
+                width="12px"
+                height="12px"
+                className="inline-block h-2 w-2 fill-current opacity-60 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 2048 2048"
+              >
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            {isThemeMenuOpen && (
+              <ul className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg">
+                {["default", "light", "dark", "retro", "aqua"].map((themeOption) => (
+                  <li key={themeOption}>
+                    <label className="cursor-pointer flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="theme-dropdown"
+                        className="theme-controller"
+                        aria-label={themeOption}
+                        value={themeOption}
+                        onChange={handleThemeChange}
+                        checked={theme === themeOption}
+                      />
+                      <span className="text-sm capitalize">{themeOption}</span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
       </nav>
     </section>
   );
 };
 
 export default Navbar;
-
