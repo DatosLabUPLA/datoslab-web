@@ -1,27 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Importa Link
 
 interface NavbarProps {
   logoSrc: string;
   logoAlt: string;
   menuItems: string[];
-  onEquipoClick: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems, onEquipoClick }) => {
+const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("default");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme); 
   }, [theme]);
-
-  const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedTheme = e.target.value;
-    setTheme(selectedTheme);
-    setIsThemeMenuOpen(false);
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,20 +38,15 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems, onEquipoCl
           <ul className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg" : ""}`}>
             {menuItems.map((item, index) => (
               <li key={index} className="p-0">
-                {item === "Equipo" ? (
-                  <a
-                    href="#"
-                    onClick={() => {
-                      onEquipoClick();
-                    }}
+                {item === "Equipo" || item === "Proyectos" ? (
+                  <Link
+                    to={`/${item.toLowerCase()}`} // Crea el enlace hacia /equipo o /proyectos
                     className="hover:text-gray-300 text-current px-2 py-1"
                   >
                     {item}
-                  </a>
+                  </Link>
                 ) : (
-                  <button
-                    className="hover:text-gray-300 text-current px-2 py-1"
-                  >
+                  <button className="hover:text-gray-300 text-current px-2 py-1">
                     {item}
                   </button>
                 )}
@@ -73,3 +60,4 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems, onEquipoCl
 };
 
 export default Navbar;
+
