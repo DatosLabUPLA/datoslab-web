@@ -5,7 +5,7 @@ const Lineas: React.FC = () => {
     <div>
         {/* Líneas de Investigación */}
         <section id="líneas" className="bg-customOrange p-16 text-center bg-gradient-to-r my-40">
-        <div className="w-full px-4 mt-8 space-y-16">
+        <div className="w-full px-4 mt-8 space-y-16 mb-14">
           <h2 className="text-white text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
           <div className="flex flex-wrap justify-between gap-5">
             {[
@@ -43,16 +43,6 @@ const Lineas: React.FC = () => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Botón centrado */}
-          <div className="flex justify-center mt-8">
-            <a
-              href="#publicaciones"
-              className="btn btn-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-white-700"
-            >
-              CONTINUAR
-            </a>
           </div>
         </div>
       </section>

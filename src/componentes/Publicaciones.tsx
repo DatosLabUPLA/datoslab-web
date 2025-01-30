@@ -4,7 +4,7 @@ const Publicaciones: React.FC = () => {
   return (
     <div>
       <section id="publicaciones">
-        <div className="mt-40 mb-20 py-0">
+        <div className="mt-40 mb-28 py-0">
           <h2 className="text-4xl font-bold text-center mb-8">Publicaciones</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-1">
             {[
@@ -27,14 +27,6 @@ const Publicaciones: React.FC = () => {
                 />
               </a>
             ))}
-          </div>
-          <div className="flex justify-center mt-8">
-            <a
-              href="#science mapping"
-              className="btn btn-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-white-700"
-            >
-              CONTINUAR
-            </a>
           </div>
         </div>
       </section>

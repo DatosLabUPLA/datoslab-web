@@ -143,10 +143,6 @@ const Equipocom: React.FC = () => {
             </div>
             </div>
         </div>
-        <div className="flex justify-center mt-8">
-            <a href="#contacto" className="btn bg-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-white-700">
-                CONTINUAR</a>
-        </div>
         </div>
         </section>
     </div>

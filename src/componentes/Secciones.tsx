@@ -117,16 +117,6 @@ const Secciones: React.FC = () => {
               </div>
             ))}
           </div>
-          
-          {/* Botón centrado */}
-          <div className="flex justify-center mt-8">
-            <a
-              href="#descargas"
-              className="btn bg-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-white-700"
-            >
-              CONTINUAR
-            </a>
-          </div>
         </div>
       </section>
     </div>
@@ -211,16 +201,6 @@ const Secciones: React.FC = () => {
               </div>
             ))}
           </div>
-
-          {/* Botón centrado */}
-          <div className="flex justify-center mt-8">
-            <a
-              href="#descargas"
-              className="btn bg-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
-            >
-              CONTINUAR
-            </a>
-          </div>
         </div>
       </section>
     </div>
@@ -283,16 +263,6 @@ const Secciones: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Botón centrado */}
-          <div className="flex justify-center mt-8">
-            <a
-              href="#descargas"
-              className="btn bg-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700"
-            >
-              CONTINUAR
-            </a>
           </div>
         </div>
       </section>

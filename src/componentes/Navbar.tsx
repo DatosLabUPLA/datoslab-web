@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems, onEquipoCl
   return (
     <section className="z-10 fixed w-full navbar-right" style={{ top: 0, left: 0, right: 0 }}>
       <nav className="navbar bg-gradient-to-r justify-between items-center bg-base-100 p-4">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-8">
           <img
             src={logoSrc}
             alt={logoAlt}

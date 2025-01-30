@@ -29,14 +29,6 @@ const Descargas: React.FC = () => {
                 ))}
             </div>
             </div>
-            {/* Botón centrado*/}
-            <div className="flex justify-center mt-4"> 
-            <a
-                href="#proyecto"
-                className="btn btn-white text-black font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 hover:bg-blue-700">
-                CONTINUAR
-            </a>
-            </div>
         </section>
         </div>
     );
