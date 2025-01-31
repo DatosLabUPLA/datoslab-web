@@ -23,39 +23,60 @@ const proyectos = [
   },
 ];
 
-const Slider = () => {
+const Slider: React.FC = () => {
   const [indice, setIndice] = useState(0);
 
-  const previo = () => {
-    setIndice((prev) => (prev === 0 ? proyectos.length - 1 : prev - 1));
+  // Función para avanzar al siguiente grupo de 3 proyectos
+  const siguiente = () => {
+    setIndice((prev) => (prev === proyectos.length - 3 ? 0 : prev + 1));
   };
 
-  const siguiente = () => {
-    setIndice((prev) => (prev === proyectos.length - 1 ? 0 : prev + 1));
+  // Función para retroceder al grupo anterior de 3 proyectos
+  const previo = () => {
+    setIndice((prev) => (prev === 0 ? proyectos.length - 3 : prev - 1));
   };
 
   return (
     <section className="relative w-full text-center">
       <h2 className="text-4xl font-bold mb-6 mt-20">Proyectos más relevantes</h2>
-      <div className="relative overflow-hidden w-full h-[300px] md:h-[500px]">
-        <img
-          src={proyectos[indice].imagen}
-          alt={proyectos[indice].titulo}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-white">
-          <div className="text-center px-4">
-            <h3 className="text-3xl font-bold mb-2">{proyectos[indice].titulo}</h3>
-            <p className="text-lg mb-4">{proyectos[indice].descripcion}</p>
-            <button className="bg-white text-black font-bold py-2 px-4 rounded-lg shadow-md hover:bg-gray-300 transition">Ver Más</button>
-          </div>
+      <div className="relative overflow-hidden w-full">
+        <div
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${(100 / 3) * indice}%)` }}
+        >
+          {/* Renderizamos solo 3 proyectos a la vez */}
+          {proyectos.slice(indice, indice + 3).map((proyecto, index) => (
+            <div key={index} className="w-full sm:w-1/3 px-2">
+              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src={proyecto.imagen}
+                  alt={proyecto.titulo}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold">{proyecto.titulo}</h3>
+                  <p className="text-gray-600">{proyecto.descripcion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-        <button onClick={previo} className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition">❮</button>
+        <button
+          onClick={previo}
+          className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition"
+        >
+          ❮
+        </button>
       </div>
       <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-        <button onClick={siguiente} className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition">❯</button>
+        <button
+          onClick={siguiente}
+          className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition"
+        >
+          ❯
+        </button>
       </div>
     </section>
   );

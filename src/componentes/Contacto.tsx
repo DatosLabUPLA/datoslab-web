@@ -13,11 +13,11 @@ const Contacto: React.FC = () => {
             href="https://www.google.com/maps/place/Subida+Leopoldo+Carvallo+270,+2360004+Playa+Ancha,+Valpara%C3%ADso/@-33.0210752,-71.6415382,17z/data=!3m1!4b1!4m6!3m5!1s0x9689e6c0ce538cb9:0x75514ace54db50af!8m2!3d-33.0210752!4d-71.6415382!16s%2Fg%2F11ggrmbzlj?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-white underline hover:text-white">
+            className="text-white underline hover:text-gray-300">
             Subida Leopoldo Carvallo 270, 4to piso, Valparaíso, CHILE
             </a>.
         </p>
-        <p className="text-base md:text-lg mt-5">
+        <p className="text-white text-base md:text-lg mt-5">
             <span className="inline-flex items-center">
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -29,12 +29,12 @@ const Contacto: React.FC = () => {
             +56 32 2 500 anexo 537
             </span>
         </p>
-        <p className="text-base md:text-lg mt-5">
+        <p className="text-white text-base md:text-lg mt-5">
             <a 
             href="https://www.youtube.com/channel/UCrXz_w8sok_tv7NcUfiEuhw/featured" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center font-bold hover:text-white"
+            className="inline-flex items-center font-bold hover:text-gray-300"
             >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -46,12 +46,12 @@ const Contacto: React.FC = () => {
             DatosLab UPLA
             </a>
         </p>
-        <p className="text-base md:text-lg mt-5">
+        <p className="text-white text-base md:text-lg mt-5">
             <a 
             href="mailto:miguel.guevara@upla.cl" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center font-bold hover:text-white"
+            className="inline-flex items-center font-bold hover:text-gray-300"
             >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -67,6 +67,7 @@ const Contacto: React.FC = () => {
         </section>
     </div>
 );
-};      
+};
 
 export default Contacto;
+

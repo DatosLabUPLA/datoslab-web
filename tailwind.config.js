@@ -52,6 +52,7 @@ module.exports = {
     themes: [
       "corporate",
       "dark",
+      "night",
       "light",
       "emerald",
       "current",

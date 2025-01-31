@@ -3,32 +3,36 @@ import React from "react";
 const Lineas: React.FC = () => {
   return (
     <div>
-        {/* Líneas de Investigación */}
-        <section id="líneas" className="bg-customOrange p-16 text-center bg-gradient-to-r my-40">
+      {/* Líneas de Investigación */}
+      <section id="líneas" className="bg-customOrange p-16 text-center bg-gradient-to-r my-40">
         <div className="w-full px-4 mt-8 space-y-16 mb-14">
           <h2 className="text-white text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
           <div className="flex flex-wrap justify-between gap-5">
             {[
               {
                 title: "Open Data",
-                description: "Potenciamos la participación ciudadana a través del uso de datos abiertos y de nuevas aplicaciones",
-                iconSrc: "img/iconos/icono1.png"
+                description:
+                  "Potenciamos la participación ciudadana a través del uso de datos abiertos y de nuevas aplicaciones",
+                iconSrc: "img/iconos/icono1.png",
               },
               {
                 title: "Data Analytics",
-                description: "Buscamos patrones significativos en los datos a través de algoritmos computacionales y modelos estadísticos",
-                iconSrc: "img/iconos/icono2.png"
+                description:
+                  "Buscamos patrones significativos en los datos a través de algoritmos computacionales y modelos estadísticos",
+                iconSrc: "img/iconos/icono2.png",
               },
               {
                 title: "Networks",
-                description: "Creamos y utilizamos redes complejas basadas en interacciones sociales o información de producción",
-                iconSrc: "img/iconos/icono3.png"
+                description:
+                  "Creamos y utilizamos redes complejas basadas en interacciones sociales o información de producción",
+                iconSrc: "img/iconos/icono3.png",
               },
               {
                 title: "Data Visualization",
-                description: "Creamos y aplicamos las mejores técnicas de visualización de datos de forma estática o interactiva",
-                iconSrc: "img/iconos/icono4.png"
-              }
+                description:
+                  "Creamos y aplicamos las mejores técnicas de visualización de datos de forma estática o interactiva",
+                iconSrc: "img/iconos/icono4.png",
+              },
             ].map((item, index) => (
               <div
                 key={index}
@@ -46,7 +50,8 @@ const Lineas: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>  
-    );  
+    </div>
+  );
 };
+
 export default Lineas;

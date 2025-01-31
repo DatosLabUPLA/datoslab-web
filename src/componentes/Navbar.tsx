@@ -52,9 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
 
         {/* Menú en pantallas grandes y menú hamburguesa en pantallas pequeñas */}
         <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
-          <ul
-            className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg z-50" : ""}`}
-          >
+          <ul className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg z-50" : ""}`}>
             {menuItems.map((item, index) => (
               <li key={index} className="p-0">
                 {item === "Equipo" || item === "Proyectos" ? (
@@ -64,6 +62,13 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                   >
                     {item}
                   </Link>
+                ) : item === "Líneas" || item === "Publicaciones" || item === "Descargas" || item === "Contacto" ? (
+                  <a
+                    href={`#${item.toLowerCase()}`} // Asegúrate de que cada sección tenga el ID correcto
+                    className="hover:text-gray-300 text-current px-2 py-1"
+                  >
+                    {item}
+                  </a>
                 ) : (
                   <button className="hover:text-gray-300 text-current px-2 py-1">
                     {item}
@@ -100,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
             </div>
             {isThemeMenuOpen && (
               <ul className="dropdown-content bg-base-300 rounded-lg z-[1] w-52 p-2 shadow-lg">
-                {["default", "light", "dark", "retro", "aqua"].map((themeOption) => (
+                {["default", "light", "night", "retro", "aqua"].map((themeOption) => (
                   <li key={themeOption}>
                     <label className="cursor-pointer flex items-center gap-2">
                       <input

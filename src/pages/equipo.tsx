@@ -39,11 +39,19 @@ const Equipo: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="p-10 text-lg flex justify-center items-center space-x-4">
+        {/* Aquí se muestran los spinners */}
+        <span className="loading loading-spinner loading-xs"></span>
+        <span className="loading loading-spinner loading-sm"></span>
+        <span className="loading loading-spinner loading-md"></span>
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="p-10 text-red-500">Error: {error}</div>;
   }
 
   const miembrosActivos = miembros.filter((miembro) => miembro.activo === "TRUE");
@@ -54,7 +62,7 @@ const Equipo: React.FC = () => {
       miembro.titulo.toLowerCase().includes("director") ||
       miembro.categoria.toLowerCase().includes("director")
   );
-  
+
   const miembrosProfesionales = miembrosActivos.filter((miembro) =>
     miembro.categoria.toLowerCase().includes("profesional")
   );
@@ -79,37 +87,37 @@ const Equipo: React.FC = () => {
 
   return (
     <div className="p-4 mt-24">
-    {/* Botón de Volver al Home */}
-    <BotonVolver />
+      {/* Botón de Volver al Home */}
+      <BotonVolver />
 
-    <h1 className="text-2xl font-bold mb-4 text-center">Equipo</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Equipo</h1>
 
-    {/* Directores */}
-    {miembrosDirectores.length > 0 && (
-      <div>
-        <h2 className="text-xl font-semibold text-center mt-16">Directores</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {miembrosDirectores.map((miembro) => (
-            <div key={miembro.id} className="border p-4 rounded-lg shadow-md flex items-center space-x-4">
-              <img
-                src={miembro.foto || imagenPorDefecto}
-                alt={miembro.nombre}
-                className="w-16 h-16 rounded-full"
-              />
-              <div>
-                <h3 className="text-xl font-semibold">{miembro.nombre}</h3>
-                <p className="text-md">{miembro.titulo}</p>
-                <p className="text-sm text-gray-600">{miembro.afiliacion}</p>
-                <p className="text-sm text-gray-600">{miembro.categoria}</p>
-                <a href={`mailto:${miembro.email}`} className="text-blue-500">
-                  {miembro.email}
-                </a>
+      {/* Directores */}
+      {miembrosDirectores.length > 0 && (
+        <div>
+          <h2 className="text-xl font-semibold text-center mt-16">Directores</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {miembrosDirectores.map((miembro) => (
+              <div key={miembro.id} className="border p-4 rounded-lg shadow-md flex items-center space-x-4">
+                <img
+                  src={miembro.foto || imagenPorDefecto}
+                  alt={miembro.nombre}
+                  className="w-16 h-16 rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold">{miembro.nombre}</h3>
+                  <p className="text-md">{miembro.titulo}</p>
+                  <p className="text-sm text-gray-600">{miembro.afiliacion}</p>
+                  <p className="text-sm text-gray-600">{miembro.categoria}</p>
+                  <a href={`mailto:${miembro.email}`} className="text-blue-500">
+                    {miembro.email}
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    )}
+      )}
 
       {/* Profesionales */}
       {miembrosProfesionales.length > 0 && (

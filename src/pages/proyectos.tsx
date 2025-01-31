@@ -29,7 +29,6 @@ const Proyectos: React.FC = () => {
         return response.json();
       })
       .then((data) => {
-        // Filtrar proyectos visibles
         const proyectosVisibles = data.filter((p: Proyecto) => p.visible === "TRUE");
         setProyectos(proyectosVisibles);
         setLoading(false);
@@ -41,14 +40,20 @@ const Proyectos: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div className="p-10 text-lg">Cargando proyectos...</div>;
+    return (
+      <div className="p-10 text-lg flex justify-center items-center space-x-4">
+        <span className="loading loading-spinner loading-xs"></span>
+        <span className="loading loading-spinner loading-sm"></span>
+        <span className="loading loading-spinner loading-md"></span>
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
   }
 
   if (error) {
     return <div className="p-10 text-red-500">Error: {error}</div>;
   }
 
-  // Filtrar proyectos activos e inactivos
   const proyectosActivos = proyectos.filter((proyecto) => proyecto.estado !== "finalizado");
   const proyectosInactivos = proyectos.filter((proyecto) => proyecto.estado === "finalizado");
 
@@ -139,5 +144,6 @@ const Proyectos: React.FC = () => {
 };
 
 export default Proyectos;
+
 
 
