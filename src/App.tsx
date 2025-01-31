@@ -5,6 +5,7 @@ import Proyectos from "./pages/Proyectos";
 import Home from "./componentes/Home";
 import Navbar from "./componentes/Navbar";
 import Footer from "./componentes/Footer";
+import BotonVolver from "./componentes/boton-volver";
 
 const App: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const App: React.FC = () => {
           menuItems={["Líneas", "Publicaciones", "Descargas", "Proyectos", "Equipo", "Contacto"]}
         />
       </header>
-
+      <BotonVolver />
       <Routes>
         {/* Página principal, que muestra Home con sus componentes */}
         <Route path="/" element={<Home />} />

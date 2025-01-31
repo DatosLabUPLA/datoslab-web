@@ -1,5 +1,5 @@
 import React from "react";
-import Inicio from "./Inicio"; // Asegúrate de tener estos componentes importados
+import Inicio from "./Inicio";
 import Lineas from "./Lineas";
 import Publicaciones from "./Publicaciones";
 import Secciones from "./Secciones";
