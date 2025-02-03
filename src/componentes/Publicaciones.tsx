@@ -6,40 +6,39 @@ const Publicaciones: React.FC = () => {
   const publicaciones = [
     { 
       src: "img/portfolio/thumbnails/research1.png", 
-      title: "The Resarch Space", 
-      description: "Descripción breve de la investigación 1" 
+      title: "RESEARCH, INNOVATION", 
+      description: "Science Mapping" 
     },
     { 
       src: "img/portfolio/thumbnails/sistemadesarrollo.png", 
-      title: "Sistema de Desarrollo", 
-      description: "Descripción breve del sistema de desarrollo" 
+      title: "OPNGOV, POLITICAL", 
+      description: "Participation" 
     },
     { 
       src: "img/portfolio/thumbnails/3.png", 
-      title: "Product Gini Index", 
-      description: "Descripción breve de la publicación 3" 
-    },
-    { 
-      src: "img/portfolio/thumbnails/research1.png", 
-      title: "The Research Space", 
-      description: "Descripción breve de la investigación 2" 
+      title: "INCOME, GENDER", 
+      description: "Inequality" 
     }
   ];
+
+  const handleOutsideClick = (e: React.MouseEvent) => {
+    // Cerrar la imagen si se hace clic fuera del contenedor de la imagen ampliada
+    if ((e.target as HTMLElement).id === "imageOverlay") {
+      setSelectedImage(null);
+    }
+  };
 
   return (
     <div>
       <section id="publicaciones">
         <div className="mt-40 mb-28 py-0">
           <h2 className="text-4xl font-bold text-center mb-8">Publicaciones</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {publicaciones.map((pub, index) => (
               <button
                 key={index}
                 className="relative group overflow-hidden rounded-lg"
-                onClick={() => {
-                  setSelectedImage(pub.src);
-                  (document.getElementById("modal_publicaciones") as HTMLDialogElement)?.showModal();
-                }}
+                onClick={() => setSelectedImage(pub.src)} // Establecer la imagen seleccionada
               >
                 {/* Imagen con efecto de hover */}
                 <img
@@ -59,26 +58,24 @@ const Publicaciones: React.FC = () => {
         </div>
       </section>
 
-      {/* Modal */}
-      <dialog id="modal_publicaciones" className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Publicación ampliada"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          )}
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Cerrar</button>
-            </form>
-          </div>
+      {/* Imagen ampliada que aparece encima */}
+      {selectedImage && (
+        <div
+          id="imageOverlay"
+          className="fixed top-0 left-0 z-50 w-full h-full bg-black bg-opacity-75 flex justify-center items-center"
+          onClick={handleOutsideClick} // Detectar clic fuera para cerrar
+        >
+          <img
+            src={selectedImage}
+            alt="Imagen ampliada"
+            className="w-auto h-auto max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
+          />
         </div>
-      </dialog>
+      )}
     </div>
   );
 };
 
 export default Publicaciones;
+
 
