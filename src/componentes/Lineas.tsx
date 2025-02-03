@@ -43,7 +43,7 @@ const Lineas: React.FC = () => {
                   alt={`Icono ${item.title}`}
                   className="w-16 h-16 mx-auto mb-3"
                 />
-                <h3 className="text-2xl font-bold text-blue-500">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-black-500">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}

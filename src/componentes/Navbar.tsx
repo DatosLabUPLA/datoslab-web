@@ -59,8 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                   <HashLink 
                     smooth 
                     to={`/#${item.toLowerCase()}`} 
-                    className="hover:text-gray-300 text-current px-2 py-1"
-                  >
+                    className="hover:text-gray-300 text-current px-2 py-1">
                     {item}
                   </HashLink>
                 )}
