@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BotonVolver from "../componentes/boton-volver";
 
 interface Proyecto {
   proyecto: string;

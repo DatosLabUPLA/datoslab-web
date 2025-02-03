@@ -38,4 +38,5 @@ npm install react-router-dom
 npm install -D prettier-plugin-tailwindcss
 npm install react-router-hash-link
 npm i --save-dev @types/react-router-hash-link
+npm run lint --fix
 npm run dev
