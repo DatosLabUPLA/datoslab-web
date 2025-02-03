@@ -36,4 +36,6 @@ npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fo
 npm install react-scroll
 npm install react-router-dom
 npm install -D prettier-plugin-tailwindcss
+npm install react-router-hash-link
+npm i --save-dev @types/react-router-hash-link
 npm run dev

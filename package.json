@@ -20,6 +20,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.3",
+    "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@types/react": "^18.3.18",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
     "@types/react-dom": "^18.3.5",
+    "@types/react-router-hash-link": "^2.4.9",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",

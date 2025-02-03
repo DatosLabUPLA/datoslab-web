@@ -10,7 +10,7 @@ import Contacto from "./Contacto";
 
 const Home: React.FC = () => {
   return (
-    <div className="p-0">
+    <div id="home" className="p-0">
       {/* Hero */}
       <section style={{ marginTop: "80px" }}>
         <div
@@ -26,8 +26,7 @@ const Home: React.FC = () => {
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-                a id nisi.
+                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
               </p>
               <a
                 href="#inicio"
@@ -38,9 +37,7 @@ const Home: React.FC = () => {
                   if (target) {
                     const yOffset = -140;
                     const y =
-                      target.getBoundingClientRect().top +
-                      window.pageYOffset +
-                      yOffset;
+                      target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: "smooth" });
                   }
                 }}
@@ -52,18 +49,27 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Componentes */}
-      <Inicio />
-      <Lineas />
-      <Publicaciones />
+      {/* Secciones con id para scroll (solamente las que se usan en el menú) */}
+      <section id="inicio">
+        <Inicio />
+      </section>
+      <section id="líneas">
+        <Lineas />
+      </section>
+      <section id="publicaciones">
+        <Publicaciones />
+      </section>
       <Secciones />
-      <Descargas />
+      <section id="descargas">
+        <Descargas />
+      </section>
       <Slider />
       <Equipocom />
-      <Contacto />
+      <section id="contacto">
+        <Contacto />
+      </section>
     </div>
   );
 };
 
 export default Home;
-

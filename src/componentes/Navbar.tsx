@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 interface NavbarProps {
   logoSrc: string;
@@ -11,22 +12,11 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("default");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleThemeMenu = () => {
-    setIsThemeMenuOpen(!isThemeMenuOpen);
-  };
-
-  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTheme(event.target.value);
-  };
 
   return (
     <section className="z-50 fixed w-full navbar-right" style={{ top: 0, left: 0, right: 0 }}>
@@ -43,36 +33,36 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
           </a>
         </div>
 
-        {/* Botón de menú hamburguesa para pantallas pequeñas */}
         <div className="flex-none md:hidden">
-          <button onClick={toggleMenu} className="btn btn-ghost">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="btn btn-ghost">
             ☰
           </button>
         </div>
 
-        {/* Menú en pantallas grandes y menú hamburguesa en pantallas pequeñas */}
         <div className={`flex-none ${isMenuOpen ? "block" : "hidden"} md:flex`}>
-          <ul className={`menu menu-horizontal px-2 space-x-2 ${isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg z-50" : ""}`}>
+          <ul
+            className={`menu menu-horizontal px-2 space-x-2 ${
+              isMenuOpen ? "absolute bg-base-100 shadow-lg mt-2 rounded-lg z-50" : ""
+            }`}
+          >
             {menuItems.map((item, index) => (
               <li key={index} className="p-0">
-                {item === "Equipo" || item === "Proyectos" ? (
-                  <Link
-                    to={`/${item.toLowerCase()}`}
-                    className="hover:text-gray-300 text-current px-2 py-1"
-                  >
+                {item === "Home" ? (
+                  <Link to="/" className="hover:text-gray-300 text-current px-2 py-1">
                     {item}
                   </Link>
-                ) : item === "Líneas" || item === "Publicaciones" || item === "Descargas" || item === "Contacto" ? (
-                  <a
-                    href={`#${item.toLowerCase()}`} // Asegúrate de que cada sección tenga el ID correcto
+                ) : item === "Equipo" || item === "Proyectos" ? (
+                  <Link to={`/${item.toLowerCase()}`} className="hover:text-gray-300 text-current px-2 py-1">
+                    {item}
+                  </Link>
+                ) : (
+                  <HashLink 
+                    smooth 
+                    to={`/#${item.toLowerCase()}`} 
                     className="hover:text-gray-300 text-current px-2 py-1"
                   >
                     {item}
-                  </a>
-                ) : (
-                  <button className="hover:text-gray-300 text-current px-2 py-1">
-                    {item}
-                  </button>
+                  </HashLink>
                 )}
               </li>
             ))}
@@ -90,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
               tabIndex={0}
               role="button"
               className="btn m-1 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg shadow-lg"
-              onClick={toggleThemeMenu}
+              onClick={() => setIsThemeMenuOpen(!isThemeMenuOpen)}
             >
               Temas
               <svg
@@ -114,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                         className="theme-controller"
                         aria-label={themeOption}
                         value={themeOption}
-                        onChange={handleThemeChange}
+                        onChange={(e) => setTheme(e.target.value)}
                         checked={theme === themeOption}
                       />
                       <span className="text-sm capitalize">{themeOption}</span>

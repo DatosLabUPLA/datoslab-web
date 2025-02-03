@@ -40,11 +40,8 @@ const Equipo: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="p-10 text-lg flex justify-center items-center space-x-4">
+      <div className="p-10 text-lg flex justify-center items-center space-x-4 mt-20">
         {/* Aquí se muestran los spinners */}
-        <span className="loading loading-spinner loading-xs"></span>
-        <span className="loading loading-spinner loading-sm"></span>
-        <span className="loading loading-spinner loading-md"></span>
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
@@ -86,10 +83,7 @@ const Equipo: React.FC = () => {
   const imagenPorDefecto = "img/portfolio/img/team/miguel_guevara.png";
 
   return (
-    <div className="p-4 mt-24">
-      {/* Botón de Volver al Home */}
-      <BotonVolver />
-
+    <div className="p-4 mt-32">
       <h1 className="text-2xl font-bold mb-4 text-center">Equipo</h1>
 
       {/* Directores */}

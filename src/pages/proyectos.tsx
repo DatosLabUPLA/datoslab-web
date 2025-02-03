@@ -41,10 +41,7 @@ const Proyectos: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="p-10 text-lg flex justify-center items-center space-x-4">
-        <span className="loading loading-spinner loading-xs"></span>
-        <span className="loading loading-spinner loading-sm"></span>
-        <span className="loading loading-spinner loading-md"></span>
+      <div className="p-10 text-lg flex justify-center items-center space-x-4 mt-20">
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
@@ -58,8 +55,7 @@ const Proyectos: React.FC = () => {
   const proyectosInactivos = proyectos.filter((proyecto) => proyecto.estado === "finalizado");
 
   return (
-    <div className="p-10 mt-10">
-      <BotonVolver />
+    <div className="p-10 mt-32">
       <h1 className="text-center text-3xl font-bold mb-5">Nuestros Proyectos</h1>
 
       {/* Proyectos Activos */}
