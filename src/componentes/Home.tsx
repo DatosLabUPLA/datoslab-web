@@ -1,12 +1,12 @@
 import React from "react";
-import Inicio from "./Inicio";
-import Lineas from "./Lineas";
-import Publicaciones from "./Publicaciones";
-import Secciones from "./Secciones";
-import Descargas from "./Descargas";
-import Slider from "./Slider";
-import Equipocom from "./Equipocom";
-import Contacto from "./Contacto";
+import Inicio from "./Inicio.js";
+import Lineas from "./Lineas.js";
+import Publicaciones from "./Publicaciones.js";
+import Secciones from "./Secciones.js";
+import Descargas from "./Descargas.js";
+import Slider from "./Slider.js";
+import Equipocom from "./Equipocom.js";
+import Contacto from "./Contacto.js";
 
 const Home: React.FC = () => {
   return (

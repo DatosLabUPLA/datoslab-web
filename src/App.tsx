@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Equipo from "./pages/equipo";
-import Proyectos from "./pages/proyectos";
-import Home from "./componentes/Home";
-import Navbar from "./componentes/Navbar";
-import Footer from "./componentes/Footer";
+import Equipo from "./pages/Equipo.js";
+import Proyectos from "./pages/Proyectos.js";
+import Home from "./componentes/Home.js";
+import Navbar from "./componentes/Navbar.js";
+import Footer from "./componentes/Footer.js";
 
 const App: React.FC = () => {
   return (
