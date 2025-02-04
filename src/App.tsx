@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Equipo from "./pages/equipo";
-import Proyectos from "./pages/proyectos";
+import Equipo from "./pages/Equipo";
+import Proyectos from "./pages/Proyectos";
 import Home from "./componentes/Home";
 import Navbar from "./componentes/Navbar";
 import Footer from "./componentes/Footer";
