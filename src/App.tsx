@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Equipo from "./pages/equipo.js";
+import { Route, Routes } from "react-router-dom";
+import Equipo from "./pages/Equipo.js";
+import Proyectos from "./pages/Proyectos.js";
 import Home from "./componentes/Home.js";
 import Navbar from "./componentes/Navbar.js";
 import Footer from "./componentes/Footer.js";
@@ -15,19 +16,17 @@ const App: React.FC = () => {
           menuItems={["Home", "Líneas", "Publicaciones", "Descargas", "Proyectos", "Equipo", "Contacto"]}
         />
       </header>
-      <Router>
       <Routes>
         {/* Página principal */}
         <Route path="/" element={<Home />} />
         
         {/* Rutas para Equipo y Proyectos */}
         <Route path="/equipo" element={<Equipo />} />
+        <Route path="/proyectos" element={<Proyectos />} />
       </Routes>
-      </Router>
       <Footer />
     </div>
   );
 };
 
 export default App;
-
