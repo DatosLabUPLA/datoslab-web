@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+const Inicio = () => {
+    return (_jsx("div", { children: _jsx("section", { id: "inicio", className: "p-10 md:p-10 text-center bg-gradient-to-r my-10", children: _jsxs("div", { className: "container mx-auto space-y-14", children: [_jsx("h1", { className: "text-3xl md:text-4xl font-bold mb-5", children: "C\u00F3mo hacer simple la complejidad de los datos" }), _jsx("hr", { className: "light my-4" }), _jsx("p", { className: "text-base md:text-lg mb-5", children: "Nuestro laboratorio encuentra patrones y valor en datos interrelacionados -y abundantes- a trav\u00E9s de nuevos m\u00E9todos y visualizaciones." }), _jsx("p", { className: "text-base md:text-lg mb-5", children: "Nuestra investigaci\u00F3n se aplica a tem\u00E1ticas diversas y con orientaci\u00F3n social." }), _jsx("a", { href: "#l\u00EDneas", className: "btn btn-white text-black font-bold py-2 px-4 rounded-lg shadow-lg \r\n            transition duration-300 hover:bg-white-700", children: "CONTINUAR" })] }) }) }));
+};
+export default Inicio;
