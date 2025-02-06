@@ -17,19 +17,19 @@ const Home: React.FC = () => {
           className="hero min-h-screen"
           style={{
             backgroundImage:
-              "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+              `url("/img/portfolio/img/team/equipodatoslab.jpg")`
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-neutral-content text-center">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <h1 className="mb-5 text-5xl font-bold">Cómo hacer simple la complejidad de los datos</h1>
               <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+              Nuestro laboratorio encuentra patrones y valor en datos interrelacionados -y abundantes- a través de nuevos métodos y visualizaciones.
+              Nuestra investigación se aplica a temáticas diversas y con orientación social.
               </p>
               <a
-                href="#inicio"
+                href="#líneas"
                 className="btn btn-white text-black rounded-lg"
                 onClick={(e) => {
                   e.preventDefault();
@@ -50,15 +50,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Secciones con id para scroll (solamente las que se usan en el menú) */}
-      <section id="inicio">
+      {/*<section id="inicio">
         <Inicio />
-      </section>
+      </section>*/}
       <section id="líneas">
         <Lineas />
       </section>
-      <section id="publicaciones">
+      {/*<section id="publicaciones">
         <Publicaciones />
-      </section>
+      </section>*/}
       <Secciones />
       <section id="descargas">
         <Descargas />

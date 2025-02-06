@@ -38,7 +38,7 @@ const Slider: React.FC = () => {
 
   return (
     <section className="relative w-full text-center">
-      <h2 className="text-4xl font-bold mb-6 mt-20">Proyectos más relevantes</h2>
+      <h2 className="text-4xl font-bold mb-6 mt-20">Proyectos destacados</h2>
       <div className="relative overflow-hidden w-full">
         <div
           className="flex transition-transform duration-500"

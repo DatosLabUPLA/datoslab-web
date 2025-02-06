@@ -4,9 +4,9 @@ const Lineas: React.FC = () => {
   return (
     <div>
       {/* Líneas de Investigación */}
-      <section id="líneas" className="bg-customOrange p-16 text-center bg-gradient-to-r my-40">
+      <section id="líneas" className="p-16 text-center bg-gradient-to-r my-0">
         <div className="w-full px-4 mt-8 space-y-16 mb-14">
-          <h2 className="text-white text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
+          <h2 className="text-4xl font-bold text-center mb-8">Líneas de Investigación</h2>
           <div className="flex flex-wrap justify-between gap-5">
             {[
               {
