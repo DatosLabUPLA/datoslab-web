@@ -1,32 +1,25 @@
+// App.tsx
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Equipo from "./pages/equipo";
 import Proyectos from "./pages/proyectos";
 import Home from "./componentes/Home";
-import Navbar from "./componentes/Navbar";
-import Footer from "./componentes/Footer";
+import Root from "./componentes/Layout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "equipo", element: <Equipo /> },
+      { path: "proyectos", element: <Proyectos /> },
+    ],
+  },
+]);
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <header>
-        <Navbar
-          logoSrc="img/datos_lab.png"
-          logoAlt="DatosLab"
-          menuItems={["Home", "Líneas", "Publicaciones", "Descargas", "Proyectos", "Equipo", "Contacto"]}
-        />
-      </header>
-      <Routes>
-        {/* Página principal */}
-        <Route path="/" element={<Home />} />
-        
-        {/* Rutas para Equipo y Proyectos */}
-        <Route path="/equipo" element={<Equipo />} />
-        <Route path="/proyectos" element={<Proyectos />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
