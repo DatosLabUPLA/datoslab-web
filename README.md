@@ -1,15 +1,5 @@
 # Página web del Laboratorio de Ciencia de Datos de la Universidad de Playa Ancha, DatosLab
 
-## Antes que todo debes instalar NodeJS desde su página oficial https://nodejs.org/en
-## Instala visual studio code
-
-## Antes de levantar un servidor de desarrollo en tu máquina local con npm run dev debes hacer lo siguiente
-ejecuta los siguientes códigos en el terminal de visual studio code para permitir ejecutar
-
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser 
-npm install
-si no te hace falta nada luego de poner en el terminal estos códigos usa npm run dev
-
 ## Extensiones que te pueden hacer falta
 
 # ES7+ React/Redux/React-Native snippets  v4.4.3 
@@ -25,17 +15,37 @@ si no te hace falta nada luego de poner en el terminal estos códigos usa npm ru
 
 ## Codigo usado en el terminal de visual studio que te puedan hacer falta
 
-npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
-npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm install daisyui
-npm install tailwindcss
-npx tailwindcss init
-npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons
-npm install react-scroll
-npm install react-router-dom
-npm install -D prettier-plugin-tailwindcss
-npm install react-router-hash-link
-npm i --save-dev @types/react-router-hash-link
+npm install
 npm run dev
+
+## cosas que le faltan a la aplicación:
+
+## Cambios rápidos: 
+-Cambiar foto del Hero.tsx con una que está en discord #datoslab el grupo completo en el pasillo, cambiar el texto de la sección de abajo hacia arriba y eliminar esa sección que sobra. listo
+
+-Sacar correos por spam, colocar linkedin, orcid, github, Google scholar. listo
+
+-Eliminar sección publicaciones. listo
+
+-Colocar links en R-package(descargas) sobre los programas presidenciales, memorial, cosas que estén funcionando, uninews, que sea como una vitrina de nuestras aplicaciones listo
+
+## Cambios regulares:
+
+-Actualizar links
+
+-En proyectos relevantes cambiar a proyectos destacados, poner un screnshot del proyecto y un enlace al mismo. Colocar Anid como etiqueta y financiador. Colocar Fondef, ciencias abiertas. Direccion, colaboración con el proyecto, proyecto de asesoría al cwts, Fondef dirección y el otro colaboración satelital obvs nieves 
+
+-Agregar miselaneos u otros al tab que tiene 3 secciones por el momento,
+en esta sección poner las ultimas publicaciones, actualizar.
+
+-Sección de proyectos y equipo debe de mejorarse 
+
+-Estos pdfs, se deben subir, reemplazar el anterior de datos abiertos. Y linkear desde la web.(Guevara dijo esto)
+2020-LOS-Datos-Abiertos-de-Chile-ARTICULO-SOLO.pdf
+2022-Cuaderno-XXIV-Covid-y-El-ValpoSoloArticulo.pdf
+
+## Cambios demorosos: 
+-Crear carousel en descargas, darle énfasis a software y aplicaciones, mensaje generamos tecnología en base a nuestras investigaciones (generamos nuestras tecnologías), colocar el package-r y links a aplicaciones o proyectos interesantes que se están trabajando.
+
+-Arreglar error de dependencias en el build o crear nuevo proyecto copiando lo que ya está
+

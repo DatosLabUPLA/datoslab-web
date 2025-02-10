@@ -13,7 +13,6 @@ const Layout: React.FC = () => {
           menuItems={[
             "Home",
             "Líneas",
-            "Publicaciones",
             "Descargas",
             "Proyectos",
             "Equipo",

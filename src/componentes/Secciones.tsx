@@ -27,6 +27,11 @@ const Secciones: React.FC = () => {
     className={`tab text-lg ${activeTab === 3 ? "tab-active" : ""}`}
     onClick={() => handleTabChange(3)}>Inequality
   </a>
+  <a
+    role="tab"
+    className={`tab text-lg ${activeTab === 4 ? "tab-active" : ""}`}
+    onClick={() => handleTabChange(4)}>Data analysis
+  </a>
 </div>
 
 {/* Solo se muestra la sección activa */}
@@ -249,6 +254,65 @@ const Secciones: React.FC = () => {
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <div className="badge badge-primary badge-outline font-bold">PAPER ES</div>
                   </a>,
+                ],
+              },
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <p className="text-gray-600 mb-3">{item.description}</p>
+                <div className="badge-container flex justify-center">
+                  {item.badges.map((badge, badgeIndex) => (
+                    <div key={badgeIndex} className="inline-block m-1">
+                      {badge}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  )}
+  {activeTab === 4 && (
+    <div id="data-analysis">
+     {/* Sección Data analysis */}
+      <section id="inequality" className="bg-customOrange px-4 md:px-40 lg:px-20 py-1">
+        <div className="mx-auto mt-24 mb-24 max-w-screen-lg">
+          <h2 className="text-white text-4xl font-bold text-center mb-16">Data analysis</h2>
+          
+          {/* Tarjetas de publicaciones */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-28 gap-y-6">
+            {[
+              {
+                description: "Gonzalez, V., Abarca-Hurtado, J., Arancibia, A., Claverías, F., Guevara, M. R., & Orellana, R. (2024). Novel Insights on Extracellular Electron Transfer Networks in the Desulfovibrionaceae Family: Unveiling the Potential Significance of Horizontal Gene Transfer. Microorganisms, 12(9), Article 9. ",
+                badges: [
+                  <a href="https://doi.org/10.3390/microorganisms12091796" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline font-bold">PAPER</div>
+                  </a>
+                ],
+              },
+              {
+                description: "Hurtado-Arenas, P., Guevara, M. R., & González-Chordá, V. M. (2024a). Cross-cultural adaptation and validation of the Hospital Survey on Patient Safety questionnaire for a Chilean hospital. BMC Nursing, 23(1), 748. ",
+                badges: [
+                  <a href="https://doi.org/10.1186/s12912-024-02409-7" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary badge-outline font-bold">PAPER</div>
+                  </a>
+                ],
+              },
+              {
+                description: "Hurtado-Arenas, P., Guevara, M. R., & González-Chordá, V. M. (2024b). Patient Safety Culture from a Nursing Perspective in a Chilean Hospital. Nursing Reports, 14(2), Article 2.",
+                badges: [
+                  <a href="https://doi.org/10.3390/nursrep14020108" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary  badge-outline font-bold">PAPER</div>
+                  </a>
+                ],
+              },
+              {
+                description: "Roa, M., Garrido, J., & Guevara, M. (2024). CGC and saturation approach: Impact-parameter dependent model of perturbative QCD and combined HERA data. Physical Review D, 110(7), 074006.",
+                badges: [
+                  <a href="https://doi.org/10.1103/PhysRevD.110.074006" target="_blank" rel="noopener noreferrer">
+                    <div className="badge badge-primary  badge-outline font-bold">PAPER</div>
+                  </a>
                 ],
               },
             ].map((item, index) => (
