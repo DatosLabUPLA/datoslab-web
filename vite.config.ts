@@ -18,6 +18,7 @@ export default defineConfig({
       }
     }
   ],
+  base: process.env.GITHUB_PAGES === 'true' ? '/datoslab-web/' : '/',
   resolve: {
     alias: [{ find: "@" , replacement: path.resolve(__dirname, "src") }],
   },
