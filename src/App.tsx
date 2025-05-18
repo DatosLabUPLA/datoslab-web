@@ -1,10 +1,10 @@
 // App.tsx
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Equipo from "./pages/equipo";
 import Proyectos from "./pages/proyectos";
 import Home from "./componentes/Home";
 import Root from "./componentes/Layout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
