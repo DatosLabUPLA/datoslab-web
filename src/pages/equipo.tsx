@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import BotonVolver from "../componentes/boton-volver";
 
 interface Miembro {
   id: number;
@@ -69,8 +67,6 @@ const Equipo: React.FC = () => {
       miembro.categoria.toLowerCase().includes("practicante") ||
       miembro.categoria.toLowerCase().includes("tesista")
   );
-
-  const miembrosOrdenados = [...miembrosProfesionales, ...miembrosPracticantesYTesistas];
 
   const miembrosInvestigadores = miembrosInactivos.filter((miembro) =>
     miembro.categoria.toLowerCase().includes("investigadora")

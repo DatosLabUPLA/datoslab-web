@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router";
+import { Link as ScrollLink } from "react-scroll";
 
 interface NavbarProps {
   logoSrc: string;
@@ -55,12 +55,16 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
                     {item}
                   </Link>
                 ) : (
-                  <HashLink 
-                    smooth 
-                    to={`/#${item.toLowerCase()}`} 
-                    className="hover:text-gray-300 text-current px-2 py-1">
+                  <ScrollLink 
+                    to={item.toLowerCase()}
+                    spy={true}
+                    smooth={true}
+                    offset={-120}
+                    duration={500}
+                    className="hover:text-gray-300 text-current px-2 py-1 cursor-pointer"
+                  >
                     {item}
-                  </HashLink>
+                  </ScrollLink>
                 )}
               </li>
             ))}
