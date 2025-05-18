@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 interface NavbarProps {
@@ -12,7 +12,6 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const [theme, setTheme] = useState("default");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
