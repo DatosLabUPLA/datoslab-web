@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "start": "vite preview --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
