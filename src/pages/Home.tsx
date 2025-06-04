@@ -1,40 +1,79 @@
-import React from 'react';
+import React from "react";
+import Lineas from "./Lineas";
+// import Publicaciones from "./Publicaciones";
+import Secciones from "./Secciones";
+import Descargas from "./Descargas";
+import Slider from "./Slider";
+import Equipocom from "./Equipocom";
+import Contacto from "./Contacto";
 
 const Home: React.FC = () => {
+  // Función para hacer scroll suave hacia un id con offset (útil para navbar fijo)
+  const scrollToId = (id: string, offset = -140) => {
+    const target = document.getElementById(id);
+    if (target) {
+      const y =
+        target.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-[--color-avocado-100] text-gray-900 font-sans">
-      <section className="max-w-5xl mx-auto px-6 py-12 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[--color-avocado-600] animate-pulse">
-          🌀 DatosLab
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-          Laboratorio de datos
-        </p>
+    <div id="home" className="p-0">
+      {/* Hero */}
+      <section style={{ marginTop: "80px" }}>
+        <div
+          className="hero min-h-screen"
+          style={{
+            backgroundImage: `url("/images/equipodatoslab.jpg")`,
+          }}
+          role="banner"
+          aria-label="Imagen de equipo DatosLab"
+        >
+          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-content text-neutral-content text-center">
+            <div className="max-w-md">
+              <h1 className="mb-5 text-5xl font-bold">
+                Cómo hacer simple la complejidad de los datos
+              </h1>
+              <p className="mb-5">
+                Nuestro laboratorio encuentra patrones y valor en datos
+                interrelacionados -y abundantes- a través de nuevos métodos y
+                visualizaciones. Nuestra investigación se aplica a temáticas
+                diversas y con orientación social.
+              </p>
+              <button
+                className="btn btn-white text-black rounded-lg"
+                aria-label="Comenzar - Ir a sección Líneas"
+                onClick={() => scrollToId("líneas")}
+              >
+                COMENZAR
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 py-10">
-        <div className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-transform ease-[--ease-snappy] duration-300">
-          <h2 className="text-2xl font-bold text-[--color-avocado-500] mb-2">🟥 Trabajo 1</h2>
-          <p>Prueba1</p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-transform ease-[--ease-snappy] duration-300">
-          <h2 className="text-2xl font-bold text-[--color-avocado-500] mb-2">🟩 Trabajo 2</h2>
-          <p>Prueba 2</p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-transform ease-[--ease-snappy] duration-300">
-          <h2 className="text-2xl font-bold text-[--color-avocado-500] mb-2">🟦 Trabajo 3</h2>
-          <p>Prueba 3</p>
-        </div>
+      {/* Secciones con id para scroll */}
+      <section id="líneas">
+        <Lineas />
       </section>
 
-      <footer className="text-center text-sm text-gray-500 mt-16 mb-4">
-        Hecho con 💛 para el laboratorio DatosLab{new Date().getFullYear()}
-      </footer>
-    </main>
+      <Secciones />
+
+      <section id="descargas">
+        <Descargas />
+      </section>
+
+      <Slider />
+
+      <Equipocom />
+
+      <section id="contacto">
+        <Contacto />
+      </section>
+    </div>
   );
 };
 
 export default Home;
-
