@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Equipo from "./pages/equipo";
-import Proyectos from "./pages/proyectos";
+import Equipo from "./pages/Equipo";
+import Proyectos from "./pages/Proyectos";
 import Home from "./pages/Home";
 import Root from "./componentes/Layout";
 
