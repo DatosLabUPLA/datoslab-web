@@ -10,11 +10,14 @@
   --color-avocado-400: oklch(0.92 0.19 114.08);
   --color-avocado-500: oklch(0.84 0.18 117.33);
   --color-avocado-600: oklch(0.53 0.12 118.34);
+  --customOrange: #ff6f3c;
 
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
 }
-
+.bg-customOrange {
+  background-color: var(--customOrange);
+}
 body {
   font-family: var(--font-display), "sans-serif";
   background-color: var(--color-avocado-100);

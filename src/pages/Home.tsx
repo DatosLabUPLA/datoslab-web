@@ -1,6 +1,5 @@
 import React from "react";
 import Lineas from "./Lineas";
-// import Publicaciones from "./Publicaciones";
 import Secciones from "./Secciones";
 import Descargas from "./Descargas";
 import Slider from "./Slider";
@@ -8,7 +7,6 @@ import Equipocom from "./Equipocom";
 import Contacto from "./Contacto";
 
 const Home: React.FC = () => {
-  // Función para hacer scroll suave hacia un id con offset (útil para navbar fijo)
   const scrollToId = (id: string, offset = -140) => {
     const target = document.getElementById(id);
     if (target) {
@@ -19,9 +17,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div id="home" className="p-0">
+    <div id="home" className="w-full">
       {/* Hero */}
-      <section className="mt-0">
+      <section className="mt-0 w-full">
         <div
           className="hero min-h-screen w-full"
           style={{
@@ -51,22 +49,28 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Secciones con id para scroll */}
-      <section id="líneas">
+      {/* Secciones con ancho completo */}
+      <section id="líneas" className="w-full">
         <Lineas />
       </section>
 
-      <Secciones />
+      <section className="w-full">
+        <Secciones />
+      </section>
 
-      <section id="descargas">
+      <section id="descargas" className="w-full">
         <Descargas />
       </section>
 
-      <Slider />
+      <section className="w-full">
+        <Slider />
+      </section>
 
-      <Equipocom />
+      <section className="w-full">
+        <Equipocom />
+      </section>
 
-      <section id="contacto">
+      <section id="contacto" className="w-full">
         <Contacto />
       </section>
     </div>

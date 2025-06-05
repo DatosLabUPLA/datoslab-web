@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <div>
       {/* Footer */}
-      <footer id="footer" className="footer bg-black bg-opacity-70 text-base-content rounded p-10 flex flex-col md:flex-row items-center justify-center gap-10">
+      <footer id="footer" className="footer bg-black bg-opacity-70 text-base-content p-10 flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Imagen izquierda */}
         <aside className="flex justify-center w-full md:w-auto">
           <a href="https://www.upla.cl" target="_blank" rel="noopener noreferrer">
