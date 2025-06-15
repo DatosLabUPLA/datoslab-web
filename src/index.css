@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/*@plugin "daisyui";*/
 
 :root {
   --font-display: "Satoshi", "sans-serif";
