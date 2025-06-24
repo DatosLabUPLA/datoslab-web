@@ -7,7 +7,7 @@ const Descargas: React.FC = () => {
       label: "Observatorio Nieves",
     },
     {
-      href: "#",
+      href: "https://datoslab.cl/memorial/",
       label: "Memorial",
     },
     {
@@ -15,7 +15,7 @@ const Descargas: React.FC = () => {
       label: "UniNews",
     },
     {
-      href: "#",
+      href: "https://datoslab.cl/programas2021/about/",
       label: "Programas presidenciales",
     },
   ];
