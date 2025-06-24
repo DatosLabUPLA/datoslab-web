@@ -21,54 +21,53 @@ const Descargas: React.FC = () => {
   ];
 
   return (
-    <div>
-      {/* Descargas */}
-      <section
-        id="descargas"
-        className="bg-black bg-opacity-70 p-10 md:p-16 text-center bg-gradient-to-r shadow-lg w-full"
-      >
-        <div className="mx-auto p-5 space-y-16">
-          <h2 className="text-white text-4xl font-bold mt-8 mb-5">
-            Explora nuestras aplicaciones.
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-6 w-full">
-            {/* Imagen izquierda */}
-            <img
-              src="/img/logonieves.png"
-              alt="Logo Nieves"
-              className="w-20 h-20 md:w-44 md:h-24 object-cover rounded-lg"
-            />
+    <section
+      id="descargas"
+      className="w-full bg-white text-black shadow-lg"
+    >
+      <div className="mx-auto max-w-screen-lg p-10 md:p-16 space-y-8 text-center">
+        <h2 className="text-4xl font-bold">Explora nuestras aplicaciones</h2>
 
-            {/* Contenido principal */}
-            <div className="bg-white rounded-lg shadow-lg p-5 text-center w-full md:w-1/3">
-              <p className="text-gray-600 mb-3">
-                Acceda mediante los siguientes enlaces:
-              </p>
-              <div className="flex flex-wrap justify-center gap-2">
-                {apps.map((app, index) => (
-                  <a
-                    key={index}
-                    href={app.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Ir a ${app.label}`}
-                  >
-                    <div className="badge badge-outline">{app.label}</div>
-                  </a>
-                ))}
-              </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          {/* Imagen izquierda */}
+          <img
+            src="/images/img/logonieves.png"
+            alt="Logo Nieves"
+            className="w-20 h-20 md:w-44 md:h-24 object-cover rounded-lg shadow"
+          />
+
+          {/* Contenido principal */}
+          <div className="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6">
+            <p className="text-black mb-4">
+              Accede mediante los siguientes enlaces:
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {apps.map((app, index) => (
+                <a
+                  key={index}
+                  href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ir a ${app.label}`}
+                  className="inline-block"
+                >
+                  <div className="px-4 py-2 border border-black rounded-full text-black text-sm font-medium hover:bg-gray-100 transition">
+                    {app.label}
+                  </div>
+                </a>
+              ))}
             </div>
-
-            {/* Imagen derecha */}
-            <img
-              src="/img/logouninews.png"
-              alt="Logo UniNews"
-              className="w-40 h-24 md:w-48 md:h-28 object-contain rounded-lg"
-            />
           </div>
+
+          {/* Imagen derecha */}
+          <img
+            src="/images/img/logouninews.png"
+            alt="Logo UniNews"
+            className="w-40 h-24 md:w-48 md:h-28 object-contain rounded-lg shadow"
+          />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

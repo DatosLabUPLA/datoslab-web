@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import BotonArriba from "./BotonArriba";
 
 const Layout: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const Layout: React.FC = () => {
       </main>
 
       <Footer />
+      <BotonArriba />
     </div>
   );
 };

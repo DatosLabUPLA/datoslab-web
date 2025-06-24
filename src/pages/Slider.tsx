@@ -25,58 +25,91 @@ const proyectos = [
 
 const Slider: React.FC = () => {
   const [indice, setIndice] = useState(0);
+  const visibles = 3;
+  const maxIndex = proyectos.length - visibles;
 
-  // Función para avanzar al siguiente grupo de 3 proyectos
   const siguiente = () => {
-    setIndice((prev) => (prev === proyectos.length - 3 ? 0 : prev + 1));
+    setIndice(prev => (prev >= maxIndex ? 0 : prev + 1));
   };
 
-  // Función para retroceder al grupo anterior de 3 proyectos
   const previo = () => {
-    setIndice((prev) => (prev === 0 ? proyectos.length - 3 : prev - 1));
+    setIndice(prev => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   return (
-    <section className="relative w-full text-center">
-      <h2 className="text-4xl font-bold mb-6 mt-20">Proyectos destacados</h2>
-      <div className="relative overflow-hidden w-full">
+    <section className="relative w-full text-center py-16 bg-gray-50">
+      <h2 className="text-4xl font-bold mb-8">Proyectos Destacados</h2>
+      <div className="relative overflow-hidden">
+        {/* Slider container */}
         <div
-          className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${(100 / 3) * indice}%)` }}
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${(100 / visibles) * indice}%)` }}
         >
-          {/* Renderizamos solo 3 proyectos a la vez */}
-          {proyectos.slice(indice, indice + 3).map((proyecto, index) => (
-            <div key={index} className="w-full sm:w-1/3 px-2">
-              <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+          {proyectos.map((proyecto, idx) => (
+            <div
+              key={idx}
+              className="w-1/3 px-4 flex-shrink-0"
+            >
+              <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                 <img
                   src={proyecto.imagen}
                   alt={proyecto.titulo}
                   className="w-full h-64 object-cover"
                 />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold">{proyecto.titulo}</h3>
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-800">{proyecto.titulo}</h3>
                   <p className="text-gray-600">{proyecto.descripcion}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
+
+        {/* Prev/Next Buttons */}
         <button
           onClick={previo}
-          className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition"
+          className="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition"
+          aria-label="Anterior"
         >
-          ❮
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-gray-800"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
         </button>
-      </div>
-      <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
         <button
           onClick={siguiente}
-          className="p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 transition"
+          className="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition"
+          aria-label="Siguiente"
         >
-          ❯
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-gray-800"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </button>
+
+        {/* Indicadores */}
+        <div className="flex justify-center mt-6 space-x-2">
+{Array.from({ length: maxIndex + 1 }).map((_, i) => (
+  <button
+    key={i}
+    onClick={() => setIndice(i)}
+    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+      i === indice ? 'bg-gray-800' : 'bg-gray-400 hover:bg-gray-600'
+    }`}
+    aria-label={`Slide ${i + 1}`}
+  ></button>
+))}
+        </div>
       </div>
     </section>
   );
