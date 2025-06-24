@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Lineas from "./Lineas";
 import Secciones from "./Secciones";
 import Descargas from "./Descargas";
@@ -15,6 +15,17 @@ const Home: React.FC = () => {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+  const shouldScroll = localStorage.getItem("scrollToHome");
+  if (shouldScroll === "true") {
+    const homeSection = document.getElementById("home");
+    if (homeSection) {
+      homeSection.scrollIntoView({ behavior: "smooth" });
+    }
+    localStorage.removeItem("scrollToHome");
+  }
+}, []);
 
   return (
     <div id="home" className="w-full text-white">
@@ -78,3 +89,5 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+// useEffect is now imported from React, so this declaration is removed.
