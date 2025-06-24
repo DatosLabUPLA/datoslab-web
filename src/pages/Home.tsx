@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         >
           <div className="hero-overlay bg-black bg-opacity-10"></div>
           <div className="hero-content flex flex-col items-center justify-center text-center text-neutral-content px-6">
-            <h1 className="mt-55 mb-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
+            <h1 className="mt-25 mb-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
               Cómo hacer simple la complejidad de los datos
             </h1>
             <p className="mb-8 max-w-3xl text-lg md:text-xl drop-shadow-sm">
