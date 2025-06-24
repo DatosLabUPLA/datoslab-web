@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div id="home" className="w-full">
+    <div id="home" className="w-full text-white">
       {/* Hero */}
       <section className="mt-0 w-full">
         <div
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           role="banner"
           aria-label="Imagen de equipo DatosLab"
         >
-          <div className="hero-overlay bg-black bg-opacity-50"></div>
+          <div className="hero-overlay bg-black bg-opacity-10"></div>
           <div className="hero-content flex flex-col items-center justify-center text-center text-neutral-content px-6">
             <h1 className="mt-75 mb-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
               Cómo hacer simple la complejidad de los datos

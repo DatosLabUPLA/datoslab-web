@@ -22,7 +22,7 @@ const Layout: React.FC = () => {
       </header>
 
       {/* Aquí el padding para que el contenido no quede debajo del navbar */}
-      <main className="pt-[90px] px-6">
+      <main className="pt-[0px] px-0">
         <Outlet />
       </main>
 
