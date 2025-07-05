@@ -37,7 +37,7 @@ const Slider: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full text-center py-16 bg-gray-50">
+    <section className="relative w-full text-center py-16 bg-gray-50 text-black">
       <h2 className="text-4xl font-bold mb-8">Proyectos Destacados</h2>
       <div className="relative overflow-hidden">
         {/* Slider container */}
