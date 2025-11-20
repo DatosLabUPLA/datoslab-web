@@ -56,13 +56,13 @@ const Secciones: React.FC = () => {
   const handleTabChange = (index: number) => setActiveTab(index);
 
   const tabClass = (i: number) =>
-    `flex-1 text-center py-2 cursor-pointer rounded-t-lg transition-colors duration-200
-     ${activeTab === i ? 'bg-white text-black font-bold shadow-md' : 'bg-gray-100 text-black hover:bg-gray-200'}`;
+    `flex-1 text-center py-3 cursor-pointer rounded-t-lg transition-colors duration-200 border-t border-l border-r border-gray-300
+     ${activeTab === i ? 'bg-customOrange text-white font-bold border-b-0' : 'bg-gray-200 text-gray-600 hover:bg-gray-300 border-b border-gray-300'}`;
 
   return (
     <section className="mt-8 mb-8">
       {/* Tabs */}
-      <div role="tablist" className="flex border-b border-gray-300">
+      <div role="tablist" className="flex gap-1">
         {tabs.map((tab, i) => (
           <div
             key={i}
@@ -77,10 +77,10 @@ const Secciones: React.FC = () => {
 
       {/* Content */}
       <div className="bg-customOrange p-6  text-black">
-        <h2 className="text-3xl font-bold text-center mb-6">{tabs[activeTab - 1]}</h2>
+        <h2 className="text-3xl font-bold text-center mb-6 text-white">{tabs[activeTab - 1]}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {publicaciones[activeTab]?.map((pub, idx) => (
-            <div key={idx} className="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div key={idx} className="bg-white rounded-lg shadow-lg p-6 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
               <p className="text-gray-800 mb-4">{pub.description}</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {pub.badges.map((badge, j) => (
@@ -89,9 +89,10 @@ const Secciones: React.FC = () => {
                     href={badge.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-3 py-1 border rounded-full text-sm transition-colors duration-200
-                      ${badge.isPrimary ? 'border-black' : 'border-gray-400'}
-                      hover:bg-gray-200`}
+                    className={`px-3 py-1 border rounded-full text-sm transition-colors duration-200 font-medium
+                      ${badge.isPrimary 
+                        ? 'border-black text-black hover:bg-black hover:text-white' 
+                        : 'border-gray-400 text-gray-600 hover:border-gray-600 hover:bg-gray-600 hover:text-white'}`}
                   >
                     {badge.label}
                   </a>
