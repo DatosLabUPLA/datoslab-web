@@ -41,12 +41,12 @@ const Home: React.FC = () => {
           role="banner"
           aria-label="Imagen de equipo DatosLab"
         >
-          <div className="hero-overlay bg-black bg-opacity-10"></div>
-          <div className="hero-content flex flex-col items-center justify-center text-center text-neutral-content px-6">
-            <h1 className="mt-55 mb-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
+          <div className="hero-overlay bg-black/25"></div>
+          <div className="hero-content flex flex-col items-center justify-start pt-40 text-center text-white px-6 h-full">
+            <h1 className="mb-6 text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
               Cómo hacer simple la complejidad de los datos
             </h1>
-            <p className="mb-8 max-w-3xl text-lg md:text-xl drop-shadow-sm">
+            <p className="mb-8 mt-20 md:mt-40 max-w-3xl text-lg md:text-xl drop-shadow-sm">
               Nuestro laboratorio encuentra patrones y valor en datos interrelacionados —y abundantes— a través de nuevos métodos y visualizaciones. Nuestra investigación se aplica a temáticas diversas y con orientación social.
             </p>
             <button

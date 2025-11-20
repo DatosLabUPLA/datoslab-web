@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <>
       <footer
         id="footer"
-        className="bg-gray-700 bg-opacity-70 text-white py-10"
+        className="bg-gray-700/70 text-white py-10"
       >
         <div className="max-w-screen-lg mx-auto flex items-center justify-between px-4">
           {/* Logo UPLA a la izquierda */}
