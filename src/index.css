@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 @import "tailwindcss";
-/*@plugin "daisyui";*/
+@plugin "daisyui" {
+  themes: light --default, dark;
+}
+
+@theme {
+  --font-display: "Roboto", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+}
 
 :root {
-  --font-display: "Roboto", sans-serif;
   --breakpoint-3xl: 1920px;
   --customOrange: #ff6f3c;
 }
