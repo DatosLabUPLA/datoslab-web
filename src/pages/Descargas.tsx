@@ -3,7 +3,7 @@ import React from "react";
 const Descargas: React.FC = () => {
   const apps = [
     {
-      href: "https://observatorionieves.cl/",
+      href: "https://datoslab.cl/observatorionieves/",
       label: "Observatorio Nieves",
     },
     {
