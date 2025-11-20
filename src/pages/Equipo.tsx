@@ -13,7 +13,7 @@ interface Miembro {
   foto: string;
 }
 
-const imagenDirector = "images/img/portfolio/img/team/miguel_guevara.png";
+const imagenDirector = "/images/img/portfolio/img/team/miguel_guevara.png";
 
 // SVG placeholder para personas sin foto
 const PersonPlaceholder: React.FC = () => (

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           {/* Logo UPLA a la izquierda */}
           <a href="https://www.upla.cl" target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
             <img
-              src="images/img/logoupla_bn.png"
+              src="/images/img/logoupla_bn.png"
               alt="Universidad de Playa Ancha"
               className="max-h-16"
             />
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <img
-              src="images/img/datos_lab.png"
+              src="/images/img/datos_lab.png"
               alt="Logo DatosLab"
               className="w-16 h-16"
             />

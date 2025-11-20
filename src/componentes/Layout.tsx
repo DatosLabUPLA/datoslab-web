@@ -9,7 +9,7 @@ const Layout: React.FC = () => {
     <div>
       <header>
         <Navbar
-          logoSrc="images/img/datos_lab.png"
+          logoSrc="/images/img/datos_lab.png"
           logoAlt="DatosLab"
           menuItems={[
             "Home",

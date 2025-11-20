@@ -11,25 +11,25 @@ const Lineas: React.FC = () => {
               title: "Open Data",
               description:
                 "Potenciamos la participación ciudadana a través del uso de datos abiertos y de nuevas aplicaciones",
-              iconSrc: "images/img/iconos/icono1.png",
+              iconSrc: "/images/img/iconos/icono1.png",
             },
             {
               title: "Data Analytics",
               description:
                 "Buscamos patrones significativos en los datos a través de algoritmos computacionales y modelos estadísticos",
-              iconSrc: "images/img/iconos/icono2.png",
+              iconSrc: "/images/img/iconos/icono2.png",
             },
             {
               title: "Networks",
               description:
                 "Creamos y utilizamos redes complejas basadas en interacciones sociales o información de producción",
-              iconSrc: "images/img/iconos/icono3.png",
+              iconSrc: "/images/img/iconos/icono3.png",
             },
             {
               title: "Data Visualization",
               description:
                 "Creamos y aplicamos las mejores técnicas de visualización de datos de forma estática o interactiva",
-              iconSrc: "images/img/iconos/icono4.png",
+              iconSrc: "/images/img/iconos/icono4.png",
             },
           ].map((item, index) => (
             <div

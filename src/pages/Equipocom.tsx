@@ -5,7 +5,7 @@ const miembros = [
   {
     nombre: "Miguel Guevara",
     cargo: "Director DatosLab",
-    imagen: "images/img/portfolio/img/team/miguel_guevara.png",
+    imagen: "/images/img/portfolio/img/team/miguel_guevara.png",
     github: "#",
     linkedin: "https://www.linkedin.com/in/miguel-guevara-albornoz/",
     orcid: "https://orcid.org/0000-0002-2319-5184",
@@ -14,7 +14,7 @@ const miembros = [
   {
     nombre: "Ezequiel Lagos",
     cargo: "Ingeniero en informática",
-    imagen: "images/img/portfolio/img/team/ezequiel_lagos.png",
+    imagen: "/images/img/portfolio/img/team/ezequiel_lagos.png",
     github: "#",
     linkedin: "#",
     orcid: undefined,
