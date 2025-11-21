@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, logoAlt, menuItems }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const rutasInternas = ["Equipo", "Proyectos"];
+  const rutasInternas = ["Equipo", "Proyectos", "Noticias"];
 
   // Handler común para Home desde otras rutas
   const handleHomeClick = () => {
