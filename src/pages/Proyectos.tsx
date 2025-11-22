@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { FaGlobe, FaGithub, FaFileAlt, FaVideo, FaUser, FaCalendar, FaTag, FaImages, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface Proyecto {
@@ -19,54 +19,146 @@ interface Proyecto {
 
 const GaleriaModal: React.FC<{ images: string[]; onClose: () => void }> = ({ images, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const hasMoved = useRef(false);
 
-  const nextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  // Reset zoom and pan when image changes
+  useEffect(() => {
+    setIsZoomed(false);
+    setPan({ x: 0, y: 0 });
+  }, [currentIndex]);
+
+  // Reset pan when zooming out
+  useEffect(() => {
+    if (!isZoomed) {
+      setPan({ x: 0, y: 0 });
+    }
+  }, [isZoomed]);
+
+  const nextImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  const prevImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const prevImage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isZoomed) {
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
+    }
+    hasMoved.current = false;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging) {
+      e.preventDefault();
+      const newX = e.clientX - dragStart.x;
+      const newY = e.clientY - dragStart.y;
+      setPan({ x: newX, y: newY });
+      hasMoved.current = true;
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!hasMoved.current) {
+      setIsZoomed(!isZoomed);
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/95 backdrop-blur-md" onClick={onClose}>
+      {/* Close Button */}
       <button 
         onClick={onClose}
-        className="absolute top-4 right-4 text-white/70 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+        className="absolute top-4 right-4 z-50 text-white bg-black/50 hover:bg-white/20 p-2 rounded-full transition-all"
       >
         <FaTimes size={24} />
       </button>
       
-      <div className="relative w-full max-w-5xl px-4 flex items-center justify-center h-full" onClick={e => e.stopPropagation()}>
+      {/* Main Image Area */}
+      <div className="flex-1 w-full flex items-center justify-center relative overflow-hidden p-4" onClick={(e) => e.stopPropagation()}>
+        
+        {/* Navigation Buttons - Enhanced visibility */}
         {images.length > 1 && (
-          <button 
-            onClick={prevImage}
-            className="absolute left-4 text-white/70 hover:text-white p-3 rounded-full hover:bg-white/10 transition-colors"
-          >
-            <FaChevronLeft size={32} />
-          </button>
+          <>
+            <button 
+              onClick={prevImage}
+              className="absolute left-4 z-40 text-white bg-black/50 hover:bg-white/20 p-4 rounded-full transition-all backdrop-blur-sm border border-white/10 hover:scale-110"
+            >
+              <FaChevronLeft size={24} />
+            </button>
+            <button 
+              onClick={nextImage}
+              className="absolute right-4 z-40 text-white bg-black/50 hover:bg-white/20 p-4 rounded-full transition-all backdrop-blur-sm border border-white/10 hover:scale-110"
+            >
+              <FaChevronRight size={24} />
+            </button>
+          </>
         )}
         
-        <img 
-          src={images[currentIndex]} 
-          alt={`Galería ${currentIndex + 1}`} 
-          className="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
-        />
-        
-        {images.length > 1 && (
-          <button 
-            onClick={nextImage}
-            className="absolute right-4 text-white/70 hover:text-white p-3 rounded-full hover:bg-white/10 transition-colors"
-          >
-            <FaChevronRight size={32} />
-          </button>
-        )}
-
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 px-4 py-1 rounded-full text-white text-sm">
-          {currentIndex + 1} / {images.length}
+        {/* Image Container with Zoom and Pan */}
+        <div 
+          className={`relative transition-transform duration-100 ease-out ${
+            isZoomed 
+              ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') 
+              : 'cursor-zoom-in'
+          }`}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          onClick={handleClick}
+          style={{ 
+            transform: `translate(${pan.x}px, ${pan.y}px) scale(${isZoomed ? 2 : 1})`,
+            maxHeight: '80vh',
+            maxWidth: '90vw'
+          }}
+        >
+          <img 
+            src={images[currentIndex]} 
+            alt={`Galería ${currentIndex + 1}`} 
+            className="max-h-[75vh] max-w-full object-contain rounded-lg shadow-2xl select-none pointer-events-none"
+          />
         </div>
+      </div>
+
+      {/* Thumbnails Strip */}
+      <div className="h-24 w-full bg-black/80 flex items-center justify-center gap-2 p-4 overflow-x-auto z-40" onClick={(e) => e.stopPropagation()}>
+        {images.map((img, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`relative flex-shrink-0 h-16 w-24 rounded-md overflow-hidden transition-all duration-200 ${
+              currentIndex === idx 
+                ? 'ring-2 ring-[var(--customOrange)] scale-110 opacity-100' 
+                : 'opacity-50 hover:opacity-80 hover:scale-105'
+            }`}
+          >
+            <img src={img} alt={`Thumb ${idx}`} className="h-full w-full object-cover" />
+          </button>
+        ))}
+      </div>
+      
+      {/* Counter */}
+      <div className="absolute bottom-28 left-1/2 -translate-x-1/2 bg-black/50 px-3 py-1 rounded-full text-white text-xs pointer-events-none">
+        {currentIndex + 1} / {images.length}
       </div>
     </div>
   );
@@ -221,7 +313,34 @@ const Proyectos: React.FC = () => {
         return response.json();
       })
       .then((data) => {
-        const proyectosVisibles = data.filter((p: Proyecto) => p.visible === "TRUE");
+        const proyectosProcesados = data.map((p: any) => {
+          let imagen_principal: string | undefined = undefined;
+          let galeria: string[] = [];
+
+          // Procesar el campo 'fotos' si existe
+          if (p.fotos) {
+            if (Array.isArray(p.fotos)) {
+              // Si ya es un array (como en el JSON proporcionado)
+              galeria = p.fotos;
+            } else if (typeof p.fotos === 'string' && p.fotos.trim() !== '') {
+              // Si viene como string separado por comas (caso legacy o CSV)
+              galeria = p.fotos.split(',').map((url: string) => url.trim());
+            }
+            
+            // La primera imagen es la principal
+            if (galeria.length > 0) {
+              imagen_principal = galeria[0];
+            }
+          }
+
+          return {
+            ...p,
+            imagen_principal,
+            galeria
+          };
+        });
+
+        const proyectosVisibles = proyectosProcesados.filter((p: Proyecto) => p.visible === "TRUE");
         setProyectos(proyectosVisibles);
         setLoading(false);
       })
