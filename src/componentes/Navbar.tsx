@@ -163,7 +163,7 @@ const LogoBlock = ({ logoSrc, logoAlt }: { logoSrc: string; logoAlt: string }) =
         DatosLab
       </span>
       <span className="text-xs text-gray-500 font-medium">
-        Data Science
+        Laboratorio de DataScience
       </span>
     </div>
   </>

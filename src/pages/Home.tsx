@@ -5,6 +5,7 @@ import Descargas from "./Descargas";
 import Slider from "./Slider";
 import Equipocom from "./Equipocom";
 import Contacto from "./Contacto";
+import SobreNosotros from "./SobreNosotros";
 
 const Home: React.FC = () => {
   const scrollToId = (id: string, offset = -140) => {
@@ -61,6 +62,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Secciones con ancho completo */}
+      <section id="sobre-nosotros" className="w-full">
+        <SobreNosotros />
+      </section>
+
       <section id="líneas" className="w-full">
         <Lineas />
       </section>
