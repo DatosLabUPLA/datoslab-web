@@ -713,8 +713,10 @@ const Proyectos: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Nuestros Proyectos</h1>
+      <div className="text-center mb-16 animate-in fade-in zoom-in duration-500">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Nuestros <span className="text-[var(--customOrange)]">Proyectos</span>
+        </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Explora el trabajo de nuestro laboratorio en ciencia de datos, visualización y análisis de redes.
         </p>

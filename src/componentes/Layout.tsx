@@ -16,8 +16,8 @@ const Layout: React.FC = () => {
             "Líneas",
             "Descargas",
             "Proyectos",
-            "Noticias",
             "Equipo",
+            "Noticias",
             "Contacto",
           ]}
         />
